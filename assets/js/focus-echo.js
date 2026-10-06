@@ -11,15 +11,20 @@
    const q=D.quotes[key];node.querySelector('.margin-kicker').textContent=q.person;
    node.querySelector('.echo-date').textContent=q.date||(q.diary?'日记摘录':'作品摘录');node.querySelector('.echo-folio').textContent=q.person.slice(0,1);
    node.querySelector('blockquote').textContent=q.text;
-   const b=node.querySelector('button');b.textContent=q.letter?'留言 '+String(q.letter).padStart(2,'0')+' ↗':q.work!=null?'作品原文 ↗':'日记原文 ↗';
-   b.onclick=()=>q.work!=null?A.work(q.work):A.open(q.diary?'diary':'letters',q.person,{target:q.letter,find:q.diary?q.text:undefined});
+   const b=node.querySelector('button');b.textContent=q.letter?'留言 '+String(q.letter).padStart(2,'0')+' ↗':q.source?'创作说明 ↗':q.work!=null?'作品原文 ↗':'日记原文 ↗';
+   b.onclick=()=>q.source?openSource(q.source,q.person):q.work!=null?A.work(q.work):A.open(q.diary?'diary':'letters',q.person,{target:q.letter,find:q.diary?q.text:undefined});
    // Keep the entry movement in the words; never filter or brighten their backdrop.
    if(!reduced.matches)node.querySelectorAll('.echo-byline,blockquote,.echo-source,.echo-folio,.thought-thread').forEach(ink=>{
      if(!ink.animate)return;ink.getAnimations().forEach(a=>a.cancel());ink.animate([{filter:'blur(8px)',transform:'translateY(9px)'},{filter:'blur(0)',transform:'translateY(0)'}],{duration:680,easing:'cubic-bezier(.18,.65,.24,1)'});
    });
  });}
+ function openSource(file,person){
+   A.show($('art-view'));$('art-title').textContent='创作说明';$('art-person').textContent=person;$('art-note').textContent='';
+   $('art-body').replaceChildren();const a=document.createElement('a');a.href=A.asset(file);a.target='_blank';a.rel='noopener';a.textContent='打开原始创作说明 ↗';$('art-body').append(a);
+   $('art-original').href=A.asset(file);$('art-context').hidden=true;
+ }
  function openImage(file,title,person,n){
-   $('music').pause();$('art-title').textContent=title;$('art-person').textContent=person;$('art-note').textContent='';
+   $('art-title').textContent=title;$('art-person').textContent=person;$('art-note').textContent='';
    const body=$('art-body');body.className='';body.replaceChildren();const img=document.createElement('img');img.src=A.asset(file);img.alt=title;body.append(img);
    $('art-original').href=A.asset(file);const context=$('art-context');context.hidden=false;context.onclick=()=>{$('art-view').close();A.open('letters',person,{target:n})};A.show($('art-view'));
  }
@@ -44,10 +49,13 @@
    else if(index===7){keys=D.stages[scene.stage].echo.map((k,i)=>scene.local>=(i?.43:.14)?k:null);}
    else if(index===5){keys=[t>=.16?'sea':null,t>=.72?'seaclosed':null];}
    else keys=keys.map((k,i)=>t>=(i?.44:.16)?k:null);
-   if(opening||closing)keys=[];renderQuotes(keys);
-   window.MarginInk?.invalidate();
+   if(opening||closing)keys=[];document.body.classList.toggle('has-left-echo',!!keys[0]);document.body.classList.toggle('has-right-echo',!!keys[1]);renderQuotes(keys);
+
  }
  document.querySelectorAll('[data-ship-stage]').forEach(b=>b.addEventListener('click',()=>window.BookNavigation.seek(7,(Number(b.dataset.shipStage)+.65)/4)));
  document.querySelectorAll('[data-sea-stage]').forEach(b=>b.addEventListener('click',()=>window.BookNavigation.seek(5,Number(b.dataset.seaStage)?.9:.4)));
- window.BookEcho={setScene:update};update(window.BookNavigation.state());
+ window.BookEcho={setScene:update,openSource,setMusic:(track,index)=>{
+   D.pages[6]=track.echoes.map((quote,i)=>{const key='playing-'+index+'-'+i;D.quotes[key]=quote;return key;});
+   update(window.BookNavigation.state());
+ }};update(window.BookNavigation.state());
 })();

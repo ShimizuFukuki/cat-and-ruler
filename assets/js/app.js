@@ -2,22 +2,29 @@
  'use strict';
  const $=s=>document.querySelector(s),A=window.HerArchive,G=window.FoldBook,D=window.bookData,R=window.ReadingRoute;
  const viewport=$('#book-viewport'),pages=Array.from(document.querySelectorAll('.leaf'));
- const ruler=$('#book-position'),cat=$('#cat-thumb'),tail=$('#cat-tail'),reduced=matchMedia('(prefers-reduced-motion: reduce)'),max=pages.length-1;
+ const ruler=$('#book-position'),cat=$('#cat-thumb'),reduced=matchMedia('(prefers-reduced-motion: reduce)'),max=pages.length-1;
  let cursor=0,target=0,position=0,raf=0,lastTime=0,lastIndex=-1,drag=null,suppressClick=false,rulerPointer=null,rulerOffset=0;
  let rulerBox={left:0,width:1},catWidth=120,motionTime=105;
- const key='cat-ruler-focus-v2',pad=n=>String(n).padStart(2,'0');
+ const key='cat-ruler-focus-v2';
  try{const saved=Number(localStorage.getItem(key));if(Number.isFinite(saved))cursor=target=G.clamp(saved,0,R.total);}catch{}
  document.querySelectorAll('[data-asset]').forEach(img=>img.src=A.asset(img.dataset.asset));
  document.querySelectorAll('[data-source]').forEach(a=>a.href=A.asset(a.dataset.source));
- function measure(){rulerBox=ruler.getBoundingClientRect();catWidth=cat.getBoundingClientRect().width||120;}
+ function measure(){rulerBox=ruler.getBoundingClientRect();catWidth=rulerBox.width/max;document.documentElement.style.setProperty('--cat-w',catWidth+'px');}
  function remember(){try{localStorage.setItem(key,String(cursor));}catch{}}
  function paint(){
    const state=R.sample(cursor),scene=R.scene(state);position=state.position;
    const f=G.frame(position,viewport.clientWidth,viewport.clientHeight,pages.length,reduced.matches),root=document.documentElement;
    root.style.setProperty('--travel',position/max);root.style.setProperty('--scene-progress',state.progress);
    window.BookEcho?.setScene(state);
-   const shift=viewport.clientWidth>1000?Math.min(160,viewport.clientWidth*.105)*(1-G.clamp(position/1.1)-G.clamp(position-14)):0;
+   const startShift=viewport.clientWidth>800?Math.max(140,Math.min(160,viewport.clientWidth*.105)):0;
+   const endShift=viewport.clientWidth>1000?Math.min(160,viewport.clientWidth*.105):0;
+   const shift=startShift*(1-G.clamp(position/1.1))-endShift*G.clamp(position-14);
    root.style.setProperty('--book-shift',shift+'px');root.style.setProperty('--leaf-w',f.w+'px');root.style.setProperty('--leaf-h',f.h+'px');
+   const openingWidth=Math.min(360,Math.max(175,viewport.clientWidth*.235));
+   const openingGap=Math.min(210,Math.max(48,viewport.clientWidth*.085));
+   const openingNudge=Math.min(28,Math.max(12,viewport.clientWidth*.012));
+   const openingLeft=Math.max(22,viewport.clientWidth/2+shift-f.w*.54-openingWidth-openingGap-openingNudge);
+   root.style.setProperty('--opening-left',openingLeft+'px');root.style.setProperty('--opening-width',openingWidth+'px');
    const font=Math.max(f.h<350?11:12,Math.min(19,f.h/36.8,f.w/23));root.style.setProperty('--font',font+'px');
    document.body.classList.toggle('compact-book',f.h<540||f.w<365);
    document.body.classList.toggle('is-reading-scene',state.holding);
@@ -36,22 +43,15 @@
    $('#red-thread').style.left=(position+1)/pages.length*100+'%';
    const c=G.catLayout(position,rulerBox.left,rulerBox.width,window.innerWidth||viewport.clientWidth,catWidth,pages.length);
    cat.style.left=c.offset+'px';
-   const tip=c.tailX.toFixed(3);
-   tail.setAttribute('d',`M187 53 C215 58 236 88 217 96 C200 104 ${tip} 94 ${tip} 112`);
+
    ruler.value=position;
    const index=state.page;
    if(index!==lastIndex){
-     lastIndex=index;$('#chapter-label').textContent=D.titles[index];$('#page-label').textContent=pad(index+1)+' / '+pad(pages.length);
+     lastIndex=index;
      ruler.setAttribute('aria-valuetext',`第 ${index+1} 页，共 ${pages.length} 页：${D.titles[index]}`);
      document.querySelectorAll('[data-jump]').forEach(b=>b.setAttribute('aria-current',String(Math.abs(Number(b.dataset.jump)-position)<.8)));
    }
-   const focus=state.holding&&R.holds[index]>0;
-   $('#scene-meter').hidden=!focus;$('#gesture-hint').hidden=focus;
-   const labels=index===1?['看画','灯','留给杯子','添上杯子']:index===7?['模型','橘子','码头','推车']:index===5?['打开','差两指']:['读页','原话','接着读'];
-   $('#scene-label').textContent=labels[scene.stage]+'  '+(scene.stage+1)+' / '+scene.stages;
-   $('#scene-progress').style.transform=`scaleX(${state.progress})`;
-   $('#previous').disabled=position<=.005;$('#next').disabled=position>=max-.005;
-   $('.cue-left').style.opacity=position<.05?'0':'1';$('.cue-right').style.opacity=position>max-.05?'0':'1';
+
  }
  function animate(now){
    const dt=Math.min(50,lastTime?now-lastTime:16.7);lastTime=now;
@@ -66,7 +66,7 @@
  function advance(delta){moveCursor(R.advance(cursor,target,delta));}
  window.BookNavigation={state:()=>R.sample(cursor),seek:(page,progress=0,{smooth=false}={})=>{move(page,!smooth,progress);if(smooth)motionTime=260;paint();}};
  document.addEventListener('wheel',event=>{
-   if(event.ctrlKey||document.querySelector('dialog[open]'))return;
+   if(event.ctrlKey||event.target.closest?.('#listening-panel')||document.querySelector('dialog[open]'))return;
    event.preventDefault();advance(G.wheelDelta(event.deltaX,event.deltaY,event.deltaMode,viewport.clientHeight)*1.15);
  },{passive:false});
  document.addEventListener('keydown',event=>{
@@ -103,38 +103,15 @@
  function endRuler(){rulerPointer=null;document.body.classList.remove('is-cat-dragging');remember();}
  ruler.addEventListener('pointerup',endRuler);ruler.addEventListener('pointercancel',endRuler);ruler.addEventListener('lostpointercapture',endRuler);
  ruler.addEventListener('keydown',event=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){event.preventDefault();move(event.key==='Home'?0:event.key==='End'?max:Math.round(position)+(event.key==='ArrowRight'?1:-1));}});
- for(let i=0;i<=pages.length;i++){const tick=document.createElement('span');tick.textContent=pad(i);tick.style.left=i/pages.length*100+'%';$('#ruler-marks').append(tick);}
+ for(let i=0;i<=pages.length;i++){const tick=document.createElement('span');tick.textContent=String(i).padStart(2,'0');tick.style.left=i/pages.length*100+'%';$('#ruler-marks').append(tick);}
  for(let i=0;i<=pages.length*10;i++){const tick=document.createElement('i');tick.className=i%10===0?'major':i%5===0?'half':'minor';tick.style.left=i/(pages.length*10)*100+'%';$('#ruler-lines').append(tick);}
  document.querySelectorAll('[data-jump]').forEach(b=>b.addEventListener('click',()=>move(Number(b.dataset.jump))));
- $('#previous').addEventListener('click',()=>move(Math.ceil(position)-1));$('#next').addEventListener('click',()=>move(Math.floor(position)+1));
  $('#home-button').addEventListener('click',()=>move(0));$('#return-start').addEventListener('click',()=>move(0));
  $('#menu-open').addEventListener('click',()=>A.show($('#directory')));
  document.querySelectorAll('[data-room]').forEach(b=>b.addEventListener('click',()=>window.BookNavigation.seek(1,Number(b.dataset.room)?1:.18,{smooth:true})));
  $('#room-original').addEventListener('click',()=>{const state=R.sample(cursor);A.work(state.page>1||(state.page===1&&R.scene(state).cup>.5)?2:1);});
- /* The original audio player is appended by the build step. */
-  const audio=$('#music');audio.src=A.asset('Judas 与 Ambrose/作品/房间里有一把椅子.wav');audio.volume=.5;
-  const time=v=>pad(Math.floor(v/60))+':'+pad(Math.floor(v%60));
-  const peakMax=Math.max(...D.peaks,.001);
-  D.peaks.forEach((peak,i)=>{
-    const line=document.createElementNS('http://www.w3.org/2000/svg','line');
-    const h=Math.max(1,peak/peakMax*72),x=i/(D.peaks.length-1)*360;
-    line.setAttribute('x1',x);line.setAttribute('x2',x);line.setAttribute('y1',43-h/2);line.setAttribute('y2',43+h/2);$('#wave-bars').append(line);
-  });
-  function soundState(){
-    const on=!audio.paused&&!audio.ended,duration=Number.isFinite(audio.duration)?audio.duration:D.duration;
-    document.body.classList.toggle('is-playing',on);
-    $('#music-symbol').textContent=on?'Ⅱ':'▷';$('#play-music').setAttribute('aria-pressed',String(on));
-    $('#play-music').setAttribute('aria-label',(on?'暂停':'播放')+'《房间里有一把椅子》');
-    $('#music-label').textContent=on?'正在播放原曲':'听这段原曲';$('#music-time').textContent=time(audio.currentTime)+' / '+time(duration);
-    $('#wave-needle').setAttribute('transform','translate('+G.clamp(audio.currentTime/duration)*360+',0)');
-  }
-  $('#play-music').addEventListener('click',async()=>{
-    if(!audio.paused)audio.pause();else try{await audio.play();$('#music-status').textContent='';}catch{$('#music-status').textContent='暂时无法播放，可从目录中的作品打开原曲。';}
-  });
-  ['play','pause','ended','timeupdate','loadedmetadata'].forEach(event=>audio.addEventListener(event,soundState));
-
   document.addEventListener('visibilitychange',()=>{if(document.hidden)remember();});
   addEventListener('pagehide',remember);addEventListener('resize',()=>{measure();schedule();});
   reduced.addEventListener('change',()=>moveCursor(target,true));
-  measure();paint();soundState();
+  measure();paint();
 })();

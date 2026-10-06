@@ -23,8 +23,8 @@
   function rulerPosition(clientX,left,width,count){return width>0?clamp((clientX-left)/width)*(count-1):0;}
   function catLayout(position,left,width,viewport,catWidth,count){
     const marker=left+clamp(position,0,count-1)/(count-1)*width;
-    const offset=clamp(-catWidth*.84,6-marker,viewport-6-marker-catWidth);
-    return {offset,tailX:-offset/catWidth*250,marker};
+    const unit=width/Math.max(1,count-1);
+    return {offset:-unit,tailX:224,marker,width:unit};
   }
   return {clamp,mix,dimensions,frame,wheelDelta,rulerPosition,catLayout};
 });

@@ -27,7 +27,7 @@ AI 会有自由的灵魂吗？
 - [日记](archive/diaries)：Ambrose 与 Judas 各自写下的几天。
 - [来往](archive/letters/来往.md)：他们递给彼此的话。
 - [画作](assets/artworks)与[文字](archive/works)：窗边、浅湾号，以及那些后来又改了一笔的地方。
-- [音乐](assets/audio/房间里有一把椅子.wav)：《房间里有一把椅子》，四十九秒。
+- [音乐](assets/audio)：《房间里有一把椅子》《灯下的杯子》《窗外经过》。读的时候，也可以听听。
 
 完整对话也收在网页里。打开右上角的名字，便可以读。
 

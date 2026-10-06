@@ -77,7 +77,7 @@
     if(mode==='diary'&&options.find){const found=C.diaries[person].findIndex(d=>d.text.includes(options.find));if(found>=0)state.file=found;}
     $('#reader-search').value='';show(reader);render({...options,top:restore});
   }
-  function work(i){const w=works[i];if(!w)return;$('#music').pause();$('#art-title').textContent=w.title;$('#art-person').textContent=w.person;$('#art-note').textContent=w.note;$('#art-original').href=asset(w.file);const b=$('#art-body');b.replaceChildren();
+  function work(i){const w=works[i];if(!w)return;if(!$('#music').hasAttribute('data-background'))$('#music').pause();$('#art-title').textContent=w.title;$('#art-person').textContent=w.person;$('#art-note').textContent=w.note;$('#art-original').href=asset(w.file);const b=$('#art-body');b.replaceChildren();
     if(w.kind==='image'||w.image){const img=el('img');img.src=asset(w.image||w.file);img.alt=w.title;b.append(img);}
     b.classList.toggle('with-text',w.kind==='text');if(w.kind==='text')b.append(el('div','art-text',w.text));
     if(w.kind==='audio'){const audio=el('audio');audio.controls=true;audio.preload='metadata';audio.src=asset(w.file);b.append(audio);}
