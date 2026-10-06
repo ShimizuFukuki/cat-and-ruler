@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 110" fill="none">
+ <title>猫与尺：趴在尺子上的睡猫</title>
+ <path d="M21 85H231V98H21z" fill="#c3b58e"/>
+ <path d="M28 85v8m10-8v5m10-5v5m10-5v5m10-5v5m10-5v8m10-8v5m10-5v5m10-5v5m10-5v5m10-5v8m10-8v5m10-5v5m10-5v5m10-5v5m10-5v8m10-8v5m10-5v5m10-5v5m10-5v5m10-5v8" stroke="#716b56" stroke-width="1"/>
+ <path d="M191 53c13 5 16 22 26 27 5 3 12 2 15 3 7 1 9 10 2 12-10 3-23-1-29-7-9-9-12-21-20-24" fill="#626c65"/>
+ <ellipse cx="127" cy="50" rx="69" ry="36" fill="#758078"/>
+ <path d="m35 41 6-27 15 19M64 29 83 17l3 29" fill="#68766c"/>
+ <path d="m40 34 4-12 8 11" fill="#c8c7b7"/>
+ <path d="M28 59c0-17 13-30 30-30 19 0 33 13 33 29 0 17-14 31-33 31-18 0-30-13-30-30" fill="#919b8e"/>
+ <path d="M37 82c1-7 9-9 17-7l17 1c11-6 25-3 31 2 8 8-6 13-16 13H47c-8 0-13-4-10-9" fill="#919b8e"/>
+ <path d="M39 56q8 8 15 0m9 0q8 8 15 0" stroke="#37483c" stroke-width="1.8" stroke-linecap="round"/>
+ <path d="m55 66 4 4 4-4z" fill="#58675b"/>
+ <path d="M59 70q-2 5-7 3m7-3q2 5 7 3" stroke="#58675b" stroke-width="1" stroke-linecap="round"/>
+</svg>
