@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none">
+ <defs>
+  <linearGradient id="fall" x1="430" y1="0" x2="790" y2="1010" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity=".8"/><stop offset=".55" stop-color="white" stop-opacity=".58"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient>
+  <mask id="distance"><rect width="1600" height="1000" fill="url(#fall)"/></mask>
+  <filter id="penumbra" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="9"/></filter>
+ </defs>
+ <g mask="url(#distance)" filter="url(#penumbra)">
+  <!-- A six-pane window projected obliquely onto the reading surface. -->
+  <path d="M180 -130L1170 -130L745 980L-245 980Z" fill="#faf3dc" fill-opacity=".32"/>
+  <g stroke="#686b50" stroke-opacity=".26" stroke-width="18">
+   <path d="M195 -140L-240 995 M1185 -140L750 995 M690 -140L255 995"/>
+   <path d="M70 175L1080 175 M-85 580L925 580"/>
+  </g>
+  <path d="M229 -130L-188 980 M724 -130L307 980 M1219 -130L802 980" stroke="#fff7dc" stroke-opacity=".43" stroke-width="3"/>
+ </g>
+</svg>

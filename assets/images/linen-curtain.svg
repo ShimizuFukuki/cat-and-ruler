@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="1000" viewBox="0 0 400 1000" preserveAspectRatio="none">
+ <defs>
+  <linearGradient id="linen"><stop stop-color="#f5efdc" stop-opacity=".6"/><stop offset=".22" stop-color="#f9f1d9" stop-opacity=".5"/><stop offset=".36" stop-color="#aaa88b" stop-opacity=".24"/><stop offset=".48" stop-color="#fff9e9" stop-opacity=".46"/><stop offset=".68" stop-color="#8d9178" stop-opacity=".2"/><stop offset=".86" stop-color="#f9f1de" stop-opacity=".3"/><stop offset="1" stop-color="#e7dfca" stop-opacity="0"/></linearGradient>
+  <linearGradient id="hem"><stop stop-color="#767e64" stop-opacity=".3"/><stop offset="1" stop-color="#767e64" stop-opacity="0"/></linearGradient>
+  <filter id="soft"><feGaussianBlur stdDeviation="3.5"/></filter>
+ </defs>
+ <path d="M-35 -25H375C295 205 370 318 253 545C150 750 251 831 142 1040H-35Z" fill="url(#linen)" filter="url(#soft)"/>
+ <g fill="none" stroke="url(#hem)" filter="url(#soft)">
+  <path d="M45 -30C-8 218 120 410 60 620S37 827 32 1030" stroke-width="9"/>
+  <path d="M173 -30C94 161 224 347 146 537S130 816 78 1030" stroke-width="13"/>
+  <path d="M296 -30C229 178 324 314 221 523S196 844 134 1030" stroke-width="6"/>
+ </g>
+</svg>

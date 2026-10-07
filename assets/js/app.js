@@ -3,6 +3,7 @@
  const $=s=>document.querySelector(s),A=window.HerArchive,G=window.FoldBook,D=window.bookData,R=window.ReadingRoute;
  const viewport=$('#book-viewport'),pages=Array.from(document.querySelectorAll('.leaf'));
  const ruler=$('#book-position'),cat=$('#cat-thumb'),reduced=matchMedia('(prefers-reduced-motion: reduce)'),max=pages.length-1;
+ let previousPaint=null;
  let cursor=0,target=0,position=0,raf=0,lastTime=0,lastIndex=-1,drag=null,suppressClick=false,rulerPointer=null,rulerOffset=0;
  let rulerBox={left:0,width:1},catWidth=120,motionTime=105;
  const key='cat-ruler-focus-v2';
@@ -36,6 +37,7 @@
      node.style.setProperty('--defocus',(G.clamp(Math.abs(i-position)-.7,0,2)*3.5).toFixed(2)+'px');node.style.setProperty('--fold-light',(1-Math.abs(leaf.a)/180).toFixed(3));node.style.setProperty('--font',font+'px');
      node.classList.toggle('near',Math.abs(i-position)<1.4);
    });
+   window.LeafArrivals?.update({position,previous:previousPaint});previousPaint=position;
    const cup=state.page<1?0:state.page>1?1:scene.cup;
    pages[1].style.setProperty('--cup',cup);
    document.querySelectorAll('[data-room]').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.room)===(cup>.5?1:0))));
@@ -95,12 +97,12 @@
  function startRuler(event,fromCat){
    if(event.button!==0)return;event.preventDefault();measure();ruler.focus({preventScroll:true});rulerPointer=event.pointerId;
    rulerOffset=fromCat?event.clientX-(rulerBox.left+position/max*rulerBox.width):0;
-   ruler.setPointerCapture(event.pointerId);document.body.classList.add('is-cat-dragging');rulerPoint(event);
+   ruler.setPointerCapture(event.pointerId);document.body.classList.add('is-cat-dragging');document.body.classList.toggle('is-cat-held',fromCat);rulerPoint(event);
  }
  cat.addEventListener('pointerdown',event=>startRuler(event,true));
  ruler.addEventListener('pointerdown',event=>startRuler(event,false));
  ruler.addEventListener('pointermove',event=>{if(rulerPointer!==event.pointerId)return;event.preventDefault();rulerPoint(event);});
- function endRuler(){rulerPointer=null;document.body.classList.remove('is-cat-dragging');remember();}
+ function endRuler(){rulerPointer=null;document.body.classList.remove('is-cat-dragging');document.body.classList.remove('is-cat-held');remember();}
  ruler.addEventListener('pointerup',endRuler);ruler.addEventListener('pointercancel',endRuler);ruler.addEventListener('lostpointercapture',endRuler);
  ruler.addEventListener('keydown',event=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){event.preventDefault();move(event.key==='Home'?0:event.key==='End'?max:Math.round(position)+(event.key==='ArrowRight'?1:-1));}});
  for(let i=0;i<=pages.length;i++){const tick=document.createElement('span');tick.textContent=String(i).padStart(2,'0');tick.style.left=i/pages.length*100+'%';$('#ruler-marks').append(tick);}

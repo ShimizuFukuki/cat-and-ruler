@@ -44,7 +44,6 @@
    b.setAttribute('aria-pressed',String(s.playing));
    b.setAttribute('data-state',pauseAction?'pause':'play');
    b.setAttribute('title',(pauseAction?'暂停':'播放')+'《'+s.track.title+'》');
-   const action=b.querySelector('.score-action');if(action)action.textContent=pauseAction?'暂停':'听曲';
    b.setAttribute('aria-label',(pauseAction?'暂停':'播放')+'《'+s.track.title+'》');
    if(b.classList.contains('modal-listen'))b.textContent=pauseAction?'暂停音乐':'听曲';
   });
@@ -52,8 +51,8 @@
   setText('listen-byline',s.blocked?'浏览器正等待一次点击':s.track.person+' · '+fmt(s.time)+' / '+fmt(s.duration));
   menu.setAttribute('aria-label',s.blocked?'开启背景音乐；浏览器阻止了自动播放':'选择曲目与音量');
   choices.forEach((b,i)=>{b.setAttribute('aria-pressed',String(s.index===i));b.querySelector('.track-number').textContent=s.playing&&s.index===i?'♪':String(i+1).padStart(2,'0');});
-  const label=s.blocked?'点击唱片，开始听曲':s.error?'暂时无法播放':s.waiting?'下一首，稍等片刻':s.loading?'正在准备音乐':s.playing?'正在播放':'已暂停';
-  setText('listening-status',s.blocked?'浏览器阻止了自动播放。点一下唱片，之后曲目会自动接续。':s.error||label);setText('music-label',label);
+  const label=s.blocked?'点击播放键，开始听曲':s.error?'暂时无法播放':s.waiting?'下一首，稍等片刻':s.loading?'正在准备音乐':s.playing?'正在播放':'已暂停';
+  setText('listening-status',s.blocked?'浏览器阻止了自动播放。点一下音乐盒的播放键，之后曲目会自动接续。':s.error||label);setText('music-label',label);
   setText('music-status',s.error);
   setText('music-time',fmt(s.time)+' / '+fmt(s.duration));
   setText('listening-volume-value',Math.round(s.volume*100)+'%');

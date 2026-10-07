@@ -1,0 +1,72 @@
+/* Local revision: letterpress foreword, a visible J, and the room's quiet air. */
+.opening-note{--soul-ink:#33432f;--soul-soft:#657454}
+.opening-note .prologue-imprint{font-size:11px;font-weight:600;color:#685f43;letter-spacing:.09em}
+.opening-note .prologue-imprint time{font-size:10px;color:#756849}
+.opening-note h2.prologue-title{margin-bottom:13px}
+.foreword-setting{margin-left:15px;margin-right:10px;column-gap:12px;max-width:325px;grid-template-columns:minmax(0,1fr) 22px}
+.foreword-premise{position:relative;line-height:0}
+.foreword-days{display:block;width:100%;max-width:282px;height:auto;user-select:none}
+.foreword-margin{font-size:12px;font-weight:600;letter-spacing:.15em;color:#756849;padding-top:9px}
+.foreword-margin:after{left:-8px;background:linear-gradient(#87794f66,#b4aa7e0a)}
+.foreword-correspondence{margin-top:18px;padding-top:12px;border-top:1px solid #8b91724d}
+.foreword-names{font-size:clamp(23px,1.72vw,29px);font-weight:500;color:#3c5034;gap:13px;margin-bottom:11px;letter-spacing:-.012em}
+.foreword-names i{font-size:12px;color:#786b4b}
+.foreword-prose{font-size:clamp(14px,1.04vw,17px);font-weight:600;line-height:1.95;letter-spacing:.035em;color:#3f4936;text-shadow:none}
+.foreword-line{display:block;white-space:nowrap}
+.foreword-line:last-child{padding-left:.6em;margin-top:6px;color:#49543e}
+.opening-note .prologue-turn{font-size:12px;font-weight:600;color:#69603f;margin-top:15px;letter-spacing:.15em}
+.opening-note .prologue-turn svg{stroke:#796b45;stroke-width:1.05}
+
+/* The large J is a printed initial, beneath the diary and clear of its ink. */
+.judas-leaf .blind-letter{right:5%;top:5%;font-style:italic;font-size:calc(var(--leaf-h)*.76);line-height:1;color:#847b5a73;text-shadow:1.3px 1.3px 0 #f4ebcf8c,-.6px -.6px 0 #77705240;transform:rotate(4deg);z-index:0;opacity:1}
+.judas-leaf .leaf-content>:not(.blind-letter):not(.paper-breath){position:relative;z-index:1}
+.judas-leaf .diary-text{isolation:isolate}
+
+/* Motion affects the room and the paper surface, never the reading position. */
+.room-breath{position:absolute;inset:-15%;pointer-events:none;overflow:hidden}
+.room-breath i{position:absolute;inset:-12%;pointer-events:none}
+.room-breath .passing-light{background:linear-gradient(112deg,transparent 32%,#fff9dc00 39%,#fff9dca6 48%,#fffbea40 58%,transparent 67%);opacity:.34;transform:translateX(-7%) rotate(-2deg);animation:room-light 21s ease-in-out infinite alternate}
+.room-breath .passing-shade{background:linear-gradient(112deg,transparent 39%,#7f795f20 47%,#b2a98309 57%,transparent 63%);opacity:.35;transform:translateX(11%);animation:room-shade 26s ease-in-out infinite alternate}
+@keyframes room-light{to{opacity:.58;transform:translateX(9%) rotate(2deg)}}
+@keyframes room-shade{to{opacity:.52;transform:translateX(-8%)}}
+.leaf-content>.paper-breath{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(105deg,transparent 15%,#fff7d500 35%,#fff9df52 52%,#fffbe81c 61%,transparent 81%);opacity:.08;transform:translateX(-18%);animation:paper-light 15s ease-in-out infinite alternate}
+.leaf:not(.near) .paper-breath,.leaf[hidden] .paper-breath{animation-play-state:paused;opacity:0}
+.leaf:nth-child(even) .paper-breath{animation-delay:-6s;animation-direction:alternate-reverse}
+@keyframes paper-light{to{opacity:.22;transform:translateX(18%)}}
+.cat-resting-body{transform-box:fill-box;transform-origin:50% 100%;animation:sleeping-cat 5.8s ease-in-out infinite}
+@keyframes sleeping-cat{0%,100%{transform:scaleY(1)}45%{transform:scaleY(1.048)}62%{transform:scaleY(1.046)}}
+.is-cat-dragging .cat-resting-body{animation-play-state:paused}
+body.ambient-paused .room-breath i,body.ambient-paused .paper-breath,body.ambient-paused .cat-resting-body,
+body.modal-open .room-breath i,body.modal-open .paper-breath,body.modal-open .cat-resting-body{animation-play-state:paused}
+
+/* Keep the current desktop layout at shorter laptop heights. Mobile is deferred. */
+@media(min-width:801px) and (max-width:1200px){
+ .opening-note .prologue-imprint{font-size:10px;margin-left:8px;gap:12px}
+ .foreword-setting{margin-left:8px;margin-right:0;column-gap:9px;grid-template-columns:minmax(0,1fr) 18px}
+ .foreword-names{font-size:22px;gap:9px}
+ .foreword-prose{font-size:clamp(12px,calc((var(--opening-width) - 39px)/12.4),14px);letter-spacing:.02em;line-height:1.95}
+ .foreword-margin{font-size:11px}
+ .foreword-correspondence{margin-top:13px;padding-top:10px}
+}
+@media(min-width:801px) and (max-height:750px){
+ .opening-note h2.prologue-title{width:min(100%,calc(var(--leaf-h)*.43));margin-bottom:8px}
+ .foreword-days{max-width:235px}
+ .foreword-correspondence{margin-top:12px;padding-top:9px}
+ .foreword-names{font-size:23px;margin-bottom:8px}
+ .foreword-prose{font-size:min(14px,calc((var(--opening-width) - 39px)/12.4));line-height:1.85}
+ .opening-note .prologue-turn{margin-top:10px}
+}
+@media(min-width:801px) and (max-height:570px){
+ .opening-note h2.prologue-title{width:min(100%,calc(var(--leaf-h)*.41))}
+ .foreword-days{max-width:195px}
+ .foreword-correspondence{margin-top:8px;padding-top:7px}
+ .foreword-names{font-size:20px;margin-bottom:6px}
+ .foreword-prose{font-size:12px;line-height:1.75}
+ .foreword-margin{font-size:10px}
+ .opening-note .prologue-turn{min-height:28px;margin-top:7px}
+}
+@media(prefers-reduced-motion:reduce){
+ .room-breath i,.paper-breath,.cat-resting-body{animation:none!important}
+ .room-breath .passing-light{opacity:.34;transform:none}
+ .leaf-content>.paper-breath{opacity:.06;transform:none}
+}

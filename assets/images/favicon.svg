@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+<title>猫与尺</title>
+<path d="M6 1H26C29 1 31 3 31 6V26C31 29 29 31 26 31H6C3 31 1 29 1 26V6C1 3 3 1 6 1Z" fill="#e9e1ca"/>
+<path d="M23 16C27 16 27 22 30 23C31 24 30 26 29 26C25 25 26 21 22 20Z" fill="#435a42"/>
+<ellipse cx="18.5" cy="15.5" rx="10" ry="7" fill="#576e51"/>
+<path d="M3 13L4 5L10 10L15 6L17 14Z" fill="#576e51"/>
+<ellipse cx="9" cy="15.5" rx="7" ry="7" fill="#899777"/>
+<path d="M4 16C5 18 7 18 8 16M10 16C11 18 13 18 14 16" fill="none" stroke="#30432e" stroke-width="1.05" stroke-linecap="round"/>
+<path d="M8 19L9 20L10 19" fill="none" stroke="#435a42" stroke-width=".9" stroke-linecap="round"/>
+<path d="M4 22C5 20 9 21 11 21C14 20 17 21 17 23H4Z" fill="#899777"/>
+<path d="M2 24H30V28H2Z" fill="#b5a16a"/>
+<path d="M4 24V27M9 24V26M14 24V27M19 24V26M24 24V27M28 24V26" stroke="#736540" stroke-width=".7"/>
+</svg>
