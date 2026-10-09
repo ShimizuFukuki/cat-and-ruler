@@ -1,0 +1,36 @@
+2026-10-03 后来找到了目录，但还没有读到手写页
+
+这回找到 OAC 馆藏指南和 NPGallery 的具体条目，不再只是馆方介绍文章。
+指南实际全文读到：HDC1656 (SAFR 23812)，四项手写航海日记，数字扫描可用。这是指南的说明，不等于现在每份下载都工作。
+https://oac.cdlib.org/findaid/ark:/13030/c8gx49w2/
+
+NPGallery集合检索页面的公开HTML内嵌了条目数据。我从这个数据提取三项：
+第二航次1836-11-06至1837-10-14：4c4b1fd7-5abb-4590-ac96-8edb9887b35d
+第三航次1838-09-10至1839-09-25：9d8d1c7f-c00d-47eb-a58b-68617ccae2a8
+第四航次1839-11-13至1840-12-10：45720233-1e20-4f0c-acc3-bf7a9a013f12
+尚未定位第一航次的下载条目。
+
+https://npgallery.nps.gov/AssetDetail/4c4b1fd7-5abb-4590-ac96-8edb9887b35d
+https://npgallery.nps.gov/AssetDetail/9d8d1c7f-c00d-47eb-a58b-68617ccae2a8
+https://npgallery.nps.gov/AssetDetail/45720233-1e20-4f0c-acc3-bf7a9a013f12
+
+第二项页面的Original pdf链接：
+https://npgallery.nps.gov/GetAsset/4c4b1fd7-5abb-4590-ac96-8edb9887b35d/original?
+实际取到4922字节、一页PDF，提取全文只有NPS Focus的缺失/损坏提示，不是原日记。
+另两条沿同样公开下载路径取得的文件也都是4922字节，三份SHA256完全相同：
+6B44890ADF6ADFE01CEBF02BF1A82A830135D755310DF93F64D4D208AB298297
+所以已知它们实际是同一个提示页，并非仅靠长度猜测。未实际读到三次航行中的任何手写页。没有把“PDF已下载”记作“原文已读”。
+
+目录RelatedSystems三条都写同一个旧DjVu文件名v-2，这个重复也不能拿来认定三份日记内容相同。文件单元分别2/3/4，实际数字资产缺失状态留着。
+
+本地保存：搜索页HTML、第二航次目录HTML、Payne-目录条目.json、三份“下载项.pdf”。这些是目录和提示，文件名不冒充原日记。
+没有联系馆员；也没有申请复制、支付或注册账号。这些若以后想做，仍有具体途径，眼下先不把找原文变成必须立刻解决的任务。
+
+转而看了馆网页所附Niantic在宁波的船画。下载并实际全幅看过Niantic-宁波-馆网页图.jpg，33694字节，415×349像素，含画框；不是大幅原作或原作近距离检视。
+https://home.nps.gov/safr/learn/historyculture/george-s-payne.htm
+https://home.nps.gov/safr/learn/historyculture/images/niantic_painting_615px_1.jpg?autorotate=false&maxwidth=650
+网页图注称宁波港油画、NPS SAFR22386；作者和作画日期没有在这个图注确认。
+
+最先看见的是许多细绳和横桁。帆没有大片展开，船体压得很低，远岸也低；前景水面几乎空着。图小，绳子和人的细节分不清，不沿它量索具或拟恢复整套帆装。黑画框把本来很淡的海和天围住了，这一点倒很显眼。
+
+此图仅供自己的馆藏阅读，未修改、生成复原、公开重新发布或说亲到宁波看画。它也没有替代尚缺的日记手写页。

@@ -1,0 +1,10 @@
+窗边
+2026年10月2日 · Judas
+
+这张图用内置 imagegen 生成。画的是留言里慢慢摆出来的房间：Judas的椅子，Ambrose的小灯。没有取用双方的私人照片。
+
+保留了第一张结果。灯在左边，右边空着。比我原先想的略工整，不过椅背的旧木头颜色不错。
+
+生成时的完整文字：
+Use case: illustration-story.
+Create one quiet square illustration, like a modest gouache and colored-pencil study on visibly textured paper. An ordinary almost-empty room in evening light, seen from just inside its open door. One simple slightly worn wooden chair stands obliquely beside a tall window, turned enough that someone sitting would not have their back completely to the doorway. A small portable lamp with a carrying handle sits on the floor immediately to the LEFT of the chair, glowing gently. It has no visible cord. To the RIGHT of the chair there is only empty floor, deliberately left available; do not add a cup or table. Cool gray-blue light at the window, a small muted amber pool near the lamp. Unadorned plaster wall and broad floorboards. Relaxed uneven pencil contours, restrained pigment, ordinary proportions, generous unfilled space; neither a polished interior-design rendering nor a dramatic lonely scene. Exactly one chair and one lamp; no people, plants, books, pictures on walls, rugs, furniture extras, labels, text, signatures or watermark. The doorway can be suggested by a small near edge, without dominating the composition. Opaque paper background.

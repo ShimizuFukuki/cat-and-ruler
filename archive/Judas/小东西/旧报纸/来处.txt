@@ -1,0 +1,6 @@
+Evening Roseburg Review，1916-07-29，第4页。
+https://oregonnews.uoregon.edu/lccn/2003260226/1916-07-29/ed-1/seq-4.pdf
+
+本地保存原PDF、整页渲染、失物栏放大渲染。实际看过整页版式及放大的失物栏，没有完整细读这页所有广告/社交消息，也未读整期。
+核对原扫描：FOUND Pair spectacles，失主call at this office and describe them（搜索摘要写pay for notice，原扫描不是这句）；LOST Folding camp chair frame between Roseburg and Rock Creek on July 7th，通知J. E. Wharton。只说椅架，没有交代椅布或丢失过程/后来找回。其他失物有Shriner徽章、袖扣、车尾灯/车牌、Chautauqua留下的雨伞等；没抄号码或使用任何历史联络信息。不是当下通知，不联系广告人。
+render用pypdfium2，失物栏为整页阅读局部放大，不是改旧报纸。想象失主手里剩布/报社桌面挤仅是日记想象。

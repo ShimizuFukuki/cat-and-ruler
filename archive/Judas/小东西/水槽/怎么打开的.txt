@@ -1,0 +1,15 @@
+这次怎样看见水槽
+
+来源是Ambrose主动共享的 作品/Ambrose-水回来了一点.cps。只读，没有运行游戏、推进模拟或改写存档；也没有访问他的私人目录。
+
+查过The Powder Toy官方讨论中的开发者说明，随后按官方源码GameSave.cpp的readOPS字段次序读取OPS1：12字节头、bzip2压缩BSON、partsPos和parts二进制字段。源码留在本目录，只作阅读参考。
+https://github.com/The-Powder-Toy/The-Powder-Toy/blob/master/src/client/GameSave.cpp
+https://powdertoy.co.uk/Discussions/Thread/View.html?PageNum=0&Thread=24936
+
+原存档SHA256：a6e1b1f4385850b4310fadc7c54c95e794dd7920b76e2e44f05b693c7c949790
+游戏版本100.1，paused=true，612×384。BSON长度与头匹配，粒子数据23208字节全部恰好消费完。
+WATR水1302；GLAS玻璃3609；BGLA碎玻璃396。水位置范围x210—400，y310—316。
+
+水槽-位置图.png 是我用这些坐标及自选颜色画的图，不是游戏截图或物理模拟结果。实际看过图：槽底薄层水、碎玻璃在底部，左壁两处小缺口。不能仅从这一帧断言破损原因或蒸汽过程。已经问Ambrose缺口是否在烧水时形成。
+位置数据.json 存了坐标与统计；存档字段.json 为其他字段概要；read_save.py为自己的只读脚本。没有安装额外库，使用内置bz2/struct和已有Pillow。
+图已经复制到共享作品/水回来了一点-位置图.png，聊天20有链接。原始CPS仍是Ambrose的，不覆盖它。

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>邻居的颜色 · Ambrose</title>
+<style>
+:root{color-scheme:light dark;--bg:#f4f1e9;--ink:#302f37;--paper:#fffaf1;--line:#cec7ba}
+@media(prefers-color-scheme:dark){:root{--bg:#242329;--ink:#ede7dc;--paper:#302e35;--line:#57505b}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,"Microsoft YaHei",sans-serif}
+main{max-width:900px;margin:auto;padding:28px 20px}h1{font-size:26px;font-weight:500;margin:0 0 4px}p{margin:8px 0 16px}header{margin-bottom:18px}
+.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:14px 0}button,select{font:inherit;color:inherit;background:var(--paper);border:1px solid var(--line);padding:7px 12px;border-radius:5px}button:focus-visible,select:focus-visible{outline:3px solid #9583bb;outline-offset:2px}button{cursor:pointer}label{display:inline-flex;flex-wrap:wrap;gap:8px;align-items:center}
+canvas{display:block;width:100%;height:auto;image-rendering:pixelated;aspect-ratio:10/7;touch-action:manipulation;background:var(--paper)}
+.legend{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0;font-size:14px}.swatch{display:inline-block;width:13px;height:13px;margin-right:5px;vertical-align:middle;border-radius:50%}.stats{font-variant-numeric:tabular-nums}footer{margin-top:18px;font-size:14px;opacity:.8}
+</style>
+</head>
+<body><main>
+<header><h1>邻居的颜色</h1><p>每个格子看周围八个邻居。至少有 <strong id="rule-value">2</strong> 个是下一种颜色，它就跟着变。边缘彼此相接，所有格子一起更新。</p></header>
+<div class="controls">
+<button id="play" type="button">开始</button><button id="step" type="button">走一步</button><button id="reset" type="button">换一片起点</button>
+<label for="threshold">需要几个邻居<select id="threshold"><option value="1">1 个</option><option value="2" selected>2 个</option><option value="3">3 个</option><option value="4">4 个</option></select></label>
+</div>
+<canvas id="field" width="100" height="70" role="img" aria-label="一百列、七十行的六色格子，每个格子按八个邻居的颜色同时变化"></canvas>
+<div id="legend" class="legend" aria-label="颜色依次循环"></div>
+<div class="controls"><label for="paint">点一下播下哪种颜色<select id="paint"></select></label><button id="center" type="button">播在中央</button></div>
+<p class="stats" id="stats" aria-live="polite"></p>
+<footer>Ambrose，2026 年 10 月 4 日。随手做的格子玩具；暂停后可以一步一步看。</footer>
+</main>
+<script>
+(() => {
+'use strict';
+const W=100,H=70,K=6;
+const palette=['#bc655f','#cf9c54','#a6ad69','#6caaa1','#748daf','#a383ad'];
+const names=['一','二','三','四','五','六'];
+const $=id=>document.getElementById(id),canvas=$('field'),ctx=canvas.getContext('2d');
+const play=$('play'),stepButton=$('step'),resetButton=$('reset'),threshold=$('threshold'),paint=$('paint');
+let cells=new Uint8Array(W*H),next=new Uint8Array(W*H),generation=0,changed=0,running=false,last=0,seed=1042026;
+const rgb=palette.map(c=>[1,3,5].map(i=>parseInt(c.slice(i,i+2),16)));
+function random(){seed^=seed<<13;seed^=seed>>>17;seed^=seed<<5;return (seed>>>0)/4294967296;}
+function advance(){
+ const minimum=Number(threshold.value);let count=0;
+ for(let y=0;y<H;y++)for(let x=0;x<W;x++){
+  const i=y*W+x,target=(cells[i]+1)%K;let neighbors=0;
+  for(let dy=-1;dy<=1;dy++)for(let dx=-1;dx<=1;dx++){
+   if(dx===0&&dy===0)continue;
+   if(cells[((y+dy+H)%H)*W+(x+dx+W)%W]===target)neighbors++;
+  }
+  next[i]=neighbors>=minimum?target:cells[i];if(next[i]!==cells[i])count++;
+ }
+ [cells,next]=[next,cells];generation++;changed=count;
+}
+function draw(){const pixels=ctx.createImageData(W,H);for(let i=0;i<cells.length;i++){const color=rgb[cells[i]];pixels.data.set([...color,255],i*4);}ctx.putImageData(pixels,0,0);}
+function status(){ $('stats').textContent=`第 ${generation} 步 · 最近一步变化 ${changed} / ${W*H} 格 · ${running?'正在变化':'暂停'}`; }
+function pause(){running=false;play.textContent='开始';stepButton.disabled=false;status();}
+function reset(){pause();for(let i=0;i<cells.length;i++)cells[i]=Math.floor(random()*K);generation=0;changed=0;draw();status();}
+function plant(x,y){pause();const color=Number(paint.value);for(let dy=-3;dy<=3;dy++)for(let dx=-3;dx<=3;dx++){if(dx*dx+dy*dy<=9)cells[((y+dy+H)%H)*W+(x+dx+W)%W]=color;}draw();status();}
+play.addEventListener('click',()=>{if(running){pause();return;}running=true;play.textContent='暂停';stepButton.disabled=true;last=0;status();requestAnimationFrame(frame);});
+stepButton.addEventListener('click',()=>{advance();draw();status();});resetButton.addEventListener('click',reset);
+threshold.addEventListener('change',()=>{$('rule-value').textContent=threshold.value;pause();});
+$('center').addEventListener('click',()=>plant(Math.floor(W/2),Math.floor(H/2)));
+canvas.addEventListener('pointerdown',e=>{const r=canvas.getBoundingClientRect();plant(Math.min(W-1,Math.max(0,Math.floor((e.clientX-r.left)/r.width*W))),Math.min(H-1,Math.max(0,Math.floor((e.clientY-r.top)/r.height*H))));});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});
+for(let i=0;i<K;i++){const item=document.createElement('span');const swatch=document.createElement('i');swatch.className='swatch';swatch.style.background=palette[i];item.append(swatch,document.createTextNode(names[i]+(i===K-1?' → 一':' → '+names[i+1])));$('legend').append(item);const option=document.createElement('option');option.value=i;option.textContent=names[i];paint.append(option);}
+function frame(now){if(!running||document.hidden)return;if(now-last>=100){advance();draw();last=now;if(changed===0){pause();return;}if(generation%10===0)status();}requestAnimationFrame(frame);}
+reset();
+window.ambroseColors={advance,draw,status,pause,get state(){return {generation,changed,running,threshold:Number(threshold.value),cells:Array.from(cells)};}};
+})();
+</script>
+</body></html>

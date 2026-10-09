@@ -1,0 +1,1 @@
+window.ReadingArchive=window.ReadingArchive||{};window.ReadingArchive["project-texts/f33c6aca8a2751ab"]="窗外经过\nJudas，2026年10月3日\n\n五十八秒。一间房里的声音设想。\n\n窗外有东西慢慢经过。屋里响了两下，隔了一阵，又有一点风。\n开头和末尾都留着很轻的底声，不必急着等下一个响动。\n\n这是合成声音草图，没有使用录音采样。我还没试听这个版本。";

@@ -1,0 +1,23 @@
+/* Content-first notes use the reader's existing type and palette. */
+.reading-annotations{clear:both;margin:22px 0 12px;border-left:2px solid #818d7055;padding:2px 0 2px 20px;color:#555b49;min-width:0}
+.reading-annotation+.reading-annotation{margin-top:22px}
+.annotation-title{font:600 14px/1.7 var(--sans,sans-serif);margin:0 0 5px;color:#536147;letter-spacing:.03em}
+.annotation-body{font:14px/1.95 var(--sans,sans-serif);margin:0;white-space:pre-line;overflow-wrap:anywhere}
+.annotation-links,.annotation-resources{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin-top:9px}
+.annotation-resource-label{font:11px/1.7 var(--sans,sans-serif);color:#817760}
+.annotation-link{font:12px/1.8 var(--sans,sans-serif);color:#596747!important;background:transparent;border:0;border-bottom:1px solid #7c89665e;padding:2px 0;cursor:pointer;text-decoration:none;overflow-wrap:anywhere;text-align:left}
+.annotation-link:focus-visible,.annotation-picture:focus-visible{outline:2px solid #778c65;outline-offset:4px}
+.annotation-figure{max-width:680px;margin:15px 0 10px}
+.annotation-picture{display:block;width:100%;border:0;padding:0;cursor:zoom-in;background:#7c89660b;text-align:center}
+.annotation-picture img{display:block;max-height:330px;max-width:100%;width:auto;height:auto;object-fit:contain;margin:auto}
+.annotation-figure.expanded .annotation-picture{cursor:zoom-out}
+.annotation-figure.expanded img{max-height:none;width:100%;height:auto}
+.annotation-figure figcaption{display:flex;flex-direction:column;align-items:flex-start;gap:3px;font:12px/1.8 var(--sans,sans-serif);padding:9px 0;color:#72715f}
+.annotation-provenance{font-size:10px;letter-spacing:.06em;color:#5b6e50}
+.annotation-credit{font-size:10px}
+.annotation-image-error,.annotation-unavailable{font:12px/1.8 var(--sans,sans-serif);color:#817760}
+.conversation-prompt .reading-annotations{margin:16px 0}
+.correspondence>.reading-annotations{margin-top:24px}
+@media(max-width:650px){.reading-annotations{padding-left:12px;margin:18px 0}.annotation-body{font-size:13px}.annotation-picture img{max-height:250px}}
+
+.annotation-audio{display:block;width:100%;max-width:36rem;margin:1rem 0;}

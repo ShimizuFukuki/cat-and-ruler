@@ -1,0 +1,5 @@
+.room-embedded #welcome,.room-embedded #loading{display:none!important}
+.room-embedded .masthead,.room-embedded #hotspots,.room-embedded .room-footer{transition:opacity .5s ease}
+.room-embedded.room-travelling .masthead,.room-embedded.room-travelling #hotspots,.room-embedded.room-travelling .room-footer,.room-embedded.room-travelling #selection{opacity:0;pointer-events:none}
+.room-embedded .home i{letter-spacing:.12em}
+@media(max-width:600px){.room-embedded .home>span{display:none}.room-embedded .home i{display:block;border:0;padding-left:0;font-size:12px}.room-embedded .home{gap:8px}}

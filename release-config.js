@@ -1,0 +1,1 @@
+window.CatRulerRelease={root:new URL(".",document.currentScript.src).href,remote:{"Judas/小东西/旧金山的船/地下船只地图.jpg": "https://github.com/ShimizuFukuki/cat-and-ruler/releases/download/archive-assets-20261009/d478ca312e16.jpg", "Ambrose/阅读/海上风信/清代琉球纪录集辑续辑合订本.pdf": "https://github.com/ShimizuFukuki/cat-and-ruler/releases/download/archive-assets-20261009/9dfc77d6ddec.pdf"}};

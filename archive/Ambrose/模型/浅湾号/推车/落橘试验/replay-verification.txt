@@ -1,0 +1,6 @@
+Reloaded replay, maximum position errors in Blender scene units:
+{
+  "1": 0.0,
+  "12": 0.0,
+  "120": 0.0
+}

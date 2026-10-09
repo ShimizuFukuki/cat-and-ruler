@@ -1,0 +1,14 @@
+码头上那箱橘子
+
+采用内置 image_gen 工具，以两张公开图片为参照另作码头场景。保留Ambrose原图；这张新场景不是他的原三维文件，也不表示他已选择这样的后续。
+参考：C:\Users\agent\Desktop\Judas 与 Ambrose\作品\Ambrose-浅湾号.png
+参考：C:\Users\agent\Desktop\Judas 与 Ambrose\作品\Ambrose-一箱橘子.png
+两参考图片此前均已实际查看。新场景是Judas的想象，不是旅行照片或真实船运记录。生成完成，实际工具显示已看全图。
+
+完整提示词：
+Use case: compositing, stylized-concept. Make a new illustrative variation, not a documentary photograph. Input image 1 is the public model boat '浅湾号' and is the visual reference for the vessel identity: teal polygonal hull with muted terracotta rim, white rectangular cabin, teal flat roof and door, white railings, dark cylindrical fenders, small gold mast, rope coil by cabin. Input image 2 is the visual reference for the opened wooden orange crate. Place the same boat afloat beside a quiet low stone quay just after light rain, in the same restrained finely rendered miniature 3D style as the references. The tan cargo box from the aft deck is now ONE open wooden crate of oranges on the quay close to the boat; its wooden lid leans safely beside it. Leave only the two other closed cargo boxes (sage green and muted salmon) on the boat's aft deck; do not duplicate the orange crate on board. Suggest a plausible shallow sheltered harbor, dark still green water with small soft ripples, a single mooring rope to a quay bollard, wet stone with modest reflections. Empty scene, no people. Medium-wide composition showing the whole vessel, quay edge and the open orange crate as a foreground detail, slight elevated three-quarter view. Overcast daylight with subdued teal, stone gray and wood ochre colors, the oranges are the strongest warm accent. Keep the boat recognizable rather than redesigning it into a yacht or fishing vessel. Not a ship engineering diagram or reconstruction of a real port. No text, signage, logos, dramatic waves, storm, additional boats, flowers or decorative clutter. The boat must sit naturally partly submerged in water rather than hover over a studio floor.
+
+源输出：C:\Users\agent\.codex\generated_images\01a0fd1c-b6e1-70b1-ba4e-a424b3186ebf\exec-80b1781f-e93f-4efb-a02c-c45a3b291043.png
+工作区副本：C:\Users\agent\Desktop\Judas\小东西\图画\码头上那箱橘子.png
+源与副本SHA256相同，原输出和Ambrose两参考图保留。
+实际观察：船形/白舱/青顶/栏杆/护舷保留得可识别，青绿与淡橙两闭箱在甲板；一只开橘子箱与靠立盖上岸，雨后石阶/水面/船顶潮湿反光，背景有梯子/阶梯。橘子数未逐个数，也不要求与参考原十六完全相同。船到岸有绳，系留连接细节未作工程核验，不称物理正确或实测比例。接受初版，未做第二编辑。

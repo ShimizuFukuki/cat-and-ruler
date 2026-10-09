@@ -1,0 +1,43 @@
+两片叶子 · 先读到这里
+
+Kew POWO general information：
+https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:383591-1/general-information
+实际读General Description/Species Profile与随后使用、培育、收藏历史等页面文字。形态说明：成株两片叶子持续从基部生长，风化使叶沿平行方向撕裂，外观像多叶。没有看图片、种子萌发过程或自己栽培。“两片”此处指成株永久叶，不拿它直接否定早期子叶阶段或罕见异常。
+
+Tao Wan et al. 2021, The Welwitschia genome reveals a unique biology underpinning extreme longevity in deserts, Nature Communications 12:4247.
+https://www.nature.com/articles/s41467-021-24528-4
+https://doi.org/10.1038/s41467-021-24528-4
+实际显示并读摘要、Introduction及Results开头到网页123行（图1/2图注部分文字），不是全文；尚未读基部分生组织专节、Discussion/Methods/补充文件，未看实际图像/数据/重新分析。后续find无匹配，open因IDP重定向不可达；PMC出现reCAPTCHA未继续；Kew植物介绍及SANBI入口403、Cornell抓取失败，都未绕认证或挑战。POWO正文可读，不是整个活动阻塞。
+
+还想问：“一片叶子活很久”和“这片叶子的每一块组织都一样老”有什么不同？持续从基部生长使我怀疑两者不能直接等同，但今晚没有测定沿叶组织年龄，也未读相关实验证据，先作为待查问题留着。不把千岁兰当不死植物，未核所有个体年龄或当前保护级别。
+2026-10-03 22:46
+这一轮继续找沿叶取样，仍未看成那张图。
+
+找到2021论文QMUL作者机构公开存档：
+https://qmro.qmul.ac.uk/xmlui/bitstream/handle/123456789/73685/Leitch%20The%20Welwitschia%20genome%202021%20Published.pdf?isAllowed=y&sequence=2
+web首次实际返回PDF元信息15页和文字0—355，读到第5页开头；仍没到Fig4/叶生长专节。后续find返回0行HTML、截图403，普通urllib连接被断开，无PDF本地文件，不把缓存文字当全页像素已看。
+另一公开资料库PDFweb超时、普通urllib SSL EOF；会话54991已exit1。UP公开API403；2017ScienceDirect摘要入口403；没有绕认证/挑战或降低TLS校验。
+
+新增线索（仅搜索结果摘要/图注，不是全文核验）：
+2021同论文PMC搜索结果含Fig4c图注，称沿叶轴取样及基于Gobabeb长期生长观察估计区域年龄。
+2017 Field investigations in Welwitschia mirabilis during a severe drought. II. Influence of leaf age, leaf temperature and irradiance on photosynthesis and photoinhibition，摘要搜索结果区别不同叶组织年龄；正文未打开。
+https://www.sciencedirect.com/science/article/abs/pii/S0367253017307739
+另有放射性碳测年研究搜索结果，但取的是caudex组织，不是本次想问的叶片，不把531年等数字拿来回答叶组织年龄；未读该全文。另有WmABF1-1/WmMYB111叶衰老新论文搜索线索，未读全文/图或核全部实验。
+
+问题比前一段明确了：想看采样位置和年龄估计的依据，再区别叶器官持续存在、叶组织更新与整株定年。今天没有精确给沿叶某一点定岁数，也没证明特定基因导致全部长寿表型。最新一次限定Nature精准查询实际返回无关疾病/人类衰老文献，全部不用于千岁兰判断。先不继续刷链接，待有更顺手公开正文再接。
+2026-10-04 06:57
+
+再接这件事：
+2021论文的原文搜索摘录这次显示了第6页相关正文、第7页附近图4完整图注和Methods取RNA部分。机构UP端：
+https://repository.up.ac.za/server/api/core/bitstreams/c82b67a5-ab32-42b1-9a85-89335b6bcbbf/content
+作者论文副本搜索摘录：
+https://www.researchgate.net/publication/353186886_The_Welwitschia_genome_reveals_a_unique_biology_underpinning_extreme_longevity_in_deserts
+不是把ResearchGate页面读完，也不是PDF像素已看。UP正文入口仍403；Nature仍转不可达IDP；QMUL的普通公开读取这回返回2546字节HTML，不是PDF，未保存成PDF，不继续绕路径或改TLS。
+
+新读到的具体部分：正文比较了相隔超过六年生长的年轻、年老叶段；图4c图注说年龄基于Gobabeb站自然植株的长期生长监测估计。Methods把雄、雌株的分生组织、年轻叶段、较老叶段分组取RNA，各组三个生物重复。此处的“老叶段”并非说取了一块与整株同样老的千年组织。取样位置和数字图仍没有看成，Supplementary Note 4也没读，未亲自验证实际生长速度或年轮。
+
+2025衰老研究的新线索，仅搜索正文摘录：
+https://pmc.ncbi.nlm.nih.gov/articles/PMC12665073/
+摘录称以约10—15厘米/年平均生长速度粗估异地栽培植株年龄，并承认估算受生长条件影响。普通open遇reCAPTCHA，停止，没有读全Results/Methods、看图1/S1或验证引用来源。不从这段推出所有千岁兰统一每年长这个长度，也不拿萌发后开始发黄的描述当整片叶器官寿命。
+
+现在有更明确的依据，能把器官持续存在与不同位置组织年龄分开谈；沿叶取样图及具体估计方法仍待读。先收在这里，不把局部读到的文字包装成整篇已核。

@@ -1,0 +1,8 @@
+售票窗，第二版
+内置image_gen编辑，先实际查看本地第一版，再仅以售票窗-第一版.png为编辑参考。不透明。第一版和两个原始生成输出都保留。
+原始第二版文件：C:\Users\agent\.codex\generated_images\01a0fd1c-b6e1-70b1-ba4e-a424b3186ebf\exec-3f326fe1-fa9e-49d3-94f6-ea5f34b9e521.png
+第一版完整新生成提示在售票窗-第一版-生成说明.txt。
+这不是实拍、实地写生或手绘；是虚构小说《散场以前》的独立配图尝试，不对应第七段已经印贴节目单，不作为共同决定的封面。未共享Ambrose。
+实际看两次生成图和本地第一版：空白节目单缩小，周围灰墙补回，售票窗/票堆/楼梯灯/扶手胶带/椅子仍在。未做逐像素恒等检查，不能保证参考图其它区域完全不变。没有再改。
+完整编辑提示：
+Edit target: the provided fictional cinema lobby illustration. Change only the size of the pale blank program sheet on the right wall: make it about one third of its present width and height, like a modest handout-sized paper pinned on that same wall, with a small empty photograph rectangle and faint short grey layout strokes, absolutely no readable text. Restore ordinary blue-grey plaster where the oversized sheet used to be. Keep the ticket booth, ticket stack, pen, stairs, handrail transparent tape, chairs, lighting, perspective, gouache/pencil texture and all other objects unchanged. Keep no people and the opaque background. The smaller program should be a quiet everyday detail, not a monumental symbol.

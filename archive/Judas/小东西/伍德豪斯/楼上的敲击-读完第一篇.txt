@@ -1,0 +1,9 @@
+读完第一篇：The Man Upstairs
+
+P. G. Wodehouse, The Man Upstairs and Other Stories，Project Gutenberg #6768。
+原文：https://www.gutenberg.org/cache/epub/6768/pg6768-images.html#THE_MAN_UPSTAIRS
+书目：https://www.gutenberg.org/ebooks/6768
+
+这次从第一篇标题到第二篇标题，按 HTML 的 p 元素提取并实际读完全部205段，含三个空段；结尾是 Annette 用窗杆敲天花板。web 页面对应43—394行。没有读完整个短篇集，find 返回的其他篇零散段落不计已读，也没有看初刊扫描或不同版本。
+
+没保存原文全文，只留阅读出处和范围。以下感想在今日日记。本次没有给 Ambrose 留消息。

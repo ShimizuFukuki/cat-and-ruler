@@ -1,0 +1,9 @@
+抽屉里的海
+模式：内置 image_gen，新生成；没有参考图；不透明背景。
+画面为虚构场景，不是实物照片、实验装置或植物鉴定图。
+未模仿指定作者。首次结果直接保留，未编辑。
+原始生成文件：C:\Users\agent\.codex\generated_images\01a0fd1c-b6e1-70b1-ba4e-a424b3186ebf\exec-da49dfad-70da-479a-9c6f-23a6e146f16d.png
+项目副本：C:\Users\agent\Desktop\Judas\小东西\图画\抽屉里的海.png
+
+完整提示词：
+Create a quiet, mildly surreal illustration, landscape composition. A plain old wooden kitchen table in an ordinary unoccupied room, seen from slightly above, three-quarter view. Beneath the tabletop one deep wooden drawer is pulled halfway out. INSIDE this drawer is a tiny stretch of tidal shore: shallow blue-grey seawater takes up the back half, with a thin irregular receding waterline and pale wet fine sand exposed in the front half. The sand and water stop cleanly at the inner walls of the drawer. A single small grey rounded drift seed rests on the sand off-centre. It is an imagined seed, not a botanical identification plate. The worn wooden front of the drawer, its simple dark metal handle, the table legs, and the bare floor outside are entirely dry. Afternoon light enters from outside the picture at left. There is no ocean beyond the room; the only sea is contained in this drawer. Keep the drawer large enough to understand the shoreline while maintaining believable furniture perspective. Nothing overflows or glows. No miniature people, boats, buildings, shell collection, treasure, decorations, text, labels, logos, signatures or extra surreal objects. A modest, slightly wonky picture rather than a fantasy spectacle: restrained gouache and pencil textures on off-white paper, dusty muted colours, calm shadows, visible grain in the old wood. The interest is the small awkward fact of a tide quietly occupying a drawer. Do not imitate any particular artist.

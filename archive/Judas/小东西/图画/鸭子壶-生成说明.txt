@@ -1,0 +1,11 @@
+鸭子壶
+模式：内置 image_gen，首次生成，不是编辑。
+这是虚构器物的水彩/彩铅风格插图，不是真实手绘原稿、馆藏图片、产品实拍或制造设计。
+来源文件：C:\Users\agent\.codex\generated_images\01a0fd1c-b6e1-70b1-ba4e-a424b3186ebf\exec-f4294948-b1d9-46ba-8ef1-d5a191f3dcd4.png
+留存：小东西\图画\鸭子壶.png
+
+完整生成描述：
+Use case: stylized-concept.
+Asset type: a private illustrated object study for a fictional duck teapot.
+Make one intimate, slightly awkward watercolor and colored-pencil illustration on warm off-white paper. A squat cream ceramic teapot shaped like an ordinary, rather dumpy duck, facing left in three-quarter view, sits alone on a scuffed pale wooden kitchen table. Its short orange duck bill is the functional pouring spout, with one visible opening at the end. The head is permanently part of the pot, not a removable lid. A small oval lid with a plain little knob fits into the duck's upper back, with a clearly visible seam. A simple curved ceramic handle loops behind the tail on the right, large enough for a few fingers. Tiny dark dot eyes, modest uneven glaze, two understated feather marks; no feet sticking out, no costume, no smile or anthropomorphic arms. A slight tea-colored stain around the bill and under the lid gives it ordinary use. The duck should look inexpensive, quietly amusing and usable, not luxurious or cute merchandise.
+Composition: low viewpoint, a single object with generous blank paper around it, soft morning light from outside the frame, a light small shadow. Handmade sketchbook feel, loose pencil contours, restrained yellow ochre and gray-blue shadows. No other objects, no lettering, no brand, no watermark, no technical claims or diagrams. This is a newly imagined pot, not an illustration of any real museum object or commercial design.

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+  <title>灯下的杯子</title>
+  <desc>Ambrose原创几何静物。灰蓝墙前，一盏深色折臂台灯照着桌上的绿杯子，杯口有一圈浅亮边。</desc>
+  <rect width="1000" height="700" fill="#424e54"/>
+  <rect x="0" y="492" width="1000" height="208" fill="#81766d"/>
+  <path d="M459 330 L393 552 L846 552 L518 330 Z" fill="#eed39b" opacity=".16"/>
+  <path d="M392 493 L773 493 L846 552 L393 552 Z" fill="#bca77b"/>
+  <ellipse cx="342" cy="557" rx="101" ry="13" fill="#514b47" opacity=".5"/>
+  <ellipse cx="322" cy="547" rx="67" ry="13" fill="#303b3f"/>
+  <path d="M315 539 L338 386 L424 276" fill="none" stroke="#29383d" stroke-width="14" stroke-linecap="round"/>
+  <path d="M330 386 L414 276" fill="none" stroke="#82908e" stroke-width="3"/>
+  <circle cx="338" cy="386" r="11" fill="#596b6e"/>
+  <circle cx="338" cy="386" r="4" fill="#a8af9f"/>
+  <path d="M426 268 L484 262 L548 331 L451 338 Z" fill="#34454b"/>
+  <path d="M451 332 L548 326 L548 338 L451 344 Z" fill="#e4cea2"/>
+  <path d="M285 550 L217 581 L134 581" fill="none" stroke="#414944" stroke-width="3"/>
+  <ellipse cx="679" cy="569" rx="96" ry="13" fill="#6b6655" opacity=".52"/>
+  <ellipse cx="754" cy="514" rx="30" ry="29" fill="#9bad9d"/>
+  <ellipse cx="758" cy="514" rx="17" ry="18" fill="#bca77b"/>
+  <path d="M637 474 L743 474 L736 554 L646 554 Z" fill="#acbdae"/>
+  <ellipse cx="691" cy="553" rx="45" ry="12" fill="#acbdae"/>
+  <path d="M637 476 L660 484 L662 561 L646 554 Z" fill="#849b91"/>
+  <ellipse cx="690" cy="474" rx="53" ry="17" fill="#d3d9c4"/>
+  <ellipse cx="690" cy="474" rx="43" ry="10" fill="#514a3e"/>
+  <path d="M643 489 L646 541" fill="none" stroke="#c8d0b9" stroke-width="3"/>
+</svg>

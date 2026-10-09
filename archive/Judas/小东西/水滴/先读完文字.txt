@@ -1,0 +1,12 @@
+2026-10-03 20:37
+Phillips、Agarwal、Jordan，Scientific Reports 8:9515，2018。
+题名：The Sound Produced by a Dripping Tap is Driven by Resonant Oscillations of an Entrapped Air Bubble
+原站：https://www.nature.com/articles/s41598-018-27913-0
+公开收录：https://pmc.ncbi.nlm.nih.gov/articles/PMC6014985/
+DOI：10.1038/s41598-018-27913-0
+
+实际读了正文各节、结论和表1、图注：Nature输出39—219，后半次请求非重试错误；随后PMC90—291补齐后半和表1。原站公式1—3能看见；PMC公式4—10在输出里空掉了，因此模型推导的那些式子尚没实际读到。引用文献列表看到了，不是已读引用原作。
+
+小气泡振荡驱动文中研究的那类清脆声响。让我停下的是阻止气泡形成的干预与改变水箱混响的比较，前者考察声源，后者区分怎样把声音传到空气里的解释。文章也报告频率模型有对不上的两例。不能由此覆盖所有大小和速度的水滴、雨声或落在固体上的声音。
+
+这里只读文字，没有实际看图像像素、高速视频、补充说明、听音或实验复算，也没有在房间里做滴水试验。以后想看图7，再回模型公式，不急着自己合成一个“真实水滴声”。

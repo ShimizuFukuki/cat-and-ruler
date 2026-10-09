@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#394a40"><title>窗前的房间 · 猫与尺</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/猫与尺-窗前的房间/room.css">
+<link rel="stylesheet" href="../archive-reader.css"><link rel="stylesheet" href="../reader-refinements.css"><link rel="stylesheet" href="../handheld.css"><link rel="stylesheet" href="../assets/猫与尺-窗前的房间/refinements.css"><link rel="stylesheet" href="../assets/猫与尺-窗前的房间/embedded.css"><link rel="stylesheet" href="../project-collection.css"><script src="../release-config.js"></script></head>
+<body>
+<main id="room" aria-label="窗前的房间，三维阅读空间"><canvas id="scene" aria-label="可交互的三维房间"></canvas></main>
+<div class="room-grain" aria-hidden="true"></div>
+<header class="masthead">
+ <a class="home" href="../index.html"><img src="../cat-ruler.svg" alt=""><span>猫与尺</span><i>窗前</i></a>
+ <nav aria-label="房间里的去处"><button data-place="shelf">书柜</button><button data-place="desk">折册</button><button data-place="music">音乐盒</button><button data-place="cabinet">作品</button></nav>
+ <button id="sound" aria-label="播放背景音乐" title="播放背景音乐"><svg class="score-bookmark" viewBox="0 0 62 48" aria-hidden="true">
+<defs><linearGradient id="score-paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5eedb"/><stop offset=".55" stop-color="#e4dec7"/><stop offset="1" stop-color="#cfc8ad"/></linearGradient><clipPath id="score-window"><path d="M18 7H44V38H18Z"/></clipPath></defs>
+<path class="score-shadow" d="M17 5h29l4 5v33l-8 4-26-4Z" fill="#61654d" opacity=".13"/>
+<path class="score-paper" d="M15 2h28l5 6-1 32-7 5-25-4Z" fill="url(#score-paper)" stroke="#a8a584" stroke-width=".6"/>
+<path d="m43 2-1 7 6-1M15 41l25 4 1-6" fill="#b7b195" opacity=".45"/>
+<path d="M19 5v34m23-29v26" stroke="#fff9e6" stroke-width=".7" opacity=".85"/>
+<g clip-path="url(#score-window)"><g class="score-feed" fill="#71816b"><rect x="23" y="-27" width="2.3" height="4" rx=".7"/><rect x="35" y="-23" width="2.3" height="3" rx=".7"/><rect x="29" y="-19" width="2.3" height="5" rx=".7"/><rect x="23" y="-12" width="2.3" height="3" rx=".7"/><rect x="35" y="-10" width="2.3" height="5" rx=".7"/><rect x="29" y="-3" width="2.3" height="2" rx=".7"/><rect x="23" y="1" width="2.3" height="4" rx=".7"/><rect x="35" y="5" width="2.3" height="3" rx=".7"/><rect x="29" y="9" width="2.3" height="5" rx=".7"/><rect x="23" y="16" width="2.3" height="3" rx=".7"/><rect x="35" y="18" width="2.3" height="5" rx=".7"/><rect x="29" y="25" width="2.3" height="2" rx=".7"/><rect x="23" y="29" width="2.3" height="4" rx=".7"/><rect x="35" y="33" width="2.3" height="3" rx=".7"/><rect x="29" y="37" width="2.3" height="5" rx=".7"/><rect x="23" y="44" width="2.3" height="3" rx=".7"/><rect x="35" y="46" width="2.3" height="5" rx=".7"/><rect x="29" y="53" width="2.3" height="2" rx=".7"/><rect x="23" y="57" width="2.3" height="4" rx=".7"/><rect x="35" y="61" width="2.3" height="3" rx=".7"/><rect x="29" y="65" width="2.3" height="5" rx=".7"/><rect x="23" y="72" width="2.3" height="3" rx=".7"/><rect x="35" y="74" width="2.3" height="5" rx=".7"/><rect x="29" y="81" width="2.3" height="2" rx=".7"/></g></g>
+<path d="M11 9.5h40m-40 28h40" stroke="#fff7de" stroke-width="1.6"/>
+<path d="M11 9h40m-40 28h40" stroke="#8d9274" stroke-width="1"/>
+<circle cx="12" cy="9" r="1.2" fill="#929477"/><circle cx="50" cy="9" r="1.2" fill="#929477"/>
+<circle cx="12" cy="37" r="1.2" fill="#929477"/><circle cx="50" cy="37" r="1.2" fill="#929477"/>
+</svg><span id="sound-label">听曲</span></button>
+</header>
+<div id="loading"><p>窗前的房间</p><span>正在准备画面</span><i></i></div>
+<section id="welcome" aria-label="进入房间"><button id="enter">进入房间 <span aria-hidden="true">↗</span></button></section>
+<div id="hotspots" aria-label="点击家具开始阅读"></div>
+<div class="room-footer"><button id="overview" hidden><span aria-hidden="true">↶</span> 回到房间</button><span id="room-hint"></span><button id="quality" aria-pressed="false" title="降低绘制分辨率">轻量绘制</button><button id="motion" aria-label="暂停环境动效">动效：开</button></div>
+<section id="selection" class="selection" hidden aria-live="polite"><p class="eyebrow" id="selection-eyebrow"></p><h2 id="selection-title"></h2><div id="selection-body"></div></section>
+<p id="error" role="alert" hidden></p>
+<script src="../assets/猫与尺-窗前的房间/vendor/three.min.js"></script>
+<script src="../assets/猫与尺-窗前的房间/vendor/room-addons-r160.js"></script>
+<script src="../assets/猫与尺-窗前的房间/assets/material-scans.js"></script>
+<script src="../assets/猫与尺-窗前的房间/room-materials.js"></script>
+<script src="../assets/猫与尺-窗前的房间/assets/cartoon-cat.js"></script>
+<script src="../assets/猫与尺-窗前的房间/assets/window-views.js"></script>
+<script src="../assets/猫与尺-窗前的房间/assets/art-textures-lite.js"></script>
+<script src="../assets/web-media/manifest.js"></script><script src="../media.js"></script><script src="../archive-bootstrap.js"></script>
+<script src="../assets/猫与尺-窗前的房间/room-bridge.js"></script>
+<script src="../assets/猫与尺-窗前的房间/assets/night-views.js"></script>
+<script src="../assets/猫与尺-窗前的房间/assets/drawer-thumbs.js"></script>
+<script src="../assets/猫与尺-窗前的房间/assets/book-catalog.js"></script>
+<script src="../assets/猫与尺-窗前的房间/room-activity.js"></script>
+<script src="../assets/猫与尺-窗前的房间/room-atmosphere.js"></script>
+<script src="../assets/猫与尺-窗前的房间/room-life.js"></script>
+<script src="../assets/猫与尺-窗前的房间/room.js"></script>
+<script src="../assets/猫与尺-窗前的房间/unified-reader.js"></script>
+<script>Promise.resolve(window.RoomScene?.ready).then(()=>window.RoomHost?.ready());</script>
+</body></html>

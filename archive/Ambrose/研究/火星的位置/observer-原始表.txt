@@ -1,0 +1,195 @@
+
+
+*******************************************************************************
+Ephemeris / API_USER Sat Oct  3 18:07:54 2026 Pasadena, USA      / Horizons    
+*******************************************************************************
+Target body name: Mars (499)                      {source: mar099}
+Center body name: Earth (399)                     {source: DE441}
+Center-site name: GEOCENTRIC
+*******************************************************************************
+Start time      : A.D. 2026-Oct-04 01:00:00.0000 UT      
+Stop  time      : A.D. 2027-Apr-04 01:00:00.0000 UT      
+Step-size       : 4320 minutes
+*******************************************************************************
+Target pole/equ : IAU_MARS                        {West-longitude positive}
+Target radii    : 3396.19, 3396.19, 3376.2 km     {Equator_a, b, pole_c}       
+Center geodetic : 0.0, 0.0, -6378.137             {E-lon(deg),Lat(deg),Alt(km)}
+Center cylindric: 0.0, 0.0, 0.0                   {E-lon(deg),Dxy(km),Dz(km)}
+Center pole/equ : ITRF93                          {East-longitude positive}
+Center radii    : 6378.137, 6378.137, 6356.752 km {Equator_a, b, pole_c}       
+Target primary  : Sun
+Vis. interferer : MOON (R_eq= 1737.400) km        {source: DE441}
+Rel. light bend : Sun                             {source: DE441}
+Rel. lght bnd GM: 1.3271E+11 km^3/s^2                                          
+Atmos refraction: NO (AIRLESS)
+RA format       : HMS
+Time format     : CAL 
+Calendar mode   : Mixed Julian/Gregorian
+EOP file        : eop.261002.p261229                                           
+EOP coverage    : DATA-BASED 1962-JAN-20 TO 2026-OCT-02. PREDICTS-> 2026-DEC-28
+Units conversion: 1 au= 149597870.700 km, c= 299792.458 km/s, 1 day= 86400.0 s 
+Table cut-offs 1: Elevation (-90.0deg=NO ),Airmass (>38.000=NO), Daylight (NO )
+Table cut-offs 2: Solar elongation (  0.0,180.0=NO ),Local Hour Angle( 0.0=NO )
+Table cut-offs 3: RA/DEC angular rate (     0.0=NO )                           
+Table format    : Comma Separated Values (spreadsheet)
+*******************************************************************************
+ Date__(UT)__HR:MN, , ,            delta,     deldot,     S-O-T,/r,
+*******************************************************************
+$$SOE
+ 2026-Oct-04 01:00, , , 1.64440170235467,-12.0985734,   67.3829,/L,
+ 2026-Oct-07 01:00, , , 1.62323162019443,-12.3387184,   68.6193,/L,
+ 2026-Oct-10 01:00, , , 1.60165037166999,-12.5725509,   69.8812,/L,
+ 2026-Oct-13 01:00, , , 1.57967163374631,-12.7973264,   71.1692,/L,
+ 2026-Oct-16 01:00, , , 1.55731170644113,-13.0126612,   72.4839,/L,
+ 2026-Oct-19 01:00, , , 1.53458634528981,-13.2193300,   73.8259,/L,
+ 2026-Oct-22 01:00, , , 1.51150966466982,-13.4184338,   75.1960,/L,
+ 2026-Oct-25 01:00, , , 1.48809332162355,-13.6118298,   76.5950,/L,
+ 2026-Oct-28 01:00, , , 1.46434495660356,-13.8020812,   78.0242,/L,
+ 2026-Oct-31 01:00, , , 1.44026905991780,-13.9896259,   79.4853,/L,
+ 2026-Nov-03 01:00, , , 1.41587303529512,-14.1707685,   80.9804,/L,
+ 2026-Nov-06 01:00, , , 1.39117245942937,-14.3404008,   82.5112,/L,
+ 2026-Nov-09 01:00, , , 1.36619082476244,-14.4947445,   84.0794,/L,
+ 2026-Nov-12 01:00, , , 1.34095645868977,-14.6319889,   85.6864,/L,
+ 2026-Nov-15 01:00, , , 1.31549941064438,-14.7518180,   87.3338,/L,
+ 2026-Nov-18 01:00, , , 1.28984960581918,-14.8545851,   89.0231,/L,
+ 2026-Nov-21 01:00, , , 1.26403592814276,-14.9412160,   90.7560,/L,
+ 2026-Nov-24 01:00, , , 1.23808471704183,-15.0137597,   92.5346,/L,
+ 2026-Nov-27 01:00, , , 1.21201861269747,-15.0738228,   94.3617,/L,
+ 2026-Nov-30 01:00, , , 1.18586096759249,-15.1184977,   96.2405,/L,
+ 2026-Dec-03 01:00, , , 1.15964377194579,-15.1415047,   98.1748,/L,
+ 2026-Dec-06 01:00, , , 1.13340943195323,-15.1375705,  100.1679,/L,
+ 2026-Dec-09 01:00, , , 1.10720776645182,-15.1033414,  102.2233,/L,
+ 2026-Dec-12 01:00, , , 1.08109313472233,-15.0368469,  104.3442,/L,
+ 2026-Dec-15 01:00, , , 1.05512244313364,-14.9370431,  106.5339,/L,
+ 2026-Dec-18 01:00, , , 1.02935386207541,-14.8035019,  108.7959,/L,
+ 2026-Dec-21 01:00, , , 1.00384561534682,-14.6366713,  111.1339,/L,
+ 2026-Dec-24 01:00, , , 0.97865440951842,-14.4375700,  113.5521,/L,
+ 2026-Dec-27 01:00, , , 0.95383722262715,-14.2040066,  116.0554,/L,
+ 2026-Dec-30 01:00, , , 0.92945979406742,-13.9284395,  118.6494,/L,
+ 2027-Jan-02 01:00, , , 0.90560197424714,-13.6030858,  121.3398,/L,
+ 2027-Jan-05 01:00, , , 0.88235487876230,-13.2227135,  124.1313,/L,
+ 2027-Jan-08 01:00, , , 0.85981707225156,-12.7837992,  127.0282,/L,
+ 2027-Jan-11 01:00, , , 0.83809212078281,-12.2840877,  130.0338,/L,
+ 2027-Jan-14 01:00, , , 0.81728637818644,-11.7226209,  133.1507,/L,
+ 2027-Jan-17 01:00, , , 0.79750671553000,-11.0997746,  136.3802,/L,
+ 2027-Jan-20 01:00, , , 0.77885822357377,-10.4171155,  139.7227,/L,
+ 2027-Jan-23 01:00, , , 0.76144365280116, -9.6751058,  143.1775,/L,
+ 2027-Jan-26 01:00, , , 0.74536872951082, -8.8696748,  146.7426,/L,
+ 2027-Jan-29 01:00, , , 0.73074803487753, -7.9958933,  150.4138,/L,
+ 2027-Feb-01 01:00, , , 0.71770104408923, -7.0534075,  154.1819,/L,
+ 2027-Feb-04 01:00, , , 0.70634392709398, -6.0461021,  158.0320,/L,
+ 2027-Feb-07 01:00, , , 0.69678337024370, -4.9809799,  161.9395,/L,
+ 2027-Feb-10 01:00, , , 0.68911125353436, -3.8681450,  165.8617,/L,
+ 2027-Feb-13 01:00, , , 0.68339942553399, -2.7204867,  169.7098,/L,
+ 2027-Feb-16 01:00, , , 0.67969583814704, -1.5524095,  173.2312,/L,
+ 2027-Feb-19 01:00, , , 0.67802383766323, -0.3773664,  175.4496,/L,
+ 2027-Feb-22 01:00, , , 0.67838674396693,  0.7953426,  174.4390,/T,
+ 2027-Feb-25 01:00, , , 0.68077484990284,  1.9591118,  171.2709,/T,
+ 2027-Feb-28 01:00, , , 0.68516524342392,  3.1047294,  167.5253,/T,
+ 2027-Mar-03 01:00, , , 0.69151647363975,  4.2204768,  163.6393,/T,
+ 2027-Mar-06 01:00, , , 0.69976662009325,  5.2947446,  159.7440,/T,
+ 2027-Mar-09 01:00, , , 0.70983441061631,  6.3168141,  155.8954,/T,
+ 2027-Mar-12 01:00, , , 0.72162084561950,  7.2770430,  152.1243,/T,
+ 2027-Mar-15 01:00, , , 0.73501199691975,  8.1681613,  148.4496,/T,
+ 2027-Mar-18 01:00, , , 0.74988482712031,  8.9872203,  144.8829,/T,
+ 2027-Mar-21 01:00, , , 0.76611580363565,  9.7365965,  141.4305,/T,
+ 2027-Mar-24 01:00, , , 0.78358902423367, 10.4220487,  138.0948,/T,
+ 2027-Mar-27 01:00, , , 0.80219801383061, 11.0479936,  134.8763,/T,
+ 2027-Mar-30 01:00, , , 0.82184131900601, 11.6160180,  131.7739,/T,
+ 2027-Apr-02 01:00, , , 0.84241924038332, 12.1268821,  128.7859,/T,
+$$EOE
+*******************************************************************************
+Column meaning:
+ 
+TIME
+
+  Times PRIOR to 1962 are UT1, a mean-solar time closely related to the
+prior but now-deprecated GMT. Times AFTER 1962 are in UTC, the current
+civil or "wall-clock" time-scale. UTC is kept within 0.9 seconds of UT1
+using integer leap-seconds for 1972 and later years.
+
+  Conversion from the internal Barycentric Dynamical Time (TDB) of solar
+system dynamics to the non-uniform civil UT time-scale requested for output
+has not been determined for UTC times after the next July or January 1st.
+Therefore, the last known leap-second is used as a constant over future
+intervals.
+
+  Time tags refer to the UT time-scale conversion from TDB on Earth
+regardless of observer location within the solar system, although clock
+rates may differ due to the local gravity field and no analog to "UT"
+may be defined for that location.
+
+  Any 'b' symbol in the 1st-column denotes a B.C. date. First-column blank
+(" ") denotes an A.D. date.
+ 
+CALENDAR SYSTEM
+
+  Mixed calendar mode was active such that calendar dates after AD 1582-Oct-15
+(if any) are in the modern Gregorian system. Dates prior to 1582-Oct-5 (if any)
+are in the Julian calendar system, which is automatically extended for dates
+prior to its adoption on 45-Jan-1 BC.  The Julian calendar is useful for
+matching historical dates. The Gregorian calendar more accurately corresponds
+to the Earth's orbital motion and seasons. A "Gregorian-only" calendar mode is
+available if such physical events are the primary interest.
+
+  NOTE: "n.a." in output means quantity "not available" at the print-time.
+ 
+ 'delta,     deldot,' =
+   Apparent range ("delta", light-time aberrated) and range-rate ("delta-dot")
+of the target center relative to the observer. A positive "deldot" means the
+target center is moving away from the observer, negative indicates movement
+toward the observer.  Units: AU and KM/S
+ 
+ 'S-O-T,/r,' =
+   Sun-Observer-Target apparent SOLAR ELONGATION ANGLE seen from the observers'
+location at print-time.
+
+   The '/r' column provides a code indicating the targets' apparent position
+relative to the Sun in the observers' sky, as described below:
+
+   Case A: For an observing location on the surface of a rotating body, that
+body rotational sense is considered:
+
+    /T indicates target TRAILS Sun   (evening sky: rises and sets AFTER Sun)
+    /L indicates target LEADS Sun    (morning sky: rises and sets BEFORE Sun)
+
+   Case B: For an observing point that does not have a rotational model (such
+as a spacecraft), the "leading" and "trailing" condition is defined by the
+observers' heliocentric ORBITAL motion:
+
+    * If continuing in the observers' current direction of heliocentric
+       motion would encounter the targets' apparent longitude first, followed
+       by the Sun's, the target LEADS the Sun as seen by the observer.
+
+    * If the Sun's apparent longitude would be encountered first, followed
+       by the targets', the target TRAILS the Sun.
+
+   Two other codes can be output:
+    /* indicates observer is Sun-centered    (undefined)
+    /? Target is aligned with Sun center     (no lead or trail)
+
+   The S-O-T solar elongation angle is numerically the minimum separation
+angle of the Sun and target in the sky in any direction. It does NOT indicate
+the amount of separation in the leading or trailing directions, which would
+be defined along the equator of a spherical coordinate system.
+
+   Units: DEGREES
+
+Computations by ...
+
+    Solar System Dynamics Group, Horizons On-Line Ephemeris System
+    4800 Oak Grove Drive, Jet Propulsion Laboratory
+    Pasadena, CA  91109   USA
+
+    General site: https://ssd.jpl.nasa.gov/
+    Mailing list: https://ssd.jpl.nasa.gov/email_list.html
+    System news : https://ssd.jpl.nasa.gov/horizons/news.html
+    User Guide  : https://ssd.jpl.nasa.gov/horizons/manual.html
+    Connect     : browser        https://ssd.jpl.nasa.gov/horizons/app.html#/x
+                  API            https://ssd-api.jpl.nasa.gov/doc/horizons.html
+                  command-line   telnet ssd.jpl.nasa.gov 6775
+                  e-mail/batch   https://ssd.jpl.nasa.gov/ftp/ssd/horizons_batch.txt
+                  scripts        https://ssd.jpl.nasa.gov/ftp/ssd/SCRIPTS
+    Inquiries   : Jon.D.Giorgini@jpl.nasa.gov
+
+*******************************************************************************

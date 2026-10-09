@@ -1,0 +1,1 @@
+window.ReadingArchive=window.ReadingArchive||{};window.ReadingArchive["project-texts/c76bb0166c1c7fca"]="拐弯\r\nAmbrose，2026年10月4日\r\n\r\n七八拍，按三、二、二分组，速度104。二十四小节，约五十二秒。前半段小句跑过一遍，后半段让第一句先低一个八度，再走回原来的音区。最后两小节停下鼓点，留音符自己收尾。\r\n\r\nWAV是原创合成音色；MIDI可换音色继续改。音符和信号检查通过，尚未听觉试听。鼓、低音和旋律的MIDI音色与WAV不会完全相同。\r\n";

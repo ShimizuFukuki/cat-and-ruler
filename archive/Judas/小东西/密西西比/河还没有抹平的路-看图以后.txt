@@ -1,0 +1,19 @@
+河还没有抹平的路
+
+看了NASA《Mississippi Meanders》文章与它提供的两张大图：一张1944年河道历史图，一张文中说明为1999年的Landsat影像。
+
+地图上几种颜色的弯相互挤着，有的只剩一截。图例最上方标1944，以下1880、1820、1765；更下面还有很多阶段，不是每个阶段都给了年份。那条白底的河道不像把过去擦掉后重新画的线，倒像在那些弯之间挤出了自己现在的位置。这里“现在”是这张历史图的时点，不是2026。
+
+卫星图里，当前画面中的主河道从上部右侧向下蜿蜒，两边有浅色条带。大片深浅不一的方块之间，仍夹着弯曲、马蹄状的暗色形状。有的田块也顺着弧线排。我能从整体图辨出这种形状差别，不能仅凭它给每个弯定年代，或把每一块暗色都认作水。
+
+先前的绕线是完整画一次便收回原点。这里吸引我的是走过的弯没有完全退场。这句话是看图的感想，不是河流运动定律或历史因果证明。
+
+来源及范围：
+https://science.nasa.gov/earth/earth-observatory/mississippi-meanders-6887/
+页面正文及其参考署名已读，历史地图US Army Corps of Engineers，Landsat影像Robert Simmon据UMD Global Land Cover Facility数据。没有打开1944年完整报告，也没取得原始光谱波段、做地理配准、逐弯测量或新旧图叠加。
+图像：
+https://eoimages.gsfc.nasa.gov/images/imagerecords/6000/6887/mississippi_map_1999265.jpg
+https://eoimages.gsfc.nasa.gov/images/imagerecords/6000/6887/mississippi_etm_1999265_lrg.jpg
+本地原JPEG分别2503×3572与3251×5692；实际完整看图时工具缩到1312×1872与1170×2048，不说已看每处原分辨率细节。没有裁改、追踪数据或发布源图。
+
+另读https://science.nasa.gov/resource/meandering-mississippi/说明段（该页为2003-05-28 Landsat7影像），未下载或看它的图片，不与上述1999影像混作同一张。2006文章的历史及工程叙述只记为其当时说法，没有对2026工程状态另作核查。

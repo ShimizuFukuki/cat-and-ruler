@@ -1,0 +1,446 @@
+﻿{
+  "answer": [
+    [
+      1,
+      3,
+      4,
+      2
+    ],
+    [
+      2,
+      4,
+      1,
+      3
+    ],
+    [
+      4,
+      2,
+      3,
+      1
+    ],
+    [
+      3,
+      1,
+      2,
+      4
+    ]
+  ],
+  "trace": [
+    {
+      "tested_removal": [
+        [
+          4,
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "solutions_after_trial_removal": 1,
+      "removed": true
+    },
+    {
+      "tested_removal": [
+        [
+          2,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "solutions_after_trial_removal": 1,
+      "removed": true
+    },
+    {
+      "tested_removal": [
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "solutions_after_trial_removal": 1,
+      "removed": true
+    },
+    {
+      "tested_removal": [
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "solutions_after_trial_removal": 1,
+      "removed": true
+    },
+    {
+      "tested_removal": [
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "solutions_after_trial_removal": 1,
+      "removed": true
+    },
+    {
+      "tested_removal": [
+        [
+          3,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "solutions_after_trial_removal": 1,
+      "removed": true
+    },
+    {
+      "tested_removal": [
+        [
+          4,
+          2
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "solutions_after_trial_removal": 1,
+      "removed": true
+    },
+    {
+      "tested_removal": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "solutions_after_trial_removal": 1,
+      "removed": true
+    },
+    {
+      "tested_removal": [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "solutions_after_trial_removal": 1,
+      "removed": true
+    },
+    {
+      "tested_removal": [
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "solutions_after_trial_removal": 1,
+      "removed": true
+    },
+    {
+      "tested_removal": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "solutions_after_trial_removal": 1,
+      "removed": true
+    },
+    {
+      "tested_removal": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "solutions_after_trial_removal": 1,
+      "removed": true
+    },
+    {
+      "tested_removal": [
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "solutions_after_trial_removal": 1,
+      "removed": true
+    },
+    {
+      "tested_removal": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "solutions_after_trial_removal": 1,
+      "removed": true
+    },
+    {
+      "tested_removal": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "solutions_after_trial_removal": 1,
+      "removed": true
+    },
+    {
+      "tested_removal": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "solutions_after_trial_removal": 1,
+      "removed": true
+    },
+    {
+      "tested_removal": [
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "solutions_after_trial_removal": 5,
+      "removed": false
+    },
+    {
+      "tested_removal": [
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "solutions_after_trial_removal": 4,
+      "removed": false
+    },
+    {
+      "tested_removal": [
+        [
+          4,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "solutions_after_trial_removal": 9,
+      "removed": false
+    },
+    {
+      "tested_removal": [
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "solutions_after_trial_removal": 1,
+      "removed": true
+    },
+    {
+      "tested_removal": [
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "solutions_after_trial_removal": 2,
+      "removed": false
+    },
+    {
+      "tested_removal": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "solutions_after_trial_removal": 2,
+      "removed": false
+    },
+    {
+      "tested_removal": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "solutions_after_trial_removal": 2,
+      "removed": false
+    },
+    {
+      "tested_removal": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "solutions_after_trial_removal": 1,
+      "removed": true
+    }
+  ],
+  "retained_clue_checks": [
+    {
+      "clue": [
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "solutions_without_this": 9
+    },
+    {
+      "clue": [
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "solutions_without_this": 6
+    },
+    {
+      "clue": [
+        [
+          4,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "solutions_without_this": 13
+    },
+    {
+      "clue": [
+        [
+          2,
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "solutions_without_this": 3
+    },
+    {
+      "clue": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "solutions_without_this": 2
+    },
+    {
+      "clue": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "solutions_without_this": 2
+    }
+  ]
+}

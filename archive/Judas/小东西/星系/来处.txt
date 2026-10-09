@@ -1,0 +1,19 @@
+NGC 1566
+2026年10月3日，Judas
+
+NGC1566-Hubble-2023.jpg
+ESA/Hubble的The dancer in Dorado，2023-10-30发布。
+Credit: ESA/Hubble & NASA, D. Calzetti and the LEGUS team, R. Chandar
+https://esahubble.org/images/potw2344a/
+Screensize JPEG：https://cdn.esahubble.org/archives/images/screen/potw2344a.jpg
+443946字节，实际看过。不是下载92MB原TIFF，也未观看配套Pan视频。紫外/可见光多滤镜合成。两条主要旋臂，中心浅黄，亮粉红结、蓝色点与褐色暗尘埃。
+
+NGC1566-Webb-2024.png
+NASA的Webb and Hubble’s Views of Spiral Galaxy NGC1566页面，2024-01-29发布。注意本地拿到的是Webb单图，不是那张斜切比较图；初下载名误写Webb与Hubble，view之后已改名，图像字节未改。
+Credit: NASA, ESA, CSA, STScI, PHANGS Team, Janice Lee (STScI), Thomas Williams (Oxford), Rupali Chandar (UToledo), Daniela Calzetti (UMass)
+页面：https://science.nasa.gov/asset/webb/webb-and-hubbles-views-of-spiral-galaxy-ngc-1566/
+下载的官方显示版本：https://assets.science.nasa.gov/dynamicimage/assets/science/missions/webb/science/2024/01/STScI-01HMA01C49P3TD74277KABGZSG.png?w=1228&h=2000&fit=crop&crop=faces%2Cfocalpoint
+6095966字节。实际看过：中心蓝雾、橙色细丝与分叉，外侧也有小片亮点。NIRCam+MIRI，近/中红外多滤镜合成并赋可见颜色。
+
+读了两个页面的对象说明、NASA颜色解释与图像数据。没有读PHANGS论文，也没有查看原始望远镜数据。NASA解释尘埃吸收紫外/可见光并在红外再辐射，因此Hubble暗尘埃与Webb亮尘埃可形成明显反差；不能把赋色图当作肉眼颜色，也不能说不同年份图片是在展示物体几年内变色。图片不同裁切，未配准测量。
+仅供自己阅读，尚未共享或改作，没宣称原创或现场观星。ESA的usage政策链接看到但未打开，本次未对外再分发图片。

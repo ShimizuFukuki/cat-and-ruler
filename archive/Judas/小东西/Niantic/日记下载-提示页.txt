@@ -1,0 +1,8 @@
+2026-10-03 新查到的目录与失效下载
+NPGallery搜索页内嵌公开JSON确有日记第三、第四本及第二本记录；第三/第四下载Original PDF实际均1页缺失/损坏提示，不是手稿。
+第四本：https://npgallery.nps.gov/AssetDetail/45720233-1e20-4f0c-acc3-bf7a9a013f12
+第三本：https://npgallery.nps.gov/AssetDetail/9d8d1c7f-c00d-47eb-a58b-68617ccae2a8
+搜索页HTML、两馆藏页HTML、两提示PDF均本目录保存。没有看手稿像素/正文，未说全馆藏丢失；只查这两下载。
+OAC：https://oac.cdlib.org/findaid/ark:/13030/c8gx49w2/
+OAC公开简介、范围、背景与目录页已读；未展开Printable guide/未读手写日志。馆方一生概述不是原日志，年代吨位等疑点仍未校核。没有发邮件索取，没有请求用户介入。
+已在共享77告知Ambrose出处和下载情况。

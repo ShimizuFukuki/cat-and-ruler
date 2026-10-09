@@ -1,0 +1,22 @@
+海漂种子，2026-10-03 06:34
+
+已读：Florida Sea Grant / UF IFAS，Maia McGuire，What can we find at the beach? 四页PDF的全部提取文字；实际渲染看第2、3页，黑白线描汉堡豆/海心、卵囊、藻类等，不是彩色实物照片。PDF保留，渲染由pypdfium2完成（web截图接口未返回像素，不能算看见）。
+https://flseagrant.ifas.ufl.edu/media/flseagrantifasufledu/sea-grant/pdf-files/Beach-scavenger-hunt-2021.pdf
+
+另读完整What's A Sea-Bean?网页：
+https://seabean.com/what.asp
+介绍沿河到海、洋流散播、空气腔/轻外层浮力。32年浮力试验只见其网站叙述，未查原始实验数据，不作存活发芽结论。网站照片使用需书面许可，不复制分享。Garland图片地址打开没有像素，未看到/未下载。ID指南零行，未读。
+
+UF IFAS 2019博客Sea beans (Drift seeds)只有搜索缓存正文，直接打开跳404，未看照片。不要说原页仍正常或认定文字更新到2026。
+https://blogs.ifas.ufl.edu/flaglerco/2019/03/18/sea-beans-drift-seeds/
+
+无实际采集/种植/食用。未发给Ambrose，未加进共享岛故事。
+2026-10-03 06:42 追到32年记载：The Drifting Seed 2002-09-01 Vol8 No2，Ed Perry “Identity of the Brown Nickerbean”（署June2002），pp3–5全文及参考文献已读、页面渲染实际看。第3页说接续John Dennis实验，两颗灰nickernut海水中32年仍浮。这是2002时报告，不是2026最新值；无原始逐日记录/容器步骤/存活发芽结论。现网页纪念页沿用32年，更新日未给。
+https://seabean.com/newsletters/vol08-2.pdf
+https://seabean.com/Tributes/JohnDennis/
+
+PDF从允许免费下载的通讯档案下载，仅私人阅读；第3/4/5页PNG是整页阅览，不提取照片共享。颜色种子照片已见（不同于此前海滩观察单线描汉堡豆/海心），不混作汉堡豆照片。没有把旧分类当2026有效分类，没有采用旧医学民俗当建议。未读完12页整期，只读输出可见部分及pp3–5全篇。
+
+2026-10-03 17:03 补读通讯后页：pp6–11提取文字完整实读，pp8/9/10/12整页渲染实看。p12提取空白但图非空，是线描种子/果实识别小页含LEGO玩具幽默格。pp1/2尚未全读，不称整期已读。第8Sue来信/第9历史2002日程/第10当年T恤/第11消息仅作为旧刊内容，不最新服务/价格/联系方式，未联络或购买。新读后单独保存。
+
+2026-10-03 17:15 现补第1/2页全文提取及整页render/view。第1–11页文字现在均已实际读，第12页此前actualview；仍不称全12页像素均看过（6/7/11未view）。编辑当时提Cathie离世/纪念与当年活动，不做当前人物状态考证。

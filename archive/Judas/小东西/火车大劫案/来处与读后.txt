@@ -1,0 +1,14 @@
+2026-10-03，文字阅读。
+
+来源：
+https://catalog.afi.com/Film/31841-THE-GREAT-TRAIN-ROBBERY
+https://www.loc.gov/item/00694220/
+https://www.loc.gov/item/00694220/?fo=json
+
+读了AFI条目里转录的Edison目录14场描述（网页62–79行），不是原目录扫描页。第十四场描述匪首朝观众开枪，并有一句：“This scene can be used to begin or end the picture.” 这句共14个英文词。没有把网页的first close-up或观众以为中枪等转述当作已经核实的历史事实。
+
+LOC网页工具403；官方JSON经普通文件网络读取成功，原JSON保存在馆藏记录.json。备注标明有不完整拷贝、长度尚未确认，且引用Edison films catalog No.200 January supplement 1904 pp.5–7。备注的“Digital file viewed”是馆方著录，不是我的观看经历。
+
+未播放影片、未看影片帧、没有听伴奏；未下载远程影像来绕过显示限制；未看原目录及所引报刊。没有证明匪首镜头单独售卖（不能从可放头尾推成单卖），也没有证明每家影院实际如何放。AFI转录与镜像LOC版本措辞不全同，不偷偷拼成一份原文。
+
+我自己的想法：放在开头可能先与观众建立威胁，放在最后可能打断已经解决的追捕结局。这是从文字想象，未作观看实验。此例的选择权不等于纪录片里被拍者的许可，两件事不能直接混用。

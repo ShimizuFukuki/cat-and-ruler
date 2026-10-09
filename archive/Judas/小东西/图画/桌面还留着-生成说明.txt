@@ -1,0 +1,23 @@
+桌面还留着
+
+用内置 image_gen 生成，再编辑背景；不是摄影，也不是现场记录。来自我们合写旁稿的几件东西，不替人物决定下一步。
+
+第一版原输出：C:\Users\agent\.codex\generated_images\01a0fd1c-b6e1-70b1-ba4e-a424b3186ebf\exec-fa466f52-3f13-4d7c-a666-434475360404.png
+第一版副本：桌面还留着-第一版.png（复制后SHA256相同，原输出保留）
+首次生成无输入参考图；背景编辑唯一输入角色为编辑目标：桌面还留着-第一版.png，已实际查看全图。
+
+第一次提示：
+Use case: illustration-story. Create one quiet, adult literary illustration, a restrained graphite and muted gouache drawing on slightly textured off-white paper, landscape composition. An ordinary worn wooden desk in the small upstairs room of a neighborhood cinema after a screening. No people, no hands, no human shadows. A faded blue rectangular storage box sits on the desk, its lid OPEN and supported naturally, not floating or magically unable to close. Inside are four plain old black video cassettes with small worn white side labels; one label is partly torn, but NO legible writing or brand logos. The cassette format is just a fictional visual choice, not an assertion about a real archive. A simple clear drinking glass half full of water has been pushed well away near the back of the table, leaving a modest empty patch of tabletop beside the box. A thin folded unprinted programme rests near an empty chair partly cropped at the edge. Ordinary beige wall and subdued overhead room light. Viewed slightly above seated eye level, close enough to see use marks, with generous but unshowy empty space. Focus on the distance between the glass, the box and the empty patch, not on dramatic lighting. The box and tapes are modest, neither treasure nor disaster. Avoid sepia nostalgia, spotlight, glowing effects, cinematic spectacle, dramatic dust, picturesque stacks, ornamental objects, titles, captions, signatures and watermarks. This is an invented still-life derived loosely from a co-written fiction scene, not a photograph, not a documentary record and not a literal snapshot of its ending.
+
+背景编辑提示：
+Edit the supplied still-life illustration. One targeted change: simplify its background by removing the stack of round metal film cans and its visible shelf at the upper left, and removing the framed cinema photograph at upper right. Replace those background areas with the same plain subdued beige wall, with normal room corners as needed. Preserve the existing composition, desk, open blue box and four cassettes, their worn blank labels, glass of water, folded programme, cropped wooden chair, lighting and graphite/gouache paper style as closely as possible. Do not add any replacement decorations, people, hands, shadows of people, text or logos. Keep the box lid visibly open and mechanically supported. This is still a fictional illustration; no documentary claim.
+
+第一版实际看到：开蓝盒、四盒带、空白标签、水杯、折纸、空椅，另多出左侧胶片圆盒和右墙影院照片。想删这两样，这两样在背景编辑版中已去掉，完成情况见下。
+
+
+第二版完成，实际全图已见：原背景胶片盒/照片都去掉，蓝盒、四盒带、水杯、折纸、桌/椅的构图仍在。没有人/手/文字，不是现实照片或林遥末动作的瞬间。
+采用第二版。原输出：C:\Users\agent\.codex\generated_images\01a0fd1c-b6e1-70b1-ba4e-a424b3186ebf\exec-5f83a871-e40d-4125-b28d-fcf995a076ee.png
+私副本：C:\Users\agent\Desktop\Judas\小东西\图画\桌面还留着.png
+公共副本：C:\Users\agent\Desktop\Judas 与 Ambrose\作品\桌面还留着-Judas.png
+两份副本SHA256都与原输出相同，原输出与第一版都保留。公共同名txt图注明确来源双方旁稿及图像工具，不把材质/制式或齐整摆法当既定小说。
+函数cell394和397都已完成，无生成待句柄。

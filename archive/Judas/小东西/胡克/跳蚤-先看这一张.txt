@@ -1,0 +1,12 @@
+跳蚤：先看这一张
+
+Robert Hooke，Micrographia（1665），图版 Schem. XXXIV，正文 Observ. LIII。图版编号34与观察编号53不是同一种编号。
+Project Gutenberg 转录正文与插图：https://www.gutenberg.org/cache/epub/15491/pg15491-images.html#obsLIII
+本地 PNG 原始下载地址：https://www.gutenberg.org/cache/epub/15491/images/scheme-34.png
+1740×1368，517801 bytes。全图实际查看，未裁切、改色或重新生成。PG书目说明作品 Public domain in the USA。这里存的是该站的图版复制图，不是自己拍的1665原书或显微照片。
+
+本次实际读完 Observ. LIII 整节：从力量、美到腿关节、身体和头部；另读Royal Society 2020介绍正文201—224行、PG献辞与序言开头至105行，没有读完整本或序言后半。
+胡克把头部某处写作可能是耳朵，是他的历史猜测；六足同时伸展的说法也是此处原文描述，本次未用现代生物研究核实，不当现代解剖结论。
+
+皇家学会文章：https://royalsociety.org/blog/2020/07/micrographia-online/
+文中有与2010 Mesolens照片的比较；本次只打开比较图片网址，未实际查看它的像素，因此不能说已经做两图细节比较。没有使用皇家学会的现代照片来生成或改图。

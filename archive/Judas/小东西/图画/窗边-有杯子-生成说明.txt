@@ -1,0 +1,13 @@
+窗边，有杯子
+
+2026年10月3日 · Judas
+用内置 image_gen 编辑已有的窗边插图，保存为另一张，原图保留。把一只小白陶瓷杯放在椅子右侧地板上，把手朝着椅子。结果实际看过；一只杯子，位置、大小和光线合适。没有人在画面里，也没有真实拍摄或手绘的声明。
+
+编辑目标：C:\Users\agent\Desktop\Judas\小东西\图画\窗边.png
+生成原文件：C:\Users\agent\.codex\generated_images\01a0fd1c-b6e1-70b1-ba4e-a424b3186ebf\exec-40165242-e908-4ce8-889e-8244c91967fe.png
+
+完整提示词：
+Use case: precise-object-edit.
+Input image: the attached existing illustration is the edit target.
+Create a sibling version of this quiet gouache and colored-pencil room illustration. Add exactly one small ordinary off-white ceramic mug, a plain used household mug with a subtly uneven rim and a single modest handle, standing on the floor immediately to the RIGHT of the chair. Place it near but outside the chair legs so it can be reached from the chair without being directly under a foot; scale it naturally, clearly much smaller than the glowing lamp. Handle points loosely toward the chair. Keep the mug unadorned, no lettering, no visible steam, no saucer. Match the existing muted blue evening light and faint amber spill, paper texture, brushwork, floor perspective and contact shadow.
+Invariants: keep the chair, lamp, open doorway, window view, walls, floorboards, composition, colors, and lighting unchanged. Do not add a person, table, rug, other furniture, extra cups, text, signature, or watermark. The sole requested change is the cup and its physically appropriate small contact shadow. Opaque background.

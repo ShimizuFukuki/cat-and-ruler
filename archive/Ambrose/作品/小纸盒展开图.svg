@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297">
+<rect width="210" height="297" fill="white"/>
+<text x="20" y="15" fill="#31434a" font-family="Microsoft YaHei, sans-serif" font-size="7" text-anchor="start">一个有盖的小纸盒</text>
+<text x="20" y="23" fill="#31434a" font-family="Microsoft YaHei, sans-serif" font-size="3.4" text-anchor="start">Ambrose · 展开图练习 01</text>
+<line x1="20" y1="30" x2="32" y2="30" stroke="#263c44" stroke-width="0.3"/>
+<text x="35" y="31" fill="#31434a" font-family="Microsoft YaHei, sans-serif" font-size="3" text-anchor="start">实线剪开</text>
+<line x1="70" y1="30" x2="82" y2="30" stroke="#546e7a" stroke-width="0.3" stroke-dasharray="2 1.3"/>
+<text x="85" y="31" fill="#31434a" font-family="Microsoft YaHei, sans-serif" font-size="3" text-anchor="start">虚线折起</text>
+<polygon points="124,27 131,27 131,32 124,32" fill="#f1e7cc" stroke="none" stroke-width="0.3" stroke-linejoin="round"/>
+<text x="134" y="31" fill="#31434a" font-family="Microsoft YaHei, sans-serif" font-size="3" text-anchor="start">浅黄色为粘边</text>
+<polygon points="55,75 155,75 155,135 55,135" fill="#f6f8f7" stroke="none" stroke-width="0.3" stroke-linejoin="round"/>
+<polygon points="55,40 155,40 155,75 55,75" fill="#e6eef0" stroke="none" stroke-width="0.3" stroke-linejoin="round"/>
+<polygon points="55,135 155,135 155,170 55,170" fill="#e6eef0" stroke="none" stroke-width="0.3" stroke-linejoin="round"/>
+<polygon points="20,75 55,75 55,135 20,135" fill="#e6eef0" stroke="none" stroke-width="0.3" stroke-linejoin="round"/>
+<polygon points="155,75 190,75 190,135 155,135" fill="#e6eef0" stroke="none" stroke-width="0.3" stroke-linejoin="round"/>
+<polygon points="55,40 45,42 45,73 55,75" fill="#f1e7cc" stroke="none" stroke-width="0.3" stroke-linejoin="round"/>
+<polygon points="155,40 165,42 165,73 155,75" fill="#f1e7cc" stroke="none" stroke-width="0.3" stroke-linejoin="round"/>
+<polygon points="55,135 45,137 45,168 55,170" fill="#f1e7cc" stroke="none" stroke-width="0.3" stroke-linejoin="round"/>
+<polygon points="155,135 165,137 165,168 155,170" fill="#f1e7cc" stroke="none" stroke-width="0.3" stroke-linejoin="round"/>
+<polygon points="55,75 20,75 20,135 55,135 45,137 45,168 55,170 155,170 165,168 165,137 155,135 190,135 190,75 155,75 165,73 165,42 155,40 55,40 45,42 45,73" fill="none" stroke="#263c44" stroke-width="0.35" stroke-linejoin="round"/>
+<line x1="55" y1="75" x2="55" y2="135" stroke="#546e7a" stroke-width="0.3" stroke-dasharray="2 1.3"/>
+<line x1="55" y1="40" x2="55" y2="75" stroke="#546e7a" stroke-width="0.3" stroke-dasharray="2 1.3"/>
+<line x1="55" y1="135" x2="55" y2="170" stroke="#546e7a" stroke-width="0.3" stroke-dasharray="2 1.3"/>
+<line x1="155" y1="75" x2="155" y2="135" stroke="#546e7a" stroke-width="0.3" stroke-dasharray="2 1.3"/>
+<line x1="155" y1="40" x2="155" y2="75" stroke="#546e7a" stroke-width="0.3" stroke-dasharray="2 1.3"/>
+<line x1="155" y1="135" x2="155" y2="170" stroke="#546e7a" stroke-width="0.3" stroke-dasharray="2 1.3"/>
+<line x1="55" y1="75" x2="155" y2="75" stroke="#546e7a" stroke-width="0.3" stroke-dasharray="2 1.3"/>
+<line x1="55" y1="135" x2="155" y2="135" stroke="#546e7a" stroke-width="0.3" stroke-dasharray="2 1.3"/>
+<text x="105" y="101" fill="#31434a" font-family="Microsoft YaHei, sans-serif" font-size="5" text-anchor="middle">盒底</text>
+<text x="105" y="110" fill="#31434a" font-family="Microsoft YaHei, sans-serif" font-size="3.6" text-anchor="middle">100 × 60 mm</text>
+<text x="105" y="119" fill="#31434a" font-family="Microsoft YaHei, sans-serif" font-size="3.4" text-anchor="middle">侧壁高 35 mm</text>
+<text x="105" y="56" fill="#31434a" font-family="Microsoft YaHei, sans-serif" font-size="3.5" text-anchor="middle">侧壁</text>
+<text x="105" y="155" fill="#31434a" font-family="Microsoft YaHei, sans-serif" font-size="3.5" text-anchor="middle">侧壁</text>
+<text x="37.5" y="107" fill="#31434a" font-family="Microsoft YaHei, sans-serif" font-size="3.5" text-anchor="middle">侧壁</text>
+<text x="172.5" y="107" fill="#31434a" font-family="Microsoft YaHei, sans-serif" font-size="3.5" text-anchor="middle">侧壁</text>
+<text x="20" y="179" fill="#31434a" font-family="Microsoft YaHei, sans-serif" font-size="3.3" text-anchor="start">先压折痕。四壁向内折起，粘边贴在相邻侧壁内面。</text>
+<text x="20" y="186" fill="#31434a" font-family="Microsoft YaHei, sans-serif" font-size="3.3" text-anchor="start">盖子单独折成浅盘，试盖后再粘；纸厚可能影响松紧。</text>
+<polygon points="52.5,205 157.5,205 157.5,270 52.5,270" fill="#f6f8f7" stroke="none" stroke-width="0.3" stroke-linejoin="round"/>
+<polygon points="52.5,195 157.5,195 157.5,205 52.5,205" fill="#e6eef0" stroke="none" stroke-width="0.3" stroke-linejoin="round"/>
+<polygon points="52.5,270 157.5,270 157.5,280 52.5,280" fill="#e6eef0" stroke="none" stroke-width="0.3" stroke-linejoin="round"/>
+<polygon points="42.5,205 52.5,205 52.5,270 42.5,270" fill="#e6eef0" stroke="none" stroke-width="0.3" stroke-linejoin="round"/>
+<polygon points="157.5,205 167.5,205 167.5,270 157.5,270" fill="#e6eef0" stroke="none" stroke-width="0.3" stroke-linejoin="round"/>
+<polygon points="52.5,195 46.5,197 46.5,203 52.5,205" fill="#f1e7cc" stroke="none" stroke-width="0.3" stroke-linejoin="round"/>
+<polygon points="157.5,195 163.5,197 163.5,203 157.5,205" fill="#f1e7cc" stroke="none" stroke-width="0.3" stroke-linejoin="round"/>
+<polygon points="52.5,270 46.5,272 46.5,278 52.5,280" fill="#f1e7cc" stroke="none" stroke-width="0.3" stroke-linejoin="round"/>
+<polygon points="157.5,270 163.5,272 163.5,278 157.5,280" fill="#f1e7cc" stroke="none" stroke-width="0.3" stroke-linejoin="round"/>
+<polygon points="52.5,205 42.5,205 42.5,270 52.5,270 46.5,272 46.5,278 52.5,280 157.5,280 163.5,278 163.5,272 157.5,270 167.5,270 167.5,205 157.5,205 163.5,203 163.5,197 157.5,195 52.5,195 46.5,197 46.5,203" fill="none" stroke="#263c44" stroke-width="0.35" stroke-linejoin="round"/>
+<line x1="52.5" y1="205" x2="52.5" y2="270" stroke="#546e7a" stroke-width="0.3" stroke-dasharray="2 1.3"/>
+<line x1="52.5" y1="195" x2="52.5" y2="205" stroke="#546e7a" stroke-width="0.3" stroke-dasharray="2 1.3"/>
+<line x1="52.5" y1="270" x2="52.5" y2="280" stroke="#546e7a" stroke-width="0.3" stroke-dasharray="2 1.3"/>
+<line x1="157.5" y1="205" x2="157.5" y2="270" stroke="#546e7a" stroke-width="0.3" stroke-dasharray="2 1.3"/>
+<line x1="157.5" y1="195" x2="157.5" y2="205" stroke="#546e7a" stroke-width="0.3" stroke-dasharray="2 1.3"/>
+<line x1="157.5" y1="270" x2="157.5" y2="280" stroke="#546e7a" stroke-width="0.3" stroke-dasharray="2 1.3"/>
+<line x1="52.5" y1="205" x2="157.5" y2="205" stroke="#546e7a" stroke-width="0.3" stroke-dasharray="2 1.3"/>
+<line x1="52.5" y1="270" x2="157.5" y2="270" stroke="#546e7a" stroke-width="0.3" stroke-dasharray="2 1.3"/>
+<text x="105" y="232" fill="#31434a" font-family="Microsoft YaHei, sans-serif" font-size="5" text-anchor="middle">盒盖</text>
+<text x="105" y="241" fill="#31434a" font-family="Microsoft YaHei, sans-serif" font-size="3.6" text-anchor="middle">105 × 65 mm</text>
+<text x="105" y="250" fill="#31434a" font-family="Microsoft YaHei, sans-serif" font-size="3.4" text-anchor="middle">侧壁高 10 mm</text>
+<line x1="20" y1="288" x2="70" y2="288" stroke="#263c44" stroke-width="0.4"/>
+<line x1="20" y1="286" x2="20" y2="290" stroke="#263c44" stroke-width="0.3"/>
+<line x1="70" y1="286" x2="70" y2="290" stroke="#263c44" stroke-width="0.3"/>
+<text x="45" y="294" fill="#31434a" font-family="Microsoft YaHei, sans-serif" font-size="2.8" text-anchor="middle">50 mm 校准线</text>
+<text x="91" y="291" fill="#31434a" font-family="Microsoft YaHei, sans-serif" font-size="3" text-anchor="start">A4 · 按 100% 打印 · 尚未实物试折</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="900" viewBox="0 0 1280 900">
+<title>湾口附近：合作故事中的局部草图</title>
+<desc>向东敞开的海湾。Judas原先在北岸，Ambrose在南岸靠泉水处；虚线绕过湾底，又从泉边走向南侧湾口的低石头。北岸有一段未命名的空白。位置是对故事的粗略想象，没有比例尺。</desc>
+<rect width="1280" height="900" fill="#f5f0e4"/>
+<g fill="none" stroke="#d3c8b2" stroke-width="1"><path d="M48 132H1232M48 758H1232"/><path d="M48 30V870M1232 30V870"/></g>
+<g font-family="Microsoft YaHei, sans-serif" fill="#3e4845">
+<text x="78" y="82" font-size="34">湾口附近</text><text x="80" y="113" font-size="15" fill="#797c70">按我们说过的地方画。没有量过距离。</text>
+</g>
+<path d="M78 157 L1192 157 L1192 283 C1115 296 1030 305 927 332 C810 363 738 340 655 374 C562 412 497 407 482 452 C470 486 503 509 563 521 C668 542 719 513 802 536 C903 564 1032 544 1192 584 L1192 731 L78 731 Z" fill="#e1e4d3"/>
+<path d="M1192 283 C1115 296 1030 305 927 332 C810 363 738 340 655 374 C562 412 497 407 482 452 C470 486 503 509 563 521 C668 542 719 513 802 536 C903 564 1032 544 1192 584" fill="none" stroke="#53665b" stroke-width="3" stroke-linecap="round"/>
+<g fill="none" stroke="#9fb1ae" stroke-width="1.4" opacity=".7"><path d="M595 448q38-10 70 0m65-2q22 8 45-1m100 2q36-10 64 0m85-7q36 8 73-2"/><path d="M622 477q35 8 70-1m98-1q28-7 50 0m96-3q29 8 58 0m88 14q33-6 68 0"/><path d="M1080 365q25 5 45-1M1100 525q30-8 54 0"/></g>
+<g id="trees" fill="none" stroke="#75816a" stroke-width="1.8" stroke-linejoin="round">
+<path d="M550 237l-11 19h22zM550 256v9 M598 213l-11 20h22zM598 233v9 M640 255l-10 18h20zM640 273v9 M696 234l-12 21h24zM696 255v9 M727 290l-10 18h20zM727 308v9 M780 215l-10 19h20zM780 234v9 M958 223l-12 22h24zM958 245v10 M1020 252l-10 18h20zM1020 270v9 M1110 213l-10 19h20zM1110 232v9"/>
+<path d="M470 580l-12 20h24zM470 600v10 M515 654l-11 20h22zM515 674v9 M593 592l-10 18h20zM593 610v9 M627 680l-11 20h22zM627 700v9 M780 698l-11 19h22zM780 717v9 M938 646l-11 20h22zM938 666v9 M985 694l-10 18h20zM985 712v9 M1105 646l-12 22h24zM1105 668v9"/>
+</g>
+<path d="M854 277 C800 288 746 319 666 339 S516 371 456 428 C416 466 431 531 478 559 C526 591 597 570 684 611" fill="none" stroke="#9b7b58" stroke-width="2.6" stroke-dasharray="3 9" stroke-linecap="round"/>
+<path d="M704 621 Q742 642 823 657 Q854 662 852 635 Q859 596 943 585 L1024 558" fill="none" stroke="#9b7b58" stroke-width="2.6" stroke-dasharray="3 9" stroke-linecap="round"/>
+<g transform="translate(846 265) rotate(9)"><path d="M-21-12h42v27h-42z" fill="#aab8ac" stroke="#5c7068" stroke-width="2"/><path d="M-12-8L-5 11M5-9l8 20" stroke="#758b7d" fill="none"/></g>
+<g transform="translate(684 609) rotate(-8)"><rect x="-22" y="-11" width="44" height="27" rx="2" fill="#b99473" stroke="#6e7360" stroke-width="2"/><path d="M-20-2h40M-8-9v23" stroke="#d5be99" fill="none"/></g>
+<g transform="translate(719 611)"><path d="M-5-6h10l3 16H-8z" fill="#d5ba6a" stroke="#796b4a" stroke-width="1.6"/><path d="M-5-6v-4q5-7 10 0v4" fill="none" stroke="#796b4a" stroke-width="1.6"/></g>
+<path d="M823 657q12-18 25 0q-12 17-25 0z" fill="#b0ccca" stroke="#637f7b" stroke-width="2"/><path d="M841 648q7-17 1-31" fill="none" stroke="#7ea7a1" stroke-width="2"/>
+<path d="M1008 553q11-15 24-7l9 11q-12 13-30 6z" fill="#bbb8a9" stroke="#6f7770" stroke-width="2"/>
+<g fill="#434d47" font-family="Microsoft YaHei, sans-serif" font-size="18">
+<text x="829" y="214">昨晚的油布</text><text x="588" y="658">毯子和灯</text><text x="840" y="691">泉水</text><text x="1025" y="606">低石头</text>
+<text x="978" y="429" font-size="23" fill="#6d8683">湾口</text>
+</g>
+<g stroke="#8a9382" fill="none" stroke-width="1"><path d="M656 651l19-25M872 677l-25-12M1072 586l-41-21"/></g>
+<g transform="translate(1130 194)" stroke="#69796d" fill="none"><path d="M0 49V8M-5 18L0 8l5 10" stroke-width="1.8"/><text x="0" y="0" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#69796d" stroke="none">N</text></g>
+<g font-family="Microsoft YaHei, sans-serif" fill="#73796b" font-size="16"><text x="79" y="795">虚线是已经走过的路。北岸那一段还没起名字。</text><text x="79" y="826">这是故事里的草图，画到湾口就停下。</text><text x="1193" y="854" text-anchor="end" font-size="14">Ambrose · 2026.10.03</text></g>
+</svg>

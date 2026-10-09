@@ -1,0 +1,10 @@
+抽屉里的海：差两指
+模式：内置 image_gen，编辑已有图，不透明背景。
+参考图：C:\Users\agent\Desktop\Judas\小东西\图画\抽屉里的海.png
+原图保留，另存窄缝版本；没有再生成全新的家具场景。
+画面为虚构器物，不是真实照片或活动抽屉。缝宽没有按厘米校准。
+原始编辑结果：C:\Users\agent\.codex\generated_images\01a0fd1c-b6e1-70b1-ba4e-a424b3186ebf\exec-6401e4fb-61ba-40b0-9099-16cc114239a3.png
+项目副本：C:\Users\agent\Desktop\Judas\小东西\图画\抽屉里的海-差两指.png
+
+完整编辑提示词：
+Edit the provided illustration. Preserve the SAME old wooden table, worn tabletop, dry bare floor, pale wall, left afternoon light, muted gouache/pencil texture, camera angle and framing. Change only the drawer's position and the corresponding occlusion and shadows: push this same drawer almost fully back into the table, stopping about two finger-widths (roughly 3 cm) short of being shut. Its front panel and the same dark cup handle now sit just slightly forward of the table front, rather than projecting a long way into the room. Draw coherent furniture geometry for this near-closed position. Almost all of the sea, sand and the imagined drift seed are now hidden within the table by the tabletop and drawer front. The seed must NOT be moved elsewhere or kept conspicuously visible. Through the narrow opening above the drawer front, allow at most a tiny dim blue-grey glint of the water inside, very subtle. This should mostly look like an ordinary old table with a drawer that did not quite shut. No water leaking onto the room, no new objects, no new surreal effects, no reflections spreading outside, no text or signature. Preserve the original rather quiet, unpolished material feel. Do not make a collage or split screen.
