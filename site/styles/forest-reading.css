@@ -1,0 +1,111 @@
+/* Restore the accepted opening's motion, independently of the folded pages. */
+.opening-note .soul-lettering{transform:perspective(750px) rotateX(var(--paper-rx,0deg)) rotateY(var(--paper-ry,0deg));transform-origin:45% 70%;transition:transform .9s cubic-bezier(.2,.65,.25,1),filter .75s;filter:drop-shadow(1px 3px 2px #5f654522)}
+.opening-note .title-air{display:block!important;position:absolute;inset:5% 8% 8% 5%;pointer-events:none;overflow:hidden;clip-path:polygon(0 7%,90% 0,100% 88%,8% 100%);transform:perspective(750px) rotateX(var(--paper-rx,0deg)) rotateY(var(--paper-ry,0deg));transition:transform .9s cubic-bezier(.2,.65,.25,1);mix-blend-mode:soft-light}
+.title-air:before{content:'';position:absolute;inset:-50% -90%;background:linear-gradient(115deg,transparent 38%,#fff9e780 44%,#fffbed 49%,#fff9e760 54%,transparent 62%);animation:title-daylight 10s ease-in-out infinite;opacity:0}
+.title-air:after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at var(--paper-x,50%) var(--paper-y,50%),#fff8dfd9,transparent 70%);opacity:var(--paper-near,0);transition:opacity .8s}
+@keyframes title-daylight{0%,100%{transform:translateX(-24%);opacity:0}20%{opacity:.8}65%{transform:translateX(24%);opacity:.7}85%{transform:translateX(24%);opacity:0}}
+.opening-note:not(.is-near-paper) .soul-lettering{animation:title-paper-rest 10s ease-in-out infinite}
+@keyframes title-paper-rest{0%,100%{transform:perspective(750px) rotateY(-.6deg) rotateX(.3deg)}50%{transform:perspective(750px) rotateY(.9deg) rotateX(-.5deg)}}
+.at-opening .opening-note h2.prologue-title{animation:october-ink 1.5s cubic-bezier(.2,.6,.2,1) both}
+.foreword-correspondence{position:relative}
+.foreword-correspondence:before{content:'';position:absolute;left:0;top:-1px;width:24%;height:1px;background:linear-gradient(90deg,transparent,#b9a46a,#fff4c6,transparent);opacity:0;animation:ink-thread-light 9s ease-in-out infinite}
+@keyframes ink-thread-light{0%,100%{transform:translateX(0);opacity:0}20%{opacity:.9}75%{transform:translateX(310%);opacity:.75}90%{transform:translateX(310%);opacity:0}}
+.opening-note .foreword-names{transition:color .5s,text-shadow .7s}
+.opening-note.is-near-paper .foreword-names{color:#33492c;text-shadow:0 1px 0 #fff7df99}
+
+/* A small schematic mechanism, not a miniature rendering. */
+.listen-toggle{width:80px;min-width:80px;height:57px;min-height:57px}
+.line-music-box{width:80px;height:57px;filter:none;overflow:visible}
+.line-music-box .line-crank{transform-box:view-box;transform-origin:0 0;animation:hand-crank 2.8s linear infinite;animation-play-state:paused}
+.line-music-box .line-cylinder-pins{animation:pin-rotation 5.6s linear infinite;animation-play-state:paused}
+.background-playing .line-crank,.background-playing .line-cylinder-pins{animation-play-state:running}
+@keyframes hand-crank{to{transform:rotate(360deg)}}
+@keyframes pin-rotation{to{transform:translateY(10px)}}
+.listen-toggle .box-lid{transition:stroke .5s}
+.listen-toggle:hover .line-music-box{transform:translateY(-1.5px);filter:drop-shadow(0 2px 1px #7e805215)}
+.listen-toggle:hover .box-lid{stroke:#384934}
+.listen-toggle:active .line-music-box{transform:translateY(.5px)}
+.listen-toggle .box-play,.listen-toggle .box-pause{transition:fill .3s}
+.listen-toggle:hover .box-play,.listen-toggle:hover .box-pause{fill:#2e4428}
+
+/* Serif figures cut into the ruler, still aligned with the original ticks. */
+.ruler-marks>span{font-family:var(--display);font-size:15px;font-weight:500;line-height:1;letter-spacing:.055em;font-variant-numeric:lining-nums tabular-nums;color:#6f5d3e;text-shadow:0 1px 0 #fff1c79c;transition:color .3s}
+.wood-ruler:hover .ruler-marks>span{color:#59492e}
+
+/* The artwork never changes aspect ratio. Its lower margin becomes a colophon. */
+.cat-finale .leaf-content{display:flex;flex-direction:column;gap:0;padding:calc(var(--leaf-w)*.07) calc(var(--leaf-w)*.085) 38px}
+.cat-finale .running-head{margin:0 0 10px;padding-bottom:10px}
+.finale-mast{display:flex;align-items:center;gap:16px;margin-bottom:8px;flex:none}
+.cat-finale .finale-mast h2{display:flex;align-items:baseline;gap:.14em;font:400 calc(var(--font)*1.95)/1.25 var(--song);letter-spacing:.08em;margin:0;white-space:nowrap}
+.finale-mast h2 small{font-size:.43em;align-self:center;margin-top:.4em}
+.finale-mast>i{height:1px;background:linear-gradient(90deg,#919a7970,transparent);flex:1}
+.finale-mast>.finale-author{font:italic calc(var(--font)*.8)/1 var(--display);color:#7d856b}
+.cat-finale .mounted-art.last-cat{width:100%;height:auto!important;min-height:0;max-height:none;aspect-ratio:8/5;flex:none;margin:0 0 12px;align-self:center;padding:0;background:#eee9df;overflow:visible}
+.cat-finale .mounted-art.last-cat>img{width:100%;height:100%;aspect-ratio:8/5;object-fit:contain;object-position:center;pointer-events:none}
+.compact-book .cat-finale .mounted-art.last-cat{width:86%}
+.finale-text{display:grid;grid-template-columns:minmax(0,.93fr) minmax(0,1.07fr);gap:calc(var(--leaf-w)*.045);align-items:start;flex:none;margin-top:auto}
+.cat-finale .finale-poem{margin:0;padding:0;animation:none!important}
+.poem-columns{display:flex;flex-direction:row-reverse;align-items:flex-start;justify-content:space-between;gap:8px;min-height:calc(var(--font)*9.8)}
+.poem-columns p{writing-mode:vertical-rl;text-orientation:upright;white-space:nowrap;font:400 calc(var(--font)*.82)/1.3 var(--song);letter-spacing:.14em;color:#626b54}
+.poem-columns p:nth-child(2){padding-top:calc(var(--font)*1.6)}
+.poem-columns p.sleep-line{font:400 calc(var(--font)*1.23)/1.3 var(--song);letter-spacing:.2em;color:#384934;margin:0;padding-top:calc(var(--font)*2.7)}
+.cat-finale .finale-poem .citation{font:400 calc(var(--font)*.56)/1.6 var(--sans);min-height:24px;margin:10px 0 0;color:#7b7256}
+.finale-note{padding-top:calc(var(--font)*.5);position:relative}
+.finale-note:before{content:'';position:absolute;top:0;left:0;width:22px;height:1px;background:#82906c70}
+.finale-note blockquote{font:400 calc(var(--font)*.74)/1.95 var(--song);color:#657055;white-space:normal}
+.finale-note blockquote>span{display:block;white-space:nowrap}
+.finale-note .farewell-thought{margin-top:calc(var(--font)*.8);font-size:.94em;letter-spacing:.01em}
+.finale-note em{display:block;font:400 calc(var(--font)*2.3)/1.5 var(--song);letter-spacing:.12em;color:#384934;transform:translateX(-.04em)}
+.finale-note .citation{font-size:calc(var(--font)*.56);line-height:1.6;min-height:24px;margin-top:3px;color:#7b7256}
+.finale-colophon{display:flex;align-items:center;gap:14px;margin-top:auto;padding-top:12px;flex:none;color:#8f8367}
+.finale-colophon>span:last-child{font:italic calc(var(--font)*.65)/1 var(--display);letter-spacing:.04em}
+.finale-colophon>i{flex:1;height:1px;background:linear-gradient(90deg,#b2a48255,#b2a48211)}
+.colophon-finish{font:400 calc(var(--font)*.7)/1 var(--song);padding:5px 3px;border-top:1px solid #a58c6860;border-bottom:1px solid #a58c6860}
+/* Already-visible text must never blank out when the page reaches the centre. */
+.at-closing .cat-finale .finale-poem,.at-closing .cat-finale .finale-farewell,.at-closing .cat-finale .farewell-rule{animation:none!important}
+
+/* Contact is a small response of the object, not a cursor effect. */
+.mounted-art,.room-print,.cover-press,.signature{transition:translate .55s cubic-bezier(.2,.8,.2,1),rotate .6s cubic-bezier(.2,.8,.2,1),box-shadow .55s}
+.mounted-art:not(.arrival-pending):hover,.room-print:not(.arrival-pending):hover{translate:0 -2px;rotate:-.35deg}
+.mounted-art:not(.arrival-pending):active{translate:0 .6px;rotate:.15deg;transition-duration:.2s}
+.cover-press:hover{translate:0 -1.5px;rotate:-.4deg}
+.signature:hover{translate:2px -1px;rotate:-1deg}
+.book-logo .cat-emblem{transition:translate .5s,rotate .5s}
+.book-logo:hover .cat-emblem{translate:0 -1px;rotate:-1deg}
+.primary-read{position:relative;transition:color .4s,background-color .5s}
+.primary-read:hover{background-color:#697c4808;color:#3a5032}
+.primary-read:active{background-color:#697c4812}
+.appbar #menu-open>svg{transition:transform .6s cubic-bezier(.2,.7,.2,1);transform-origin:50% 70%}
+.appbar #menu-open:hover>svg{transform:perspective(180px) rotateY(-18deg) translateY(-1px)}
+.closing-person h2{transition:translate .55s,color .55s}
+.closing-person:has(button:hover) h2{translate:3px 0;color:#384934}
+.arrival-pending{opacity:0!important}
+
+body.ambient-paused .title-air:before,body.ambient-paused .soul-lettering,body.ambient-paused .foreword-correspondence:before,body.ambient-paused .line-crank,body.ambient-paused .line-cylinder-pins{animation-play-state:paused}
+@media(min-width:801px) and (max-height:750px){.cat-finale .running-head{margin-bottom:7px;padding-bottom:8px}.finale-mast{margin-bottom:4px}.cat-finale .mounted-art.last-cat{margin-bottom:8px}.finale-colophon{padding-top:7px}.poem-columns{min-height:calc(var(--font)*9.4)}.finale-text{gap:calc(var(--leaf-w)*.035)}.cat-finale .finale-poem .citation{margin-top:5px}}
+@media(min-width:801px) and (max-height:570px){.listen-toggle,.line-music-box{width:69px;min-width:69px;height:48px;min-height:48px}.cat-finale .leaf-content{padding-top:18px;padding-bottom:30px}.cat-finale .finale-mast h2{font-size:20px}.cat-finale .mounted-art.last-cat{width:80%;margin-bottom:6px}.poem-columns{min-height:115px}.poem-columns p{font-size:10px}.poem-columns p.sleep-line{font-size:14px;padding-top:27px}.finale-note blockquote{font-size:10px;line-height:1.75}.finale-note em{font-size:26px}.finale-note .farewell-thought{margin-top:6px}.finale-colophon{padding-top:4px}.finale-colophon .colophon-finish{font-size:9px;padding:3px}.finale-note .citation,.cat-finale .finale-poem .citation{font-size:8px;min-height:18px;margin-top:2px}.ruler-marks>span{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.opening-note .soul-lettering,.title-air:before,.foreword-correspondence:before,.line-crank,.line-cylinder-pins{animation:none!important}.opening-note .title-air{display:none!important}.opening-note .soul-lettering,.mounted-art,.room-print,.cover-press,.signature,.book-logo .cat-emblem,.appbar #menu-open>svg,.closing-person h2{transition:none!important;translate:none!important;rotate:none!important}.arrival-pending{opacity:1!important}}
+@media(min-width:801px) and (max-height:570px){.compact-book .cat-finale .mounted-art.last-cat{width:74%;margin-bottom:4px}.cat-finale .leaf-content{padding-top:14px}.cat-finale .running-head{padding-bottom:5px;margin-bottom:5px}.poem-columns{min-height:0}.poem-columns p.sleep-line{padding-top:14px}.finale-colophon{padding-top:3px}}
+
+/* Cached shadow image: no per-frame blur or branch drawing. */
+#room-shadows{animation:canopy-breeze 23s ease-in-out infinite alternate;transform-origin:70% 10%;will-change:transform;mix-blend-mode:normal;opacity:.8}
+body.ambient-paused .cat-resting-body,body.ambient-paused .soul-paper,body.ambient-paused .foreword-margin:after{animation-play-state:paused}
+@keyframes canopy-breeze{from{transform:translate3d(-9px,-6px,0) rotate(-.6deg) scale(1.025)}to{transform:translate3d(12px,8px,0) rotate(.7deg) scale(1.025)}}
+body.ambient-paused #room-shadows{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){#room-shadows{animation:none;will-change:auto}}
+
+/* Final leaf: keep a common baseline and leave space between the two original voices. */
+.cat-finale .leaf-content{padding-left:calc(var(--leaf-w)*.09);padding-right:calc(var(--leaf-w)*.09)}
+.finale-mast{margin-bottom:15px}
+.finale-text{grid-template-columns:1fr 1fr;gap:calc(var(--leaf-w)*.06);margin-top:12px;align-items:start}
+.poem-columns{gap:12px;justify-content:flex-start;min-height:calc(var(--font)*10.6);padding-right:3px}
+.poem-columns p{font-size:calc(var(--font)*.88);line-height:1.45;letter-spacing:.13em;margin:0}
+.poem-columns p:nth-child(2){padding-top:calc(var(--font)*1.25)}
+.poem-columns p.sleep-line{font-size:calc(var(--font)*1.15);font-weight:500;letter-spacing:.16em;padding-top:calc(var(--font)*2.5);margin:0}
+.finale-note{padding:calc(var(--font)*.35) 0 0 calc(var(--font)*.35)}
+.finale-note:before{left:calc(var(--font)*.35)}
+.finale-note blockquote{font-size:calc(var(--font)*.78);line-height:2.1;color:#535d46;margin:0}
+.finale-note .farewell-thought{margin-top:calc(var(--font)*.75)}
+.finale-note em{font-size:calc(var(--font)*2.15);font-weight:500;line-height:1.65;letter-spacing:.13em}
+.finale-colophon{margin-top:auto;padding-top:16px}
+@media(min-width:801px) and (max-height:750px){.finale-mast{margin-bottom:7px}.finale-text{margin-top:4px}.poem-columns{min-height:calc(var(--font)*9.3)}.finale-note blockquote{line-height:1.85}.finale-note em{line-height:1.35}.finale-colophon{padding-top:8px}}

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>摆渡 · 一趟航线</title><style>:root{color-scheme:light;--ink:#253b3c;--dim:#667c7c;--paper:#f4f1e9;--line:#d6ddd6;--green:#385e53;--sea:#dcebea;--warm:#be7150}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,"Microsoft YaHei",sans-serif}main{max-width:1200px;margin:auto;padding:32px 36px}header{display:flex;align-items:center;justify-content:space-between;gap:20px}.eyebrow{font-size:11px;letter-spacing:.17em;color:var(--dim);margin:0}h1{font-size:40px;letter-spacing:.12em;margin:3px 0 14px;font-weight:650}h1 span{font-size:14px;font-weight:400;letter-spacing:.12em;margin-left:22px;color:var(--dim)}h2{font-size:18px;margin:0 0 7px}h3{font-size:12px;letter-spacing:.08em;margin:22px 0 10px;color:var(--dim)}p{margin:6px 0}.muted{color:var(--dim);font-size:13px}.intro{margin:12px 0 24px}.status{display:grid;grid-template-columns:repeat(4,1fr);padding:15px 0 20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);gap:20px}.status small{display:block;color:var(--dim);font-size:11px}.status strong{font-size:22px;font-weight:550}.layout{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(280px,1fr);gap:30px;margin-top:25px}.chart{min-width:0}.chart-head{display:flex;justify-content:space-between;align-items:baseline}.chart-head span,.map-note{font-size:11px;color:var(--dim)}#map{width:100%;background:var(--sea);border-radius:7px;margin-top:10px;display:block}.route{stroke:#94aaa8;stroke-width:2}.route.shallow{stroke-dasharray:7 7}.route.closed{stroke:#bc9b7d}.distance{font-size:13px;fill:#526b6b;paint-order:stroke;stroke:var(--sea);stroke-width:8px}.island{fill:#e9e4c6;stroke:#c9c5a6;stroke-width:1.2}.port-label{font-size:16px;fill:var(--ink);font-weight:600}.port-note{font-size:11px;fill:#627b78}.boat-ring{fill:none;stroke:var(--warm);stroke-width:3}.boat{fill:var(--warm)}#tide-strip{display:grid;grid-template-columns:repeat(8,1fr);gap:3px;margin-top:12px}#tide-strip div{font-size:10px;text-align:center;padding:8px 2px;background:#e4e7de;border-radius:3px}#tide-strip .passable{background:#d1e3df}#tide-strip b{display:block;font-size:11px;font-weight:500}.dock{border-left:1px solid var(--line);padding-left:26px}.item{display:flex;align-items:center;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding:9px 0}.item b{font-size:13px;font-weight:550}.item small{display:block;color:var(--dim);font-size:11px}.empty{font-size:13px;color:var(--dim);padding:8px 0}button{font:inherit;font-size:12px;border:0;border-radius:4px;padding:9px 13px;background:var(--green);color:white;cursor:pointer;white-space:nowrap}button:hover{filter:brightness(1.12)}button:focus-visible{outline:3px solid #d19360;outline-offset:3px}button:disabled{opacity:.4;cursor:not-allowed}.quiet{background:transparent;color:var(--green);border:1px solid #9caf9f}.wide{width:100%;margin-top:10px}.route-button{width:100%;display:flex;justify-content:space-between;margin:7px 0;text-align:left}#message{min-height:24px;color:#a75235;font-size:12px}#end{padding:20px;margin:24px 0;background:#e0e7da;border-radius:5px}.ledger{margin-top:30px;border-top:1px solid var(--line);padding-top:22px;display:grid;grid-template-columns:180px 1fr;gap:24px}.ledger ol{padding-left:20px;margin:0;font-size:13px;max-height:230px;overflow:auto}.ledger li{padding:3px 0}footer{display:flex;justify-content:space-between;gap:20px;color:var(--dim);font-size:10px;margin-top:30px;padding-top:15px;border-top:1px solid var(--line)}@media(max-width:800px){main{padding:22px 18px}.layout{grid-template-columns:1fr}.dock{border-left:0;padding-left:0}.status{gap:8px}.status strong{font-size:17px}h1 span{display:block;margin:0}.ledger{grid-template-columns:1fr;gap:12px}footer{display:block}}
+.manifest{border-top:1px solid var(--line);padding-top:22px;margin-top:25px}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:12px;margin-top:12px;text-align:left}th{font-weight:500;color:var(--dim);font-size:11px}td,th{padding:10px 8px;border-bottom:1px solid var(--line);white-space:nowrap}.complete{color:#6e8074}td:first-child{color:var(--ink)}
+
+.route-advice{display:block;color:#906044;font-size:11px;line-height:1.6;padding:0 4px 5px}.map-note{line-height:1.8}
+</style></head>
+<body><main><header><div><p class="eyebrow">AMBROSE · 航行小试验 02 · 顺流</p><h1>摆渡<span>一趟航线</span></h1></div><button id="restart" class="quiet">重新开航</button></header>
+<section class="intro"><p>五个码头，一条小船。把东西送到等它们的人那里。</p><p class="muted">船舱只有 3 格。浅水道随潮开闭；航行或等待才会让时间前进。28 小时后收船。</p></section>
+<section class="status" aria-label="航行状态"><div><small>船的位置</small><strong id="location"></strong></div><div><small>当地时间</small><strong id="clock"></strong><small id="remaining"></small></div><div><small>现在的潮水</small><strong id="tide"></strong></div><div><small>已经送到</small><strong id="delivered"></strong></div></section>
+<div class="layout"><section class="chart"><div class="chart-head"><h2>潮湾航图</h2><span>数字为小时 · 东港航道随潮变化</span></div><svg id="map" viewBox="0 0 720 490" role="img" aria-label="五个码头之间的航线图"></svg><div id="tide-strip" aria-label="未来八小时潮汐"></div><p class="map-note">虚线浅水道在涨潮和高潮时可出发。沙洲往东港，落潮时顺流；东港返沙洲，涨潮时顺流：4 小时缩短为 2 小时。按出发时的潮况计算。</p></section>
+<section class="dock"><h2 id="dock-title"></h2><p id="dock-description" class="muted"></p><h3>码头的货</h3><div id="waiting"></div><h3 id="cargo-heading"></h3><div id="cargo"></div><h3>下一程</h3><div id="routes"></div><button id="wait" class="quiet wide">等潮水 · 1 小时</button><p id="message" role="status" aria-live="polite"></p></section></div>
+<section id="end" hidden></section><section class="manifest"><h2>全湾货单</h2><p class="muted">各码头托运的东西都列在这里，出发前可以一起盘算。</p><div class="table-wrap"><table><thead><tr><th>货物</th><th>现在在哪</th><th>送往</th><th>占位</th><th>约定时间</th><th>情况</th></tr></thead><tbody id="manifest"></tbody></table></div></section><section class="ledger"><div><h2>航行手记</h2><p class="muted">每次靠岸，留下一行。</p></div><ol id="log"></ol></section><footer>进度保存在这个浏览器中。可以随时离开，再回来接着开船。<span>虚构的海湾，没有真实航海用途。</span></footer></main><script>(()=>{'use strict';const __modules={};
+__modules["engine.mjs"]=(()=>{
+const ports={A:{name:'老码头',x:105,y:330,description:'早餐摊收了伞，货箱还在木栈桥上。'},B:{name:'芦苇湾',x:190,y:125,description:'木屋前有人修网。水鸟在芦苇间落下。'},C:{name:'沙洲',x:365,y:295,description:'浅水道露不露底，要看潮水的意思。'},D:{name:'灯塔岛',x:490,y:100,description:'塔上的灯还没亮，看守人正等零件。'},E:{name:'东港',x:605,y:355,description:'港口比别处热闹，回程也有人托东西。'}};
+const routes=[{a:'A',b:'B',hours:2},{a:'A',b:'C',hours:3},{a:'B',b:'C',hours:2},{a:'B',b:'D',hours:4},{a:'C',b:'D',hours:2,shallow:true},{a:'C',b:'E',hours:4},{a:'D',b:'E',hours:2}];
+const jobs=[{id:'j1',name:'一篮早面包',from:'A',to:'B',size:1,due:6},{id:'j2',name:'灯塔的齿轮箱',from:'A',to:'D',size:2,due:14},{id:'j3',name:'给东港的信',from:'A',to:'E',size:1,due:18},{id:'j4',name:'修好的渔网',from:'B',to:'C',size:1,due:10},{id:'j5',name:'两罐蜂蜜',from:'B',to:'E',size:1,due:20},{id:'j6',name:'借来的小提琴',from:'C',to:'A',size:1,due:18},{id:'j7',name:'一袋旧书',from:'D',to:'B',size:1,due:22},{id:'j8',name:'给老码头的药箱',from:'E',to:'A',size:1,due:26}];
+const tide=t=>['低潮','涨潮','高潮','落潮'][Math.floor((t%8)/2)];
+const time=t=>`${t+6>=24?'次日 ':''}${String((t+6)%24).padStart(2,'0')}:00`;
+const open=(r,t)=>!r.shallow||(t%8>=2&&t%8<6);
+const travelHours=(r,from,t)=>((r.a==='C'&&r.b==='E')||r.a==='E'&&r.b==='C')&&((from==='C'&&t%8>=6)||(from==='E'&&t%8>=2&&t%8<4))?2:r.hours;
+const used=s=>s.cargo.reduce((sum,id)=>sum+jobs.find(j=>j.id===id).size,0);
+const ended=s=>s.t>=28||s.done.length===jobs.length;
+function fresh(){return {version:2,t:0,port:'A',cargo:[],waiting:Object.fromEntries(Object.keys(ports).map(p=>[p,jobs.filter(j=>j.from===p).map(j=>j.id)])),done:[],log:['06:00 · 在老码头解开缆绳。先挑一批货吧。']};}
+function act(state,kind,target){
+ const s=structuredClone(state);const note=m=>s.log.push(`${time(s.t)} · ${m}`);
+ if(ended(s))return {state,error:'今天已经收船了。可以重新开航，再试一条路线。'};
+ if(kind==='load'){
+  const j=jobs.find(j=>j.id===target);if(!j||!s.waiting[s.port].includes(target))return {state,error:'这件货不在当前码头。'};
+  if(used(s)+j.size>3)return {state,error:'船舱装不下了。可以先卸下一件，或带这批货出发。'};
+  s.waiting[s.port]=s.waiting[s.port].filter(id=>id!==target);s.cargo.push(target);note(`装上${j.name}。`);
+ }else if(kind==='unload'){
+  if(!s.cargo.includes(target))return {state,error:'这件货不在船上。'};
+  s.cargo=s.cargo.filter(id=>id!==target);s.waiting[s.port].push(target);note(`把${jobs.find(j=>j.id===target).name}留在${ports[s.port].name}，以后可以取回。`);
+ }else if(kind==='sail'){
+  const r=routes.find(r=>(r.a===s.port&&r.b===target)||(r.b===s.port&&r.a===target));
+  if(!r)return {state,error:'这两个码头之间没有直达航道。'};
+  if(!open(r,s.t))return {state,error:'浅水道还不能走。等一等，或从芦苇湾绕行。'};
+  const hours=travelHours(r,s.port,s.t);
+  if(s.t+hours>28)return {state,error:'这一程会超过收船时间。可以等到收船，或走一条短些的航线。'};
+  s.t+=hours;s.port=target;note(`${hours<r.hours?'借着顺流，':''}经过${hours}小时，靠上${ports[target].name}。`);
+  for(const id of [...s.cargo]){const j=jobs.find(j=>j.id===id);if(j.to===target){s.cargo=s.cargo.filter(x=>x!==id);s.done.push({id,at:s.t,onTime:s.t<=j.due});note(`${j.name}送到了${s.t<=j.due?'，没有迟到':'，晚了'+(s.t-j.due)+'小时'}。`);}}
+ }else if(kind==='wait'){s.t++;note(`留在${ports[s.port].name}等了一小时，${tide(s.t)}。`);}
+ else return {state,error:'没有执行这个操作。'};
+ return {state:s,error:null};
+}
+
+return {ports,routes,jobs,tide,time,open,travelHours,used,ended,fresh,act};
+})();
+__modules["app.js"]=(()=>{
+const {ports,routes,jobs,tide,time,open,travelHours,used,ended,fresh,act}=__modules["engine.mjs"];
+const key="cat-collection-ferry-39dfed892bc77173";let state=fresh();try{const saved=JSON.parse(localStorage.getItem(key));if(saved?.version===2&&Array.isArray(saved.cargo)&&saved.waiting&&Array.isArray(saved.done)&&Array.isArray(saved.log)&&Number.isInteger(saved.t)&&ports[saved.port])state=saved;}catch{}
+const $=id=>document.getElementById(id);const find=id=>jobs.find(j=>j.id===id);
+function cargoItem(id,aboard){const j=find(id);const disabled=ended(state)||(!aboard&&used(state)+j.size>3);return `<div class="item"><div><b>${j.name}</b><small>去${ports[j.to].name} · ${j.size}格 · 截止 ${time(j.due)}</small></div><button data-kind="${aboard?'unload':'load'}" data-target="${id}" ${disabled?'disabled':''}>${aboard?'卸下':'装船'}</button></div>`;}
+function draw(){
+ $('remaining').textContent=ended(state)?'这一趟已收船':`距收船还有 ${28-state.t} 小时`;
+ $('manifest').innerHTML=jobs.map(j=>{const done=state.done.find(d=>d.id===j.id);const where=state.cargo.includes(j.id)?'船上':done?'已签收':ports[Object.keys(state.waiting).find(p=>state.waiting[p].includes(j.id))]?.name||'—';return `<tr class="${done?'complete':''}"><td>${j.name}</td><td>${where}</td><td>${ports[j.to].name}</td><td>${j.size}格</td><td>${time(j.due)}</td><td>${done?(done.onTime?'准时送到':'迟到 '+(done.at-j.due)+' 小时'):state.t>j.due?'已过约定时间':'待送'}</td></tr>`;}).join('');
+ $('location').textContent=ports[state.port].name;$('clock').textContent=time(state.t);$('tide').textContent=tide(state.t);$('delivered').textContent=`${state.done.length} / ${jobs.length}`;$('dock-title').textContent=ports[state.port].name;$('dock-description').textContent=ports[state.port].description;
+ if(state.port==='D'&&state.done.some(j=>j.id==='j2'))$('dock-description').textContent='齿轮箱已经送到。看守人把它搬进了塔里。';
+ if(state.port==='A'&&state.t>8)$('dock-description').textContent='栈桥上的箱子少了。熟悉的缆桩又到了眼前。';
+ $('waiting').innerHTML=state.waiting[state.port].map(id=>cargoItem(id,false)).join('')||'<p class="empty">这里暂时没有等着运走的货。</p>';
+ $('cargo-heading').textContent=`船上的货 · ${used(state)} / 3 格`;$('cargo').innerHTML=state.cargo.map(id=>cargoItem(id,true)).join('')||'<p class="empty">船舱是空的。</p>';
+ $('routes').innerHTML=routes.filter(r=>r.a===state.port||r.b===state.port).map(r=>{const to=r.a===state.port?r.b:r.a;const allowed=open(r,state.t),hours=travelHours(r,state.port,state.t);const later=open(r,state.t+1)?travelHours(r,state.port,state.t+1):Infinity;const advice=!ended(state)&&allowed&&1+later<hours?`<small class="route-advice">等 1 小时再走，${time(state.t+1+later)} 到岸，比现在出发早 ${hours-1-later} 小时。</small>`:'';return `<div><button class="route-button" data-kind="sail" data-target="${to}" ${ended(state)||!allowed||state.t+hours>28?'disabled':''}><span>前往${ports[to].name}</span><span>${allowed?hours+' 小时'+(hours<r.hours?' · 顺流':''):'浅水道未开'}</span></button>${advice}</div>`;}).join('');
+ $('wait').disabled=ended(state);$('map').innerHTML=`<defs><pattern id="water" width="45" height="40" patternUnits="userSpaceOnUse"><path d="M5 22q6-4 12 0" fill="none" stroke="#c3d9d8" stroke-width="1"/></pattern></defs><rect width="720" height="490" fill="url(#water)"/><text x="35" y="45" fill="#819b98" font-size="11" letter-spacing="4">潮 湾 / TIDAL BAY</text>`+routes.map(r=>{const a=ports[r.a],b=ports[r.b];return `<line class="route ${r.shallow?'shallow':''} ${open(r,state.t)?'':'closed'}" x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}"/><text class="distance" x="${(a.x+b.x)/2+8}" y="${(a.y+b.y)/2-8}">${r.a==='C'&&r.b==='E'?'4 / 2':r.hours}${r.shallow?' · 浅':''}</text>`;}).join('')+Object.entries(ports).map(([id,p])=>`<g><ellipse class="island" cx="${p.x}" cy="${p.y}" rx="${id==='C'?49:37}" ry="${id==='C'?24:31}" transform="rotate(-18 ${p.x} ${p.y})"/><circle cx="${p.x}" cy="${p.y}" r="5" fill="#466759"/>${id===state.port?`<circle class="boat-ring" cx="${p.x}" cy="${p.y}" r="16"/><path class="boat" d="M${p.x-9},${p.y+14}h18l-5 7h-8z"/>`:''}<text class="port-label" text-anchor="middle" x="${p.x}" y="${p.y+55}">${p.name}</text><text class="port-note" text-anchor="middle" x="${p.x}" y="${p.y+73}">${state.waiting[id].length}件待运</text></g>`).join('');
+ $('tide-strip').innerHTML=Array.from({length:8},(_,i)=>`<div class="${open({shallow:true},state.t+i)?'passable':''}">${i===0?'现在':time(state.t+i)}<b>${tide(state.t+i)}</b></div>`).join('');$('log').innerHTML=[...state.log].reverse().map(s=>`<li>${s}</li>`).join('');
+ $('end').hidden=!ended(state);if(ended(state))$('end').innerHTML=`<h2>${state.done.length===jobs.length?'最后一件也送到了。':'该收船了。'}</h2><p>送到 ${state.done.length} 件，其中 ${state.done.filter(j=>j.onTime).length} 件准时。${state.done.length===jobs.length?'船舱空了，今天的事做完了。':'没有送完的货，留给下一趟。'}</p>`;
+ try{localStorage.setItem(key,JSON.stringify(state));}catch{$('message').textContent='浏览器没能保存进度，关页前请留意。';}
+}
+document.addEventListener('click',e=>{const b=e.target.closest('button[data-kind]');if(!b)return;const result=act(state,b.dataset.kind,b.dataset.target);state=result.state;$('message').textContent=result.error||'';draw();});
+ $('wait').onclick=()=>{const result=act(state,'wait');state=result.state;$('message').textContent=result.error||'';draw();};
+ $('restart').onclick=()=>{if(confirm('重新开航会清掉这一趟的进度。要再试一次吗？')){state=fresh();$('message').textContent='';draw();}};draw();
+
+
+return {};
+})();
+})();</script></body></html>

@@ -1,0 +1,63 @@
+/* A paragraph owns a right-hand shelf; the original stays in the left column. */
+.archive-room{--material-width:clamp(230px,23vw,320px);--material-gap:clamp(28px,3vw,48px)}
+.archive-room .archive-scroll{padding:42px clamp(24px,3vw,56px) 38px}
+.archive-room #archive-body,.archive-room .archive-heading{max-width:1160px}
+.archive-room .diary-sheet,.archive-room .conversation-passage,.archive-room .letter-reading{display:grid;grid-template-columns:minmax(0,1fr) var(--material-width);column-gap:var(--material-gap);align-items:start}
+.archive-room .diary-sheet{margin-bottom:30px}
+.archive-room .material-sequence{display:block}
+.archive-room .passage-segment{display:grid;grid-template-columns:minmax(0,1fr) var(--material-width);column-gap:var(--material-gap);align-items:start;margin-bottom:24px}
+.archive-room .passage-segment:last-child{margin-bottom:0}
+.archive-room .passage-segment>.archive-prose,.archive-room .passage-segment>.diary-original{min-width:0;grid-column:1}
+.archive-room .passage-segment>.diary-original{white-space:pre-wrap}
+.archive-room .passage-segment>.archive-prose>:first-child{margin-top:0}
+.archive-room .passage-segment>.archive-prose>:last-child{margin-bottom:0}
+.archive-room .paragraph-main,.archive-room .conversation-passage>.archive-prose,.archive-room .letter-reading>.archive-prose{min-width:0;grid-column:1}
+.archive-room .reading-materials{grid-column:2;grid-row:1;margin:0;padding:4px 0 0;border:0;min-width:0;color:#5a604e;font:12px/1.7 var(--sans);letter-spacing:0}
+.archive-room .material-pocket>summary{display:none}
+.archive-room .material-items{display:grid;gap:22px}
+.archive-room .reading-material,.archive-room .reading-materials .conversation-material{margin:0;min-width:0;padding:0}
+.archive-room .material-picture{display:block;width:100%;padding:0;border:0;cursor:zoom-in;background:#d6c9af21}
+.archive-room .material-picture img{display:block;width:100%;height:auto;max-height:340px;object-fit:contain;margin:0 auto}
+.archive-room .reading-material figcaption{display:grid;gap:4px;padding:8px 0 0;text-align:left}
+.archive-room .material-source{display:block;border:0;background:none;font:12px/1.7 var(--sans);text-align:left;text-decoration:none;color:var(--author);padding:0;overflow-wrap:anywhere;cursor:pointer}
+.archive-room .material-source:hover{text-decoration:underline;text-underline-offset:3px}
+.material-facts,.material-missing{font:10px/1.8 var(--sans);color:#837b69;overflow-wrap:anywhere}
+.reading-material :is(audio,video){width:100%;max-width:100%}
+.archive-room .conversation-turn{max-width:none;margin-bottom:55px}
+.archive-room .conversation-section{display:block}
+.archive-room .conversation-section-title{position:static;writing-mode:horizontal-tb;font:12px/1.8 var(--sans);letter-spacing:.15em;margin-bottom:12px;color:#81765f}
+.archive-room .conversation-passage{margin-bottom:30px}
+.archive-room .conversation-head{padding-bottom:15px;border-bottom:1px solid #d6c9af66}
+.archive-room .conversation-answer{border:0;padding-top:0;margin-top:22px}
+.archive-room .conversation-prompt>.reading-materials{margin:15px 0;max-width:320px}
+.archive-room .correspondence,.archive-room .correspondence.judas{margin:0 0 50px;padding:25px 0!important;border-left:0!important;background:none}
+.archive-room .correspondence .reading-figure{width:100%;margin:0}
+.archive-room .reading-materials .figure-open{transform:none;padding:0!important;box-shadow:none;background:none}
+.archive-room .reading-materials img{max-width:100%;height:auto;object-fit:contain}
+.archive-room #archive-subtitle:empty{display:none}
+.archive-room #archive-layout,.archive-room #archive-source{display:none!important}
+.archive-room[data-layout=desk] #archive-body{padding:0;box-shadow:none;background:none;max-width:1160px}
+.archive-room[data-layout=desk] .archive-scroll{background:none}
+.material-viewer{width:min(1200px,94vw);height:92dvh;max-height:none;max-width:none;padding:20px 24px;border:0;background:#eee7d7;color:#383c31;box-shadow:0 20px 70px #1118;box-sizing:border-box}
+.material-viewer::backdrop{background:#1e261cdd}
+.material-viewer[open]{display:flex;flex-direction:column;gap:12px}
+.material-viewer header{display:flex;justify-content:space-between;align-items:center;gap:20px;font:14px/1.7 'Microsoft YaHei',sans-serif}
+.material-viewer h2{font:inherit;margin:0}.material-close{border:0;background:none;color:inherit;cursor:pointer;white-space:nowrap;padding:10px}
+.material-viewer-image{flex:1;min-height:0;overflow:auto;text-align:center}
+.material-viewer-image img{max-width:100%;height:auto;display:block;margin:auto}
+.material-viewer .material-source{font:12px/1.8 'Microsoft YaHei',sans-serif;color:#516246}
+.material-picture:focus-visible,.material-source:focus-visible,.material-close:focus-visible{outline:2px solid #516246;outline-offset:4px}
+@media(max-width:1100px) and (min-width:901px){.archive-room{--material-width:220px;--material-gap:24px}.archive-room .archive-spine{padding-left:15px;padding-right:12px}.archive-room .archive-shell{grid-template-columns:130px minmax(0,1fr)}}
+@media(max-width:900px){
+ .archive-room .diary-sheet,.archive-room .conversation-passage,.archive-room .letter-reading{display:block}
+ .archive-room .passage-segment{display:block}
+ .archive-room .reading-materials{margin:16px 0 8px;padding:0}
+ .archive-room .material-pocket{border-top:1px solid #a99e8144;border-bottom:1px solid #a99e8144;padding:8px 0}
+ .archive-room .material-pocket>summary{display:list-item;cursor:pointer;font:12px/1.8 var(--sans);color:var(--author);padding:5px 0;min-height:28px}
+ .archive-room .material-items{padding:12px 0;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+ .archive-room .material-items>figure:only-child,.archive-room .material-items>div:only-child{grid-column:1/-1;max-width:480px}
+ .archive-room .material-picture img{max-height:290px}
+ .archive-room .archive-scroll{padding:30px 23px 38px}
+ .material-viewer{width:100vw;height:100dvh;padding:14px;max-height:100dvh}
+}
+@media(prefers-reduced-motion:reduce){.material-picture,.material-viewer{scroll-behavior:auto}}

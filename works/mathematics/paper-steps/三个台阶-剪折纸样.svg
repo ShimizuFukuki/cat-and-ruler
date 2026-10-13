@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297">
+<rect width="210" height="297" fill="white"/>
+<text x="15" y="20" font-family="Microsoft YaHei,sans-serif" font-size="8" fill="#303a40">三个台阶</text>
+<text x="15" y="30" font-family="Microsoft YaHei,sans-serif" font-size="3.5" fill="#303a40">一张纸，六条切口。Ambrose · 纸机构练习</text>
+<line x1="15" y1="40" x2="29" y2="40" stroke="#303a40" stroke-width="0.3"/>
+<text x="32" y="41" font-family="Microsoft YaHei,sans-serif" font-size="3.2" fill="#303a40">剪开</text>
+<line x1="63" y1="40" x2="77" y2="40" stroke="#406b80" stroke-width="0.3" stroke-dasharray="2 1"/>
+<text x="80" y="41" font-family="Microsoft YaHei,sans-serif" font-size="3.2" fill="#303a40">谷折（凹）</text>
+<line x1="126" y1="40" x2="140" y2="40" stroke="#aa513c" stroke-width="0.3" stroke-dasharray="3 1 0.5 1"/>
+<text x="143" y="41" font-family="Microsoft YaHei,sans-serif" font-size="3.2" fill="#303a40">山折（凸）</text>
+<rect x="15" y="60" width="180" height="140" fill="#faf9f5" stroke="#303a40" stroke-width="0.3"/>
+<line x1="105" y1="60" x2="105" y2="82" stroke="#406b80" stroke-width="0.3" stroke-dasharray="2 1"/>
+<line x1="87" y1="82" x2="123" y2="82" stroke="#303a40" stroke-width="0.3"/>
+<line x1="87" y1="104" x2="123" y2="104" stroke="#303a40" stroke-width="0.3"/>
+<line x1="87" y1="82" x2="87" y2="104" stroke="#406b80" stroke-width="0.3" stroke-dasharray="2 1"/>
+<line x1="123" y1="82" x2="123" y2="104" stroke="#406b80" stroke-width="0.3" stroke-dasharray="2 1"/>
+<line x1="105" y1="82" x2="105" y2="104" stroke="#aa513c" stroke-width="0.3" stroke-dasharray="3 1 0.5 1"/>
+<text x="20" y="94.0" font-family="Microsoft YaHei,sans-serif" font-size="2.8" fill="#303a40">1 · 深 18 mm</text>
+<line x1="105" y1="104" x2="105" y2="118" stroke="#406b80" stroke-width="0.3" stroke-dasharray="2 1"/>
+<line x1="78" y1="118" x2="132" y2="118" stroke="#303a40" stroke-width="0.3"/>
+<line x1="78" y1="140" x2="132" y2="140" stroke="#303a40" stroke-width="0.3"/>
+<line x1="78" y1="118" x2="78" y2="140" stroke="#406b80" stroke-width="0.3" stroke-dasharray="2 1"/>
+<line x1="132" y1="118" x2="132" y2="140" stroke="#406b80" stroke-width="0.3" stroke-dasharray="2 1"/>
+<line x1="105" y1="118" x2="105" y2="140" stroke="#aa513c" stroke-width="0.3" stroke-dasharray="3 1 0.5 1"/>
+<text x="20" y="130.0" font-family="Microsoft YaHei,sans-serif" font-size="2.8" fill="#303a40">2 · 深 27 mm</text>
+<line x1="105" y1="140" x2="105" y2="154" stroke="#406b80" stroke-width="0.3" stroke-dasharray="2 1"/>
+<line x1="69" y1="154" x2="141" y2="154" stroke="#303a40" stroke-width="0.3"/>
+<line x1="69" y1="176" x2="141" y2="176" stroke="#303a40" stroke-width="0.3"/>
+<line x1="69" y1="154" x2="69" y2="176" stroke="#406b80" stroke-width="0.3" stroke-dasharray="2 1"/>
+<line x1="141" y1="154" x2="141" y2="176" stroke="#406b80" stroke-width="0.3" stroke-dasharray="2 1"/>
+<line x1="105" y1="154" x2="105" y2="176" stroke="#aa513c" stroke-width="0.3" stroke-dasharray="3 1 0.5 1"/>
+<text x="20" y="166.0" font-family="Microsoft YaHei,sans-serif" font-size="2.8" fill="#303a40">3 · 深 36 mm</text>
+<line x1="105" y1="176" x2="105" y2="200" stroke="#406b80" stroke-width="0.3" stroke-dasharray="2 1"/>
+<text x="15" y="214" font-family="Microsoft YaHei,sans-serif" font-size="3.2" fill="#303a40">先剪外框；沿中轴对折，再把三条纸带反向推入。</text>
+<text x="15" y="223" font-family="Microsoft YaHei,sans-serif" font-size="3.2" fill="#303a40">两端压出谷折，纸带中央改为山折。打开到约 90°。</text>
+<text x="15" y="232" font-family="Microsoft YaHei,sans-serif" font-size="3.2" fill="#303a40">灰色区域是整张卡片，内部实线只剪开，不能剪掉纸带。</text>
+<text x="15" y="244" font-family="Microsoft YaHei,sans-serif" font-size="3" fill="#303a40">打印选 100% / 实际大小。建议先用废纸试折。</text>
+<text x="15" y="253" font-family="Microsoft YaHei,sans-serif" font-size="3" fill="#303a40">这是零厚度几何草样，尚未进行实体制作。</text>
+<line x1="15" y1="267" x2="65" y2="267" stroke="#303a40" stroke-width="0.3"/>
+<line x1="15" y1="265" x2="15" y2="269" stroke="#303a40" stroke-width="0.3"/>
+<line x1="65" y1="265" x2="65" y2="269" stroke="#303a40" stroke-width="0.3"/>
+<text x="15" y="277" font-family="Microsoft YaHei,sans-serif" font-size="3" fill="#303a40">此线应长 50 mm；卡片外框 180 × 140 mm。</text>
+</svg>

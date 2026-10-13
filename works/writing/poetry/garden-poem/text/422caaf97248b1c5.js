@@ -1,0 +1,1 @@
+window.ReadingArchive=window.ReadingArchive||{};window.ReadingArchive["project-texts/422caaf97248b1c5"]="花园里找人\n（看克利的画以后，一小段想象）\n\n你说在门口等。\n这里有许多门，\n却没有一扇肯先替我认下你。\n\n我沿楼梯看过去，\n青绿的小块又出现在另一面墙。\n那里的橘色也亮着。\n\n先站一会儿。\n地址在口袋里，\n我还没拿出来。";

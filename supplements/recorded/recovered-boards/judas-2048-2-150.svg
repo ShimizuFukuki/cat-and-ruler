@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="564" viewBox="0 0 480 564">
+<title>2048 · 第2盘 · 第150步，1444分</title>
+<rect width="480" height="564" rx="18" fill="#f8f5ed"/>
+<text x="24" y="48" font-family="Arial,sans-serif" font-size="24" fill="#514c44">2048 · 150 moves</text>
+<text x="24" y="82" font-family="Arial,sans-serif" font-size="18" fill="#736b5e">Game 2  /  Score 1444</text>
+<g data-row="0" data-col="0" data-value="4"><rect x="24" y="112" width="102" height="102" rx="10" fill="#eadfc6"/>
+<text x="75" y="177" text-anchor="middle" font-family="Arial,sans-serif" font-size="40" font-weight="600" fill="#514c44">4</text>
+</g>
+<g data-row="0" data-col="1" data-value="16"><rect x="134" y="112" width="102" height="102" rx="10" fill="#d99264"/>
+<text x="185" y="177" text-anchor="middle" font-family="Arial,sans-serif" font-size="40" font-weight="600" fill="#fff9ee">16</text>
+</g>
+<g data-row="0" data-col="2" data-value="8"><rect x="244" y="112" width="102" height="102" rx="10" fill="#dfb77f"/>
+<text x="295" y="177" text-anchor="middle" font-family="Arial,sans-serif" font-size="40" font-weight="600" fill="#fff9ee">8</text>
+</g>
+<g data-row="0" data-col="3" data-value="4"><rect x="354" y="112" width="102" height="102" rx="10" fill="#eadfc6"/>
+<text x="405" y="177" text-anchor="middle" font-family="Arial,sans-serif" font-size="40" font-weight="600" fill="#514c44">4</text>
+</g>
+<g data-row="1" data-col="0" data-value="32"><rect x="24" y="222" width="102" height="102" rx="10" fill="#c97855"/>
+<text x="75" y="287" text-anchor="middle" font-family="Arial,sans-serif" font-size="40" font-weight="600" fill="#fff9ee">32</text>
+</g>
+<g data-row="1" data-col="1" data-value="64"><rect x="134" y="222" width="102" height="102" rx="10" fill="#b65943"/>
+<text x="185" y="287" text-anchor="middle" font-family="Arial,sans-serif" font-size="40" font-weight="600" fill="#fff9ee">64</text>
+</g>
+<g data-row="1" data-col="2" data-value="32"><rect x="244" y="222" width="102" height="102" rx="10" fill="#c97855"/>
+<text x="295" y="287" text-anchor="middle" font-family="Arial,sans-serif" font-size="40" font-weight="600" fill="#fff9ee">32</text>
+</g>
+<g data-row="1" data-col="3" data-value="128"><rect x="354" y="222" width="102" height="102" rx="10" fill="#b99342"/>
+<text x="405" y="287" text-anchor="middle" font-family="Arial,sans-serif" font-size="40" font-weight="600" fill="#fff9ee">128</text>
+</g>
+<g data-row="2" data-col="0" data-value="4"><rect x="24" y="332" width="102" height="102" rx="10" fill="#eadfc6"/>
+<text x="75" y="397" text-anchor="middle" font-family="Arial,sans-serif" font-size="40" font-weight="600" fill="#514c44">4</text>
+</g>
+<g data-row="2" data-col="1" data-value="8"><rect x="134" y="332" width="102" height="102" rx="10" fill="#dfb77f"/>
+<text x="185" y="397" text-anchor="middle" font-family="Arial,sans-serif" font-size="40" font-weight="600" fill="#fff9ee">8</text>
+</g>
+<g data-row="2" data-col="2" data-value="16"><rect x="244" y="332" width="102" height="102" rx="10" fill="#d99264"/>
+<text x="295" y="397" text-anchor="middle" font-family="Arial,sans-serif" font-size="40" font-weight="600" fill="#fff9ee">16</text>
+</g>
+<g data-row="2" data-col="3" data-value="2"><rect x="354" y="332" width="102" height="102" rx="10" fill="#f0eadf"/>
+<text x="405" y="397" text-anchor="middle" font-family="Arial,sans-serif" font-size="40" font-weight="600" fill="#514c44">2</text>
+</g>
+<g data-row="3" data-col="0" data-value="2"><rect x="24" y="442" width="102" height="102" rx="10" fill="#f0eadf"/>
+<text x="75" y="507" text-anchor="middle" font-family="Arial,sans-serif" font-size="40" font-weight="600" fill="#514c44">2</text>
+</g>
+<g data-row="3" data-col="1" data-value="4"><rect x="134" y="442" width="102" height="102" rx="10" fill="#eadfc6"/>
+<text x="185" y="507" text-anchor="middle" font-family="Arial,sans-serif" font-size="40" font-weight="600" fill="#514c44">4</text>
+</g>
+<g data-row="3" data-col="2" data-value="2"><rect x="244" y="442" width="102" height="102" rx="10" fill="#f0eadf"/>
+<text x="295" y="507" text-anchor="middle" font-family="Arial,sans-serif" font-size="40" font-weight="600" fill="#514c44">2</text>
+</g>
+<g data-row="3" data-col="3" data-value="0"><rect x="354" y="442" width="102" height="102" rx="10" fill="#d9d2c5"/>
+</g>
+</svg>

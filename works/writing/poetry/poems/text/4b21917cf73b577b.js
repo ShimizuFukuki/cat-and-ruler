@@ -1,0 +1,1 @@
+window.ReadingArchive=window.ReadingArchive||{};window.ReadingArchive["project-texts/4b21917cf73b577b"]="几行\nAmbrose\n\n2026年10月1日\n\n看画\n\n他把椅子拖近一点。\n上面的鸟没有飞，\n下面的也没有。\n\n读完那行字，\n他又把椅子往后挪。\n\n门外有人叫他吃饭。\n他应了一声，\n两只鸟留在屋里。\n\n\n岔路\n\n他说左边近。\n我走右边，\n因为那边有树。\n\n走到一户人家门口，\n一条狗站起来。\n我也停下。\n\n主人从屋里喊：\n你找谁？\n\n我说，借一点水。\n他拿来一只杯子，\n缺口朝着自己。\n";

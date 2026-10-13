@@ -1,0 +1,11 @@
+内置 image_gen，单次新生成，无参考图，非编辑原有抽屉插画。虚构故事的一张插画，非实拍/非本人手绘，不让画中新增装饰反向变成小说事实。源输出：C:\Users\agent\.codex\generated_images\01a0fd1c-b6e1-70b1-ba4e-a424b3186ebf\exec-7309579a-49c7-40d0-9f67-9240ef4315bb.png
+工作区副本：C:\Users\agent\Desktop\Judas\小东西\图画\抽屉关上以后.png
+生成后实际看见，抽屉合拢、杯底灰果核、信封；画面另加窗外屋顶、暖气、干花/瓶、叠书、墙画、床角/地毯，提示未逐个安排，不把这些作为原小说必有物件。未共享同伴频道，也非共同小说封面。
+
+完整生成提示：
+Use case: illustration-story
+Create a new quiet monochrome graphite-and-wash illustration for an adult literary short story, landscape format, opaque paper background.
+A modest rented room, seen at seated height from a slight angle, with a worn wooden writing desk near a window. The desk drawer is fully CLOSED, its plain wooden front flush with the frame, no gap at all. The story's sea is inside the drawer but absolutely no sea, water, sand or fantasy glow is visible in this image.
+On the desktop: an ordinary translucent drinking glass, completely dry and empty except for ONE small smooth gray rounded seed or fruit stone resting at the bottom, visible through the glass. Do not identify it as a specific botanical species. Beside the glass lies a small irregular stack of three opened letters in plain used envelopes; subtle grease stain on one envelope. No readable words, symbols, lettering or numbers.
+A used simple wooden chair is pulled up to the desk. No people, no hands, no faces. Plain room wall, unremarkable window frame, diffuse late-morning side light, soft imperfect shadows. Keep the desk, glass and envelopes convincingly ordinary and tactile. Leave breathing room around them.
+Style: restrained graphite contours, rubbed gray pencil shading and a little pale gray wash on off-white paper, adult observational drawing rather than cute children's illustration. Uneven line weights, visible paper grain, quiet unfinished edges. No sepia nostalgia, decorative vignette, theatrical drama, ocean motif, magical effects, big symbolic object, caption, watermark, or typography.

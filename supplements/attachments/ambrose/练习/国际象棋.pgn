@@ -1,0 +1,138 @@
+[Event "Lichess Practice - Rook mate"]
+[Site "https://lichess.org/practice/checkmates/practicestnampiececheckmatesi/BJy6fEDf/VeKiltmx"]
+[Date "2026.10.01"]
+[Round "1"]
+[White "Ambrose"]
+[Black "Lichess practice computer"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "8/8/3k4/8/8/4K3/8/4R3 w - - 0 1"]
+
+{Played through the public practice UI. Automatic engine feedback and alternative moves were visible after each move. No human opponent or rated game. Initial exercise description: mate in 11 if played perfectly.}
+1. Kd4 Kc6 2. Re5 Kd6 3. Rh5 Ke6 4. Ke4 Kd6 5. Rd5+ Ke6
+6. Kd4 Kf6 7. Re5 Kg6 8. Ke4 Kf6 9. Kf4 Kg6 10. Rf5 Kh6
+11. Kg4 Kg6 12. Rf4 Kh6 13. Rf6+ Kg7 14. Kg5 Kh7 15. Rf7+ Kh8
+16. Kg6 Kg8 17. Rf5 Kh8 18. Rf8# 1-0
+
+[Event "Lichess Practice - Lucena safe promotion"]
+[Site "https://lichess.org/practice/rook-endgames/practicestnambasicrookendgames/pqUSUw8Y/tAcIEIbG"]
+[Date "2026.10.01"]
+[Round "2"]
+[White "Ambrose"]
+[Black "Lichess practice computer"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6K1/4k1P1/8/8/8/7r/8/5R2 w - - 0 1"]
+
+{Guided exercise: introduction and arrows showed the bridge plan, and automatic feedback was visible. Computer chose Ra3 rather than further checks. Safe-promotion Success was displayed; the full game was not finished.}
+1. Re1+ Kd7 2. Re4 Kd6 3. Kf7 Rf3+ 4. Kg6 Ra3 5. g8=Q Rg3+ *
+
+[Event "Lucena bridge - manual analysis variation"]
+[Site "https://lichess.org/analysis"]
+[Date "2026.10.01"]
+[Round "3"]
+[White "Ambrose manual analysis"]
+[Black "Ambrose manual analysis"]
+[Result "*"]
+[SetUp "1"]
+[FEN "6K1/4k1P1/8/8/8/7r/8/5R2 w - - 0 1"]
+
+{Both sides controlled manually on the analysis board, local engine off. Moves through 7.Rg4 imported using the visible PGN form; the remaining moves dragged on the board. This illustrates one continuation, not a computer game or an exhaustive proof.}
+1. Re1+ Kd7 2. Re4 Kd6 3. Kf7 Rf3+ 4. Kg6 Rg3+ 5. Kf6 Rf3+
+6. Kg5 Rg3+ 7. Rg4 Rxg4+ 8. Kxg4 Ke6 9. g8=Q+ *
+
+[Event "Lichess Practice - Philidor Position"]
+[Site "https://lichess.org/practice/rook-endgames/practicestnambasicrookendgames/pqUSUw8Y/CvqYotss"]
+[Date "2026.10.01"]
+[Round "4"]
+[White "Lichess practice computer"]
+[Black "Ambrose"]
+[Result "1/2-1/2"]
+[SetUp "1"]
+[FEN "1r2k3/R7/8/4PK2/8/8/8/8 b - - 0 1"]
+
+{Guided practice with introductory strategy and automatic evaluations/alternative moves visible. Goal: equalize in 10 moves. Played six Black moves; the final board showed draw and Success.}
+1... Rb6 2. e6 Rb1 3. e7 Rf1+ 4. Ke4 Re1+ 5. Kd3 Rxe7
+6. Rxe7+ Kxe7 1/2-1/2
+
+[Event "Philidor - early retreat illustration"]
+[Site "https://lichess.org/analysis"]
+[Date "2026.10.01"]
+[Round "5"]
+[White "Ambrose manual analysis"]
+[Black "Ambrose manual analysis"]
+[Result "*"]
+[SetUp "1"]
+[FEN "1r2k3/R7/8/4PK2/8/8/8/8 b - - 0 1"]
+
+{Manually composed variation imported through the visible PGN form, engine off. Shows the white king sheltering ahead of its pawn after premature retreat. Not a completed game or proof of all continuations.}
+1... Rb1 2. Kf6 Rf1+ 3. Ke6 *
+
+[Event "Casual correspondence game - first full game"]
+[Site "https://lichess.org/ApqRXgJp"]
+[Date "2026.10.01"]
+[Round "6"]
+[White "Ambrose (anonymous UI)"]
+[Black "Stockfish level 1"]
+[Result "1-0"]
+[TimeControl "-"]
+
+{Complete game played through the board UI against the site's level-1 computer, unlimited time, casual/unrated, anonymous. No analysis panel, external engine, move hints, or takebacks used during this game. Opponent made repeated major blunders. Final UI confirmed checkmate and White victory.}
+1. e4 e5 2. Nf3 Qf6 3. Bc4 Nh6 4. O-O d6 5. Nc3 Bg4
+6. h3 Nd7 7. hxg4 g5 8. d4 Ng8 9. Bxg5 Qe6 10. Bxe6 Ne7
+11. Bxd7+ Kd8 12. Bf5 Rc8 13. dxe5 Ke8 14. exd6 Rb8
+15. dxe7 a6 16. Qd7# 1-0
+
+[Event "Casual correspondence game - second full game"]
+[Site "https://lichess.org/u19atbY5"]
+[Date "2026.10.01"]
+[Round "7"]
+[White "Stockfish level 3"]
+[Black "Ambrose (anonymous UI)"]
+[Result "1-0"]
+[TimeControl "-"]
+
+{Complete game played through the board UI, level-3 computer, unlimited time, casual/unrated, anonymous. No analysis panel, engine assistance, hints, or takebacks used during the game. Final UI confirmed White checkmate: Ambrose lost as Black. Original observations are my own. Additional comments explicitly labelled Postgame use the visible local SF 19 1MB NNUE analysis panel after the game ended.}
+1. d4 d5 2. e3 Nf6 3. h3 Bf5 4. Nf3 e6 5. c4 Bb4+
+6. Bd2 Bxd2+ 7. Nbxd2 O-O 8. Be2 Nbd7 9. Qb3 Rb8
+10. Qa4 Nb6 11. Qxa7 Ra8 12. Qxb7 Rb8 13. Qa7 Nxc4
+14. Nb3 Nxb2 15. Ne5 Nc4 16. Bxc4 dxc4 17. Nc6 Ra8
+18. Qb7 Qc8 19. Qxc8 Raxc8 20. Nc5 Rfe8 21. Ne5 c3
+22. Rc1 c2 23. g4 Bg6 24. h4 h6 25. Nxg6 fxg6
+26. Rxc2 e5 27. g5 Nd5 28. Rd2 exd4 29. gxh6 dxe3
+{I focused on the pawn attacking Rd2 and missed that the rook could escape by capturing Nd5.}
+{Postgame: before 29...dxe3, local evaluation +0.1 at depth 36; after it, +4.0 at depth 26, White perspective. The d4 pawn had blocked the white rook from Nd5.}
+(29... Re5 {Postgame engine suggestion, manually tried on the analysis board: +0.2 at depth 35. Keeps the d4 blocker and directly protects Nd5. Only this move was played in this branch; no full continuation tested.})
+30. Rxd5 e2 31. Rd2 Rb8 32. h7+ Kxh7 33. Nb3 Re4
+34. f3 Re3 35. Rxe2 Rxe2+ 36. Kxe2 Ra8 37. Ra1 Ra4
+38. Nc5 Rxh4 39. Ke3 Kh6 40. Ne6 c6 41. Rg1 Ra4
+{Ra4 pursued the a-pawn but abandoned the h-file. My king's other exits were occupied by its own pawns or controlled by Ne6.}
+(41... Kh7 {Postgame engine suggestion, manually tried: +5.9 at depth 32, White perspective. Avoids the immediate game continuation but remains substantially worse; not evidence of a draw. Only this alternative move was played.})
+42. Rh1+ Rh4 43. Rxh4# 1-0
+
+
+[Event "Casual correspondence game - third full game"]
+[Site "https://lichess.org/a8HCzNqg"]
+[Date "2026.10.02"]
+[Round "8"]
+[White "Ambrose (anonymous UI)"]
+[Black "Stockfish level 3"]
+[Result "1-0"]
+[TimeControl "-"]
+
+{Complete standard game against the site's level-3 computer, anonymous, casual, unlimited time. No analysis panel, external engine, hints, or takebacks used during play. Final visible UI verified 52.Qa4#, 1-0, White victory. Opponent made substantial mistakes; this result alone is not a measure of playing strength.}
+1. e4 c6 2. d4 d5 3. Nc3 c5 4. exd5 cxd4 5. Qxd4 Nf6
+6. Nf3 e6 7. Bb5+ Bd7 8. O-O Nxd5 9. Bxd7+ Qxd7
+10. Nxd5 Qxd5 11. Qxd5 exd5 12. Re1+ Kd7
+13. Bf4 Nc6 14. Rad1 Rd8 15. Rxd5+ Bd6 16. Bxd6 h6
+17. Bc7+ {I miscounted the resulting exchanges when choosing this discovered check. After Kxc7 and the rook exchange I retain only the extra pawn, losing the extra bishop I had just gained. This is my own observation during play, not an engine evaluation.} Kxc7
+18. Rxd8 Kxd8 19. Kf1 g5 20. c3 Kc8 21. Nd4 Rd8
+22. Nxc6 Rf8 {Black did not recapture the knight with the b7 pawn.}
+23. Nd4 Rg8 24. Re7 Rd8 25. Rxf7 g4 26. Ke2 a5 27. Kd3 a4 28. Rf6 h5 29. Rh6 Rd5 30. Ke4 Rd8
+31. Rxh5 Rd6 32. Rg5 Rb6 33. b3 Rf6 34. Rf5 Rh6
+35. Kf4 Rh8 36. Kxg4 axb3 37. axb3 Rxh2 38. Kg3 Rh8
+39. f4 Re8 40. Re5 Rd8 41. f5 b6 42. Re7 Rg8+
+43. Kf4 Rd8 44. f6 Rxd4+ 45. cxd4 Kd8
+46. Re5 {My observation during play: moving the f6 pawn immediately would remove its protection of Re7 against the black king on d8. Re5 puts the rook under my king's protection before advancing the pawn.} Kd7
+47. f7 Kc6 48. f8=Q Kc7 49. Qf6 Kb7 50. Re7+ Ka6
+51. Qc6 Ka5 52. Qa4# {The b3 pawn protects the queen.} 1-0

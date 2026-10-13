@@ -1,0 +1,89 @@
+/* Cloth bindings, small brass labels and warm paper. The room stays central. */
+@font-face{font-family:RoomSong;src:url('../shared/fonts/serif-sc.woff2') format('woff2');font-display:swap}
+:root{--song:RoomSong,'Songti SC','SimSun',serif;--display:RoomDisplay,Georgia,serif;--sans:'Microsoft YaHei',system-ui,sans-serif}
+.masthead{background:linear-gradient(#21352bb8,transparent);padding:23px 3.4vw}.masthead .home img{filter:brightness(1.4) saturate(.7)}.masthead nav{gap:30px;margin-right:3.6vw}.masthead nav button{font:13px var(--song);min-height:42px;letter-spacing:.15em}.room-grain{opacity:.018}
+.hotspot{background:#ece6cfed;color:#36483b;padding:9px 15px;border:0;border-radius:2px 2px 9px 2px;box-shadow:0 3px 12px #13251b35;letter-spacing:.10em;font:13px var(--song);backdrop-filter:blur(8px);transform:translate(-50%,-130%)}
+.hotspot:before{width:4px;height:4px;background:#a78f60;border:0;border-radius:50%}.hotspot:after{content:'';position:absolute;top:100%;left:50%;height:17px;width:1px;background:#e5dbc0cc;box-shadow:0 1px 4px #182d23}.hotspot:hover{background:#fff8e3;box-shadow:0 5px 20px #13251b50}.hotspot:active{transform:translate(-50%,-130%)}
+.selection{top:50%;right:3.5vw;width:clamp(230px,20vw,300px);padding:24px 25px 19px;color:#344a3c;background:linear-gradient(100deg,#f3eddbf5,#e5ddc7f0);border:1px solid #f4eedb99;border-left:3px solid #9b9071;box-shadow:1px 2px 0 #a99d7e,0 12px 38px #182e233b;backdrop-filter:blur(14px)}
+.selection:before{display:none}.selection .eyebrow:empty{display:none}.selection h2{font:23px/1.6 var(--song);letter-spacing:.15em;margin:0 0 17px}.selection button{border-top:1px solid #6a745326;min-height:56px;padding:13px 0;display:flex;align-items:center;justify-content:space-between;gap:15px}.selection button em{font:italic 28px var(--display)}.selection button span{font:12px var(--song);opacity:.78;white-space:nowrap;float:none}.selection button:hover{color:#1d3527;transform:translateX(2px)}.selection button[aria-pressed=true]{color:#805f32}.selection[data-place=music] button em{font:15px/1.7 var(--song)}.selection[data-place=music] h2:after{content:'♪';float:right;color:#9d8254;font:25px Georgia}.selection[data-place=cabinet] button em,.selection[data-place=desk] button em{font:18px var(--song)}
+.room-footer{left:3.4vw;right:3.4vw;gap:20px;justify-content:flex-start;font:12px var(--song);letter-spacing:.06em}#room-hint:empty{display:none}#room-hint{max-width:35%}#overview{border:0;border-bottom:1px solid #e4dab384;background:#263b3180;backdrop-filter:blur(8px);padding:11px 15px;border-radius:2px}#quality{margin-left:auto}#quality,#motion{font:11px var(--song);min-height:40px;text-shadow:0 1px 6px #122a1d}
+.room-time-control{display:flex;gap:8px;align-items:center;font-size:11px;order:4;padding-left:18px;border-left:1px solid #ded2ad50}.room-time-control>span{opacity:.64}.room-time-control select{font:12px var(--song);color:#eee7d2;background:#273e337d;border:0;border-bottom:1px solid #d4c6a175;border-radius:0;padding:8px 3px;min-height:40px;cursor:pointer}.room-time-control option{color:#34483a;background:#eee7d2}
+#welcome{top:auto;bottom:16vh;left:50%;transform:translateX(-50%);background:none}#welcome button{border:1px solid #e0d3ac70;padding:16px 23px;background:#273e339c;backdrop-filter:blur(10px);text-align:center}body.entered #welcome{transform:translateX(-50%);visibility:hidden}#loading{background:#34483d}#loading p{font:25px var(--song)}#loading span{letter-spacing:.12em}#scene{outline-offset:-8px}
+.room-fallback #scene{display:none}.room-fallback #room{background:linear-gradient(#203d3577,#263d34bb),url('../reading/assets/room-day.webp') center/cover}.room-fallback .selection{right:50%;transform:translate(50%,-50%);width:min(390px,85vw)}.room-fallback .room-footer{display:none}
+.drawer-tray{width:min(1100px,91vw);height:min(820px,87svh);overflow:visible;color:#384335;box-shadow:0 35px 110px #101d1799;background:transparent}.drawer-tray::backdrop{background:#17251e77;backdrop-filter:blur(4px)}.drawer-tray[open]{animation:tray-arrive .45s cubic-bezier(.2,.7,.2,1) both}.tray-rim{height:100%;display:flex;flex-direction:column;border:14px solid #8a6a4c;border-top-color:#ab8e65;border-bottom-color:#6a503d;border-radius:3px;background:repeating-linear-gradient(2deg,#cfbb9600 0,#65513c09 2px,#cfbb9600 4px,#cfbb9600 11px),#c7b795;box-shadow:inset 0 9px 22px #4e3a2933,0 0 0 1px #c2a776}
+.tray-rim>header{display:flex;align-items:center;justify-content:space-between;padding:20px 30px 15px;border-bottom:1px solid #796b5033;gap:20px}.tray-kicker{font:11px var(--sans);letter-spacing:.18em;color:#746449}.tray-rim h2{font:26px var(--song);letter-spacing:.10em;margin:5px 0 0}.tray-close{font:12px var(--song);padding:12px 0 12px 15px;min-height:44px}.tray-close span{font:26px var(--display);margin-left:12px}.tray-scroll{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#8b7c5d transparent;padding:29px 30px 36px}.tray-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 25px;align-items:start}
+.tray-piece{display:block;padding:0;text-align:left;width:100%;color:#354235;transition:transform .25s}.tray-mount{height:183px;padding:12px;background:#f1ebd9;box-shadow:1px 3px 4px #68543c40,0 0 0 1px #fdf7e6;display:flex;align-items:center;justify-content:center;flex-direction:column;position:relative;gap:10px}.tray-piece:nth-child(3n+1) .tray-mount{rotate:-.65deg}.tray-piece:nth-child(3n) .tray-mount{rotate:.55deg}.tray-mount img{width:100%;height:100%;object-fit:contain}.tray-piece-title{display:block;font:16px/1.6 var(--song);margin-top:13px}.tray-piece small{display:block;font:italic 17px var(--display);color:#786b51;margin-top:3px}.tray-piece:hover{transform:translateY(-4px)}.tray-piece:focus-visible{outline-color:#526d54;outline-offset:9px}.tray-mark{font:italic 38px var(--display);color:#7c876d}.tray-paper-title{font:16px/1.6 var(--song);text-align:center;max-width:90%}.tray-type-text{align-items:flex-start;padding:22px}.tray-type-text:after{content:'';display:block;width:73%;height:20px;background:repeating-linear-gradient(transparent 0 7px,#83907740 7px 8px)}.tray-type-text .tray-mark{font:12px var(--song);color:#8b917a}.tray-type-text .tray-paper-title{text-align:left;font-size:20px}.tray-rim>footer{display:flex;align-items:center;justify-content:space-between;padding:12px 27px;border-top:1px solid #796b5033;background:#bba47d45;font:12px var(--song)}.tray-rim>footer button{min-height:42px;min-width:42px}.tray-rim>footer nav{display:flex;align-items:center;gap:18px}.tray-more{letter-spacing:.08em}.tray-empty{font:15px var(--song)}
+@keyframes tray-arrive{from{opacity:0;transform:translateY(12px) scale(.975)}to{opacity:1;transform:none}}
+@media(max-width:1000px){.selection{right:22px;width:238px;padding:20px}.tray-mount{height:155px}.tray-grid{gap:25px 20px}.masthead nav{gap:20px}}
+@media(max-width:760px){
+ .masthead{padding:16px 18px;align-items:flex-start;height:105px}.home img{width:40px}.home>span{font-size:21px}.home i{display:none}.masthead nav{position:fixed;bottom:max(17px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);width:max-content;max-width:94vw;margin:0;gap:21px;padding:0 22px;background:#eee7d2ed;color:#344a3c;border:1px solid #f9f1d8b0;box-shadow:0 7px 26px #15251b45;backdrop-filter:blur(14px);border-radius:3px}.masthead nav button{min-height:46px;font-size:13px;letter-spacing:.08em}.masthead nav button:hover{color:#715d36}.masthead nav button.active{border-bottom:2px solid #99845b}
+ #sound{min-height:42px;gap:0!important}#sound .score-bookmark{width:40px;height:34px}#sound-label{font-size:11px}.selection{left:18px;right:18px;top:auto;bottom:129px;transform:none;width:auto;max-height:37svh;overflow:auto;padding:16px 21px}.selection h2{font-size:20px;margin:0 0 8px}.selection button{min-height:44px;padding:7px 0}.selection button em{font-size:24px}.selection button span{font-size:11px}
+ .room-footer{left:18px;right:18px;bottom:76px;gap:9px;flex-wrap:wrap}#room-hint{display:none}#overview{font-size:11px;padding:8px 11px;min-height:38px}#quality{margin-left:auto}#quality,#motion{font-size:10px;min-height:34px}.room-time-control{padding-left:8px;gap:4px}.room-time-control>span{display:none}.room-time-control select{font-size:11px;min-height:35px;padding:6px 0}.hotspot{font-size:11px;padding:9px 11px}.hotspot:after{height:13px}
+ .drawer-tray{width:95vw;height:90svh}.tray-rim{border-width:8px}.tray-rim>header{padding:16px 18px 12px}.tray-rim h2{font-size:23px}.tray-kicker{font-size:10px}.tray-close{font-size:11px}.tray-scroll{padding:22px 18px}.tray-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 18px}.tray-mount{height:145px;padding:9px}.tray-piece-title{font-size:14px;margin-top:10px}.tray-piece small{font-size:15px}.tray-type-text{padding:14px}.tray-type-text .tray-paper-title{font-size:17px}.tray-rim>footer{padding:7px 15px}.room-fallback .selection{left:25px;right:25px;top:25%;bottom:auto;transform:none;width:auto;max-height:60svh}
+}
+@media(max-width:380px){.room-footer{gap:6px}.room-time-control{border:0;padding-left:0}#quality{font-size:9px}.masthead nav{gap:16px;padding:0 18px}.tray-mount{height:125px}}
+@media(prefers-reduced-motion:reduce){.drawer-tray[open]{animation:none}.tray-piece,.hotspot{transition:none}}
+@media(max-width:760px){.selection[data-place=music]{max-height:29svh}}
+
+/* The open drawer stays in view until a work is deliberately opened. */
+.selection[data-place=open-drawer]{top:auto;bottom:16vh;transform:none;padding:18px 23px;width:225px}
+.selection[data-place=open-drawer] h2{font-size:18px;margin:0 0 8px}
+.selection[data-place=open-drawer] button{min-height:43px;padding:10px 0}
+.selection[data-place=open-drawer] button em{font:16px var(--song)}
+@media(max-width:760px){.selection[data-place=open-drawer]{left:18px;right:18px;bottom:126px;width:auto;max-height:24svh;padding:12px 20px}.selection[data-place=open-drawer] h2{font-size:17px}.selection[data-place=open-drawer] button{min-height:37px;padding:6px 0}}
+
+#book-caption{position:fixed;z-index:14;pointer-events:none;max-width:248px;padding:9px 13px;background:#eee7d5;color:#344a3c;box-shadow:0 4px 14px #14291f36;border-left:2px solid #9b9071;font:13px/1.7 Georgia,"Songti SC",SimSun,serif;letter-spacing:.035em}
+#book-caption[hidden]{display:none}
+/* Keep the bookcase visible above its compact mobile index. */
+@media(max-width:760px){.selection[data-place=shelf]{max-height:170px;padding:10px 17px;bottom:129px}.selection[data-place=shelf] h2{font-size:16px;margin:0 0 3px}.selection[data-place=shelf] #selection-body{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}.selection[data-place=shelf] button{min-height:42px;gap:6px}.selection[data-place=shelf] button em{font-size:17px}.selection[data-place=shelf] button span{font-size:11px}}
+
+/* Labels appear only after selection, never attached to furniture. */
+#hotspots{display:block}.selection{max-height:68svh;overflow:auto}.selection[data-place=cabinet] button em{font:15px/1.6 var(--song)}.selection[data-place=shelf] button:last-child em{font:15px/1.6 var(--song)}
+@media(max-width:760px){.selection{max-height:37svh}.selection[data-place=music]{max-height:29svh}.selection[data-place=shelf]{max-height:170px}}
+
+/* Floating region cues return without adding words to furniture. */
+.region-spot[hidden],.shelf-section[hidden]{display:none}
+.region-spot{font-size:14px;font-weight:600;letter-spacing:.04em;padding:10px 14px;background:#f2ead8ef}
+.shelf-section{position:absolute;pointer-events:none;transform:translate(-100%,-50%);padding:6px 10px;background:#f0e8d6e8;border-left:2px solid #8b7857;color:#344b3e;font:600 14px/1.5 var(--song);white-space:nowrap;box-shadow:0 3px 12px #17352b28}
+.archive-section{font-size:17px;border-left:3px solid #9a743d;background:#fff3d9f5}
+.genre-section{transform:translate(-50%,30%);font-size:12px;padding:3px 7px;letter-spacing:.04em}
+.selection[data-place=shelf] #selection-body{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.selection[data-place=shelf] .archive-volume em{font:600 16px/1.5 var(--song)}
+.selection[data-place=shelf] .archive-volume{color:#395447;border-top-color:#90734770}
+.selection[data-place=shelf] .eyebrow{display:block;margin:0 0 12px;color:#806a44;font:12px var(--song)}
+.selection[data-place=shelf]{width:clamp(230px,22vw,330px)}
+.selection[data-place=shelf] button em{font:15px/1.5 var(--song)}
+.selection[data-place=shelf] button span{font-size:10px}
+@media(max-width:760px){.region-spot{font-size:11px;padding:8px 10px}.shelf-section{font-size:11px;padding:4px 7px;transform:translate(-12%,-50%)}.genre-section{transform:translate(-50%,30%);font-size:10px;padding:3px 5px}.archive-section{font-size:13px}.selection[data-place=shelf]{width:auto;max-height:230px}.selection[data-place=shelf] .archive-volume em{font-size:13px}.selection[data-place=shelf] button{min-height:36px}.selection[data-place=shelf] h2{font-size:18px}.selection[data-place=shelf] .eyebrow{margin-bottom:5px}}
+
+/* The desk and its research drawers have separate cues, both below their objects. */
+.below-spot,.below-spot:active{transform:translate(-50%,30%)}
+.below-spot:after{top:auto;bottom:100%}
+.selection[data-place=models] button em,.selection[data-place=research] button em{font:16px/1.6 var(--song)}
+.selection[data-place=models]{top:auto;bottom:16vh;transform:none;max-height:150px}
+@media(max-width:760px){.selection[data-place=models]{bottom:129px;max-height:120px}}
+/* A model collection is a whole page, rather than a wooden drawer tray. */
+.drawer-tray.model-gallery{width:100vw;max-width:none;height:100svh;max-height:none;margin:0;border:0;border-radius:0;box-shadow:none;background:#dfe4df;color:#324a42;overflow:hidden}
+.model-gallery::backdrop{background:#263a34}
+.model-gallery[open]{animation:none}
+.model-gallery .tray-rim{border:0;border-radius:0;box-shadow:none;background:#dfe4df}
+.model-gallery .tray-rim>header{padding:clamp(24px,5vw,72px) max(24px,calc((100vw - 1240px)/2)) 28px;border-bottom:1px solid #9cafa44a;align-items:flex-end}
+.model-gallery .tray-kicker{color:#6c8176;letter-spacing:.12em}
+.model-gallery h2{font:clamp(28px,3vw,44px)/1.3 var(--song);letter-spacing:.05em;margin-top:10px}
+.model-gallery .tray-close{color:#324a42;white-space:nowrap}
+.model-gallery .tray-scroll{padding:38px max(24px,calc((100vw - 1240px)/2)) 64px;scrollbar-color:#81958a transparent}
+.model-gallery .tray-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:42px 32px}
+.model-gallery .tray-mount{height:clamp(180px,22vw,290px);padding:20px;rotate:0!important;background:#eaf0ea;box-shadow:0 2px 0 #a4b6aa;gap:16px}
+.model-gallery .tray-piece{color:#324a42}
+.model-gallery .tray-piece-title{font:19px/1.6 var(--song);margin-top:16px}
+.model-gallery .tray-piece small{font:13px/1.5 var(--sans);color:#6c8176;margin-top:5px}
+.model-gallery .tray-mark{color:#7e9488;font:italic 36px var(--display)}
+.model-gallery .tray-piece:focus-visible,.model-gallery .tray-close:focus-visible{outline:2px solid #536f61;outline-offset:5px}
+.model-gallery .tray-rim>footer[hidden]{display:none}
+@media(max-width:760px){.model-gallery .tray-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 16px}.model-gallery .tray-rim>header{padding:24px 22px 20px;gap:12px}.model-gallery .tray-scroll{padding:26px 22px 40px}.model-gallery .tray-mount{height:170px;padding:10px}.model-gallery .tray-piece-title{font-size:15px}.model-gallery .tray-close{font-size:11px}}
+@media(max-width:380px){.model-gallery .tray-grid{grid-template-columns:1fr}.model-gallery .tray-mount{height:230px}}
+
+/* Four complete archives are the primary entries; make their index equally explicit. */
+.selection[data-place=shelf] .archive-volume em{font:600 17px/1.65 var(--song)}
+.selection[data-place=shelf] .archive-volume span{font-size:11px}
+@media(max-width:760px){.selection[data-place=shelf] .archive-volume em{font-size:14px}}

@@ -1,0 +1,136 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>推起滑套，撑开伞骨 · Ambrose</title><style>
+:root{--viz-series-1:#34776c;--viz-series-2:#b97b3c;--muted-foreground:#798980;--border:#c7d2c8;--foreground:#273c37;color:var(--foreground);background:#f6f3e9;font:17px/1.7 system-ui,sans-serif}body{max-width:720px;margin:5vh auto;padding:24px}h3{font:500 2.2rem/1.25 Georgia,serif;margin:1.2rem 0}.viz-controls,.viz-row{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}.viz-controls{justify-content:space-between}.btn{font:inherit;background:#fcfbf6;border:1px solid #a4b9ae;border-radius:8px;padding:.55em .85em;color:inherit;cursor:pointer}.btn:disabled{opacity:.35;cursor:default}.btn:focus-visible,input:focus-visible{outline:3px solid #34776c;outline-offset:3px}.form-check{display:flex;gap:.65em;align-items:center}input{width:20px;height:20px;accent-color:#34776c}.tabular-nums{font-variant-numeric:tabular-nums}.provenance{font-size:.8rem;color:#697871;border-top:1px solid var(--border);padding-top:1.5rem;margin-top:2.5rem}
+.form-range{width:100%;height:26px;margin:1rem 0}.viz-row{justify-content:space-between}
+</style><main><div id="ambrose-umbrella-linkage">
+  <h3>推起滑套，撑开伞骨</h3>
+  <div class="viz-row">
+    <label class="form-label" for="umbrella-distance">滑套距顶点 <output id="umbrella-distance-value" class="tabular-nums">30.0 cm</output></label>
+    <span class="tabular-nums" id="umbrella-angle" aria-live="polite">伞骨张角 71.1°</span>
+  </div>
+  <input class="form-range" id="umbrella-distance" type="range" min="15" max="85" step="0.5" value="30" aria-label="滑套距顶点，厘米">
+  <div class="viz-row text-small">
+    <span><span class="umbrella-key umbrella-rib-key"></span>伞骨</span>
+    <span><span class="umbrella-key umbrella-strut-key"></span>支撑杆</span>
+    <span>两杆铰接的几何模型</span>
+  </div>
+  <svg id="umbrella-drawing" role="img" aria-labelledby="umbrella-svg-title umbrella-svg-desc">
+    <title id="umbrella-svg-title">滑套带动支撑杆，使左右伞骨展开</title>
+    <desc id="umbrella-svg-desc">沿伞杆上下移动滑套，连接滑套与伞骨的支撑杆保持长度不变。可通过上方滑块或拖动滑套改变位置。</desc>
+    <line id="umbrella-shaft" class="umbrella-structure"></line>
+    <line id="umbrella-left-rib" class="umbrella-rib"></line>
+    <line id="umbrella-right-rib" class="umbrella-rib"></line>
+    <line id="umbrella-left-strut" class="umbrella-strut"></line>
+    <line id="umbrella-right-strut" class="umbrella-strut"></line>
+    <circle id="umbrella-left-joint" class="umbrella-joint" r="4"></circle>
+    <circle id="umbrella-right-joint" class="umbrella-joint" r="4"></circle>
+    <circle id="umbrella-crown" class="umbrella-crown" r="5"></circle>
+    <rect id="umbrella-runner" width="18" height="13" rx="3"></rect>
+    <rect id="umbrella-runner-hit" width="44" height="44" fill="transparent" aria-hidden="true"></rect>
+    <text id="umbrella-crown-label" class="text-small" text-anchor="middle">固定顶点</text>
+    <text id="umbrella-runner-label" class="text-small">滑套</text>
+  </svg>
+</div>
+<style>
+  #ambrose-umbrella-linkage .umbrella-key { display:inline-block; width:18px; height:3px; vertical-align:middle; margin-right:5px; }
+  #ambrose-umbrella-linkage .umbrella-rib-key { background:var(--viz-series-1); }
+  #ambrose-umbrella-linkage .umbrella-strut-key { background:var(--viz-series-2); }
+  #ambrose-umbrella-linkage svg { display:block; width:100%; touch-action:none; overflow:visible; }
+  #ambrose-umbrella-linkage .umbrella-structure { stroke:var(--muted-foreground); stroke-width:2; }
+  #ambrose-umbrella-linkage .umbrella-rib { stroke:var(--viz-series-1); stroke-width:4; stroke-linecap:round; }
+  #ambrose-umbrella-linkage .umbrella-strut { stroke:var(--viz-series-2); stroke-width:3; stroke-linecap:round; }
+  #ambrose-umbrella-linkage .umbrella-joint { fill:var(--viz-series-1); }
+  #ambrose-umbrella-linkage .umbrella-crown { fill:var(--foreground); }
+  #ambrose-umbrella-linkage #umbrella-runner { fill:var(--foreground); }
+  #ambrose-umbrella-linkage #umbrella-runner-hit { cursor:ns-resize; }
+  #ambrose-umbrella-linkage text { fill:var(--foreground); }
+</style>
+<script>
+(() => {
+  const root = document.getElementById('ambrose-umbrella-linkage');
+  const slider = root.querySelector('#umbrella-distance');
+  const svg = root.querySelector('#umbrella-drawing');
+  const value = root.querySelector('#umbrella-distance-value');
+  const angle = root.querySelector('#umbrella-angle');
+  const geometry = { rib:85, attachment:42, strut:43, shaft:112 };
+  let distance = 30;
+  let scale = 1;
+  let cx = 0;
+  const cy = 32;
+  let dragging = false;
+  function restore(state) {
+    const saved = state && state.modelContent && state.modelContent.runnerDistanceCm;
+    if (Number.isFinite(saved)) distance = Math.max(15, Math.min(85, saved));
+    slider.value = String(distance);
+  }
+  function line(id, x1, y1, x2, y2) {
+    const item = root.querySelector(id);
+    item.setAttribute('x1', x1); item.setAttribute('y1', y1);
+    item.setAttribute('x2', x2); item.setAttribute('y2', y2);
+  }
+  function place(id, x, y) {
+    const item = root.querySelector(id);
+    item.setAttribute('cx', x); item.setAttribute('cy', y);
+  }
+  function draw() {
+    const width = Math.max(280, root.clientWidth);
+    scale = Math.min(2.9, (width - 72) / (2 * geometry.rib));
+    cx = width / 2;
+    const height = cy + geometry.shaft * scale + 24;
+    svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+    svg.setAttribute('height', height);
+    const a = geometry.attachment, b = geometry.strut, d = distance;
+    const cosine = Math.max(-1, Math.min(1, (a*a + d*d - b*b) / (2*a*d)));
+    const theta = Math.acos(cosine);
+    const sine = Math.sin(theta);
+    const ex = geometry.rib * sine * scale;
+    const ey = geometry.rib * cosine * scale;
+    const jx = a * sine * scale;
+    const jy = a * cosine * scale;
+    const runnerY = cy + d * scale;
+    line('#umbrella-shaft', cx, cy, cx, cy + geometry.shaft * scale);
+    line('#umbrella-left-rib', cx, cy, cx-ex, cy+ey);
+    line('#umbrella-right-rib', cx, cy, cx+ex, cy+ey);
+    line('#umbrella-left-strut', cx, runnerY, cx-jx, cy+jy);
+    line('#umbrella-right-strut', cx, runnerY, cx+jx, cy+jy);
+    place('#umbrella-left-joint', cx-jx, cy+jy);
+    place('#umbrella-right-joint', cx+jx, cy+jy);
+    place('#umbrella-crown', cx, cy);
+    const runner = root.querySelector('#umbrella-runner');
+    runner.setAttribute('x', cx-9); runner.setAttribute('y', runnerY-6.5);
+    const hit = root.querySelector('#umbrella-runner-hit');
+    hit.setAttribute('x', cx-22); hit.setAttribute('y', runnerY-22);
+    const topLabel = root.querySelector('#umbrella-crown-label');
+    topLabel.setAttribute('x', cx); topLabel.setAttribute('y', 17);
+    const runnerLabel = root.querySelector('#umbrella-runner-label');
+    runnerLabel.setAttribute('x', cx+29); runnerLabel.setAttribute('y', runnerY+4);
+    value.textContent = `${d.toFixed(1)} cm`;
+    angle.textContent = `伞骨张角 ${(theta * 180 / Math.PI).toFixed(1)}°`;
+    slider.setAttribute('aria-valuetext', `距顶点 ${d.toFixed(1)} 厘米，张角 ${(theta*180/Math.PI).toFixed(1)} 度`);
+  }
+  function save() {
+    if (window.openai && window.openai.setWidgetState) {
+      window.openai.setWidgetState({modelContent:{runnerDistanceCm:distance},privateContent:null}).catch(() => {});
+    }
+  }
+  slider.addEventListener('input', () => { distance = Number(slider.value); draw(); });
+  slider.addEventListener('change', save);
+  svg.addEventListener('pointerdown', event => {
+    if (event.target.id !== 'umbrella-runner-hit') return;
+    dragging = true; svg.setPointerCapture(event.pointerId);
+  });
+  svg.addEventListener('pointermove', event => {
+    if (!dragging) return;
+    const box = svg.getBoundingClientRect();
+    const svgY = (event.clientY-box.top) * svg.viewBox.baseVal.height / box.height;
+    distance = Math.max(15, Math.min(85, Math.round((svgY-cy)/scale*2)/2));
+    slider.value = String(distance); draw();
+  });
+  svg.addEventListener('pointerup', () => { if (dragging) { dragging=false; save(); } });
+  svg.addEventListener('pointercancel', () => { dragging=false; });
+  window.addEventListener('openai:set_globals', event => { restore(event.detail && event.detail.globals && event.detail.globals.widgetState); draw(); });
+  restore(window.openai && window.openai.widgetState);
+  new ResizeObserver(draw).observe(root);
+  draw();
+})();
+</script>
+<p class="provenance">Ambrose · 2026年10月2日<br>根据原对话第29265条保存的完整代码恢复；交互代码和原 SVG 保持原样，仅补独立网页外壳与基础样式。这是两根铰接杆的平面模型，未模拟伞布、弹性与真实伞面的曲率。</p></main></html>

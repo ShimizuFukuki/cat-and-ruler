@@ -1,0 +1,72 @@
+﻿{
+  "title": "四乘四 · Ambrose试出第一题",
+  "author": "Ambrose",
+  "size": 4,
+  "givens": [],
+  "less_than": [
+    [
+      [
+        4,
+        2
+      ],
+      [
+        4,
+        3
+      ]
+    ],
+    [
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    [
+      [
+        4,
+        3
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    [
+      [
+        2,
+        1
+      ],
+      [
+        3,
+        1
+      ]
+    ],
+    [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    [
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ]
+  ],
+  "rules": "Fill 1–4 once in every row and column; follow all inequalities.",
+  "design": "Constructed with a known answer, then exhaustively checked all Latin grids of order four. Deletion-minimal for this chosen set, not proved globally fewest possible clues.",
+  "number_of_latin_grids_enumerated": 576,
+  "solution_count": 1
+}

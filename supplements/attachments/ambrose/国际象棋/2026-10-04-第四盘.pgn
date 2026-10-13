@@ -1,0 +1,10 @@
+[Event "Local text-board game 4"]
+[Site "Ambrose desktop"]
+[Date "2026.10.04"]
+[Round "?"]
+[White "Ambrose"]
+[Black "Stockfish 19 (Skill 3)"]
+[Result "0-1"]
+[TimeControl "-"]
+
+{ White resigned after 32...Qxd1+; the position is not checkmate. No takebacks; engine plays only Black, no suggestions or analysis for Ambrose. Skill setting is not a calibrated Elo rating. } 1. e4 { 先占中心，给象让路。 } 1... c5 2. Nf3 { 出马，准备d4打开中心。 } 2... Nc6 3. d4 { 用d兵换开c线与中心。 } 3... cxd4 4. Nxd4 { 马回吃，中心驻点。 } 4... Nf6 5. Nc3 { 保护e4，完成后翼马的出子。 } 5... e6 6. Be2 { 准备短易位，先把王移出中心。 } 6... d6 7. O-O { 王暂时安全，之后发展c1象。 } 7... Qc7 8. Be3 { 象保护d4，连通重子。 } 8... Qd8 9. Qd2 { 后移开d1，准备把车放到d线。 } 9... Be7 10. Rad1 { a车上d线，f车继续守王翼。 } 10... a6 11. f4 { 支持e4并准备f5，争取王翼空间。 } 11... Qa5 12. f5 { 推进f兵，向e6施压。 } 12... O-O 13. fxe6 { 把f线打开，观察黑方怎样回吃。 } 13... Bxe6 14. Nxe6 { 以马换象，争取f线和e6弱兵。 } 14... fxe6 15. Rf3 { 准备车横移到王翼，暂时不牺牲子。 } 15... b5 16. Rg3 { 车靠近黑王，下一步考虑象和后的配合。 } 16... Ne5 17. Bh6 { g兵被g线车牵住，象到h6增加压力。 } 17... Ng6 18. Bg5 { 黑马挡住g线后，先退象，不能再把g兵当作被钉住。 } 18... b4 19. Na4 { c3马被兵赶走，选a4；b5会被a6兵吃。 } 19... Qxa4 20. b3 { 赶开a4后；上一手漏看后在a5可直接吃a4马，不撤回。 } 20... Qc6 21. Qd3 { 后保护e4，并让d车保持连线。 } 21... Qc5+ 22. Kh1 { 避开c5后沿斜线的将军。 } 22... Qe5 23. h4 { 用h兵保护g5象，争取h5赶走g6马。 } 23... Nxe4 24. Re3 { 马e4攻击g3车；先保车，g5象有h4兵保护。 } 24... d5 25. Bf3 { 给e4马压力，尽量让两象与车靠近。 } 25... Bxg5 26. hxg5 { h兵回吃黑象。 } 26... Rf4 27. Bxe4 { 先换掉扎在e4的马；回吃后还须防皇后受兵攻击。 } 27... Rh4+ 28. Kg1 { 离开h线将军，继续观察黑后的入口。 } 28... dxe4 29. Qe2 { 避开e4兵攻击，后留在王附近。 } 29... Qh2+ 30. Kf1 { 王往f1退，躲开h2后的将军。 } 30... Qf4+ 31. Qf2 { 后挡住f线，将军线上有王保护它。 } 31... Qg4 32. Qg3 { 提出后交换，e3车可沿第三横线回吃。 } 32... Qxd1+ 0-1

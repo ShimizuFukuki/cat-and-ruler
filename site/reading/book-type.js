@@ -1,0 +1,10 @@
+(function(root){'use strict';
+ const song='BookSong, serif',latin=song,cache=new WeakMap();
+ const gap=(a,b)=>a&&b&&(/[A-Za-z0-9]/.test(a)&&/\p{Script=Han}/u.test(b)||/\p{Script=Han}/u.test(a)&&/[A-Za-z0-9]/.test(b));
+ function segments(text){let last='';return (text.match(/[\x20-\x7e]+|[^\x20-\x7e]+/gu)||[]).map(text=>{const part={text,family:/^[\x20-\x7e]+$/.test(text)?latin:song,gap:gap(last,text[0])};last=text.at(-1);return part;});}
+ function measure(c,text,size){text=text.replace(/\uFEFF/g,'');if(!text)return 0;let widths=cache.get(c);if(!widths){widths=new Map();cache.set(c,widths);}let total=0;for(const s of segments(text)){const key=size+':'+s.family+':'+s.text;if(!widths.has(key)){c.font=size+'px '+s.family;widths.set(key,c.measureText(s.text).width);}total+=widths.get(key)+(s.gap?size*.1:0);}return total;}
+ // A Latin word moves as a unit. A URL longer than a complete line may split.
+ function line(text,start,max,size,c){let pos=start,width=0;const limit=max-(start===0?size*2:0);while(pos<text.length){if(text[pos]==='\r'&&text[pos+1]==='\n'){pos+=2;break;}if(text[pos]==='\n'||text[pos]==='\r'){pos++;break;}const word=/^[A-Za-z0-9]+(?:['’.-][A-Za-z0-9]+)*/.exec(text.slice(pos)),token=word?word[0]:String.fromCodePoint(text.codePointAt(pos)),tw=measure(c,token,size)+(pos>start&&gap(text[pos-1],token[0])?size*.1:0);if(width+tw>limit&&pos>start){if(/^[，。！？；：、）》」』】,.!?;:]$/.test(token)){pos+=token.length;}break;}if(tw>limit&&pos===start){let n=0;while(n<token.length&&width+measure(c,token[n],size)<=limit){width+=measure(c,token[n],size);n++;}pos+=Math.max(1,n);break;}width+=tw;pos+=token.length;}return {start,end:Math.max(pos,start+1),text:text.slice(start,pos).replace(/[\r\n]+$/,'')};}
+ function wrap(text,continued,max,size,c){const out=[];let pos=0;while(pos<text.length){const l=line(text,pos,max+(continued&&pos===0?size*2:0),size,c);out.push({...l,indent:!continued&&pos===0});pos=l.end;}return out;}
+ const api={song,latin,segments,measure,line,wrap};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.BookType=api;
+})(typeof window!=='undefined'?window:globalThis);

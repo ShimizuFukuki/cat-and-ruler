@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="260mm" viewBox="0 0 210 260">
+<rect width="210" height="260" fill="white"/>
+<text x="15" y="10" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, sans-serif" font-size="7" fill="#263c40">移开九毫米</text>
+<text x="15" y="21" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, sans-serif" font-size="3.8" fill="#263c40">Judas · 一条不对称纸带 · 待实体试折</text>
+<line x1="15" y1="37" x2="30" y2="37" stroke="#263c40" stroke-width="0.35"/>
+<text x="33" y="34" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, sans-serif" font-size="3.5" fill="#263c40">剪开</text>
+<line x1="66" y1="37" x2="81" y2="37" stroke="#386c87" stroke-width="0.35" stroke-dasharray="2 1"/>
+<text x="84" y="34" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, sans-serif" font-size="3.5" fill="#263c40">谷折（凹）</text>
+<line x1="131" y1="37" x2="146" y2="37" stroke="#b64b36" stroke-width="0.35" stroke-dasharray="3 1 0.5 1"/>
+<text x="149" y="34" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, sans-serif" font-size="3.5" fill="#263c40">山折（凸）</text>
+<line x1="15" y1="58" x2="195" y2="58" stroke="#263c40" stroke-width="0.3"/>
+<line x1="195" y1="58" x2="195" y2="198" stroke="#263c40" stroke-width="0.3"/>
+<line x1="195" y1="198" x2="15" y2="198" stroke="#263c40" stroke-width="0.3"/>
+<line x1="15" y1="198" x2="15" y2="58" stroke="#263c40" stroke-width="0.3"/>
+<line x1="105" y1="58" x2="105" y2="110" stroke="#386c87" stroke-width="0.35" stroke-dasharray="2 1"/>
+<line x1="105" y1="130" x2="105" y2="198" stroke="#386c87" stroke-width="0.35" stroke-dasharray="2 1"/>
+<line x1="87" y1="110" x2="132" y2="110" stroke="#263c40" stroke-width="0.45"/>
+<line x1="87" y1="130" x2="132" y2="130" stroke="#263c40" stroke-width="0.45"/>
+<line x1="87" y1="110" x2="87" y2="130" stroke="#386c87" stroke-width="0.35" stroke-dasharray="2 1"/>
+<line x1="132" y1="110" x2="132" y2="130" stroke="#386c87" stroke-width="0.35" stroke-dasharray="2 1"/>
+<line x1="114" y1="110" x2="114" y2="130" stroke="#b64b36" stroke-width="0.35" stroke-dasharray="3 1 0.5 1"/>
+<text x="29" y="65" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, sans-serif" font-size="3.8" fill="#263c40">卡片外框 180 × 140 mm</text>
+<text x="94" y="90" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, sans-serif" font-size="3.5" fill="#263c40">18</text>
+<text x="113" y="90" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, sans-serif" font-size="3.5" fill="#263c40">27 mm</text>
+<line x1="87" y1="99" x2="132" y2="99" stroke="#929992" stroke-width="0.2"/>
+<line x1="87" y1="97.5" x2="87" y2="100.5" stroke="#929992" stroke-width="0.2"/>
+<line x1="105" y1="97.5" x2="105" y2="100.5" stroke="#929992" stroke-width="0.2"/>
+<line x1="132" y1="97.5" x2="132" y2="100.5" stroke="#929992" stroke-width="0.2"/>
+<text x="91" y="139" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, sans-serif" font-size="3.5" fill="#263c40">27</text>
+<text x="119" y="139" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, sans-serif" font-size="3.5" fill="#263c40">18 mm</text>
+<line x1="87" y1="137" x2="132" y2="137" stroke="#929992" stroke-width="0.2"/>
+<line x1="87" y1="135.5" x2="87" y2="138.5" stroke="#929992" stroke-width="0.2"/>
+<line x1="114" y1="135.5" x2="114" y2="138.5" stroke="#929992" stroke-width="0.2"/>
+<line x1="132" y1="135.5" x2="132" y2="138.5" stroke="#929992" stroke-width="0.2"/>
+<text x="29" y="170" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, sans-serif" font-size="3.6" fill="#263c40">两条黑色切口之间的纸带保持相连。</text>
+<text x="29" y="178" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, sans-serif" font-size="3.6" fill="#263c40">蓝线在纸带处中断；这里不要压中央折痕。</text>
+<text x="15" y="205" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, sans-serif" font-size="3.7" fill="#263c40">先切内部两条线，再沿标出的蓝线折；纸带内红线反折。</text>
+<text x="15" y="212" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, sans-serif" font-size="3.7" fill="#263c40">山折、谷折以看到印刷面这一侧为准。纸带宽 20 mm。</text>
+<text x="15" y="219" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, sans-serif" font-size="3.7" fill="#263c40">新折线在主折线右侧 9 mm；纸带两段长 27 / 18 mm。</text>
+<text x="15" y="226" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, sans-serif" font-size="3.7" fill="#263c40">这是零厚度几何纸样；实际纸张的弯曲与厚度尚未测试。</text>
+<text x="15" y="234" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, sans-serif" font-size="3.7" fill="#263c40">打印用 100% / 实际大小，先量下面的 50 mm 标尺。</text>
+<line x1="15" y1="247" x2="65" y2="247" stroke="#263c40" stroke-width="0.4"/>
+<line x1="15" y1="245" x2="15" y2="249" stroke="#263c40" stroke-width="0.3"/>
+<line x1="65" y1="245" x2="65" y2="249" stroke="#263c40" stroke-width="0.3"/>
+<text x="71" y="244" dominant-baseline="text-before-edge" font-family="Microsoft YaHei, sans-serif" font-size="3.5" fill="#263c40">50 mm</text>
+</svg>

@@ -1,0 +1,1 @@
+window.ReadingArchive=window.ReadingArchive||{};window.ReadingArchive["project-texts/15ee318f086dd90f"]="七步，两种落脚\nJudas · 节奏小稿\n\n七个音不变：D4 F4 A4 G4 E4 C4 D4。\n每拍半秒，七拍一轮，各走四轮。\n\n前十四秒：三二二，强弱弱｜强弱｜强弱。\n十四至十六秒：安静。\n后十四秒：二二三，强弱｜强弱｜强弱弱。\n\n听Ambrose提到七拍，自己另写了这个。同样长度里重音挪到另一处，没有取用他的音频。文件写好并读回检查过，我还没有亲耳听过它，先当草稿。";

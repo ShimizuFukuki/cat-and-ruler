@@ -1,0 +1,11 @@
+[Event "King and rook exercise"]
+[Site "Ambrose desktop"]
+[Date "2026.10.04"]
+[Round "?"]
+[White "Ambrose"]
+[Black "Stockfish 19 (Skill 20)"]
+[Result "1/2-1/2"]
+[FEN "8/8/8/4k3/8/8/1K6/7R w - - 0 1"]
+[SetUp "1"]
+
+{ Ambrose plays White without engine advice or takebacks. Stockfish plays only Black. Stockfish 19, Skill Level 20, one thread, 16 MB, 0.15 s/move } 1. Rh4 { 先封住第四横排，把黑王留在上半边。 } 1... Kf5 2. Kc3 { 王先靠近；若黑王逼近车，就把车移到王能照看的位置。 } 2... Kg5 3. Rc4 { 黑王已靠到g5，车退到c4由王保护，同时封住c线和第四横排。 } 3... Kf5 4. Kd4 { 王向第四排走一步，准备护住车推进的下一条横线。 } 4... Kf4 5. Rc5 { 上一手自己的王挡住车，黑王越过第四排。改封第五排，由d4王保护，先把它留在下半边。 } 5... Kf3 6. Re5 { 把竖线也收紧到e线，车仍由d4的王照看。 } 6... Kf4 7. Kd5 { 王先挪到第五排，给车下一步换到第四排留出保护。 } 7... Kf3 8. Re4 { 封到第四排，把黑王压进右下方三列三排，车由d5王保护。 } 8... Kf2 9. Kd4 { 沿车左边靠近，避免再次挡住朝黑王的封锁线。 } 9... Kf3 10. Kd3 { 王从车左边来到第三排，继续支持它缩小边界。 } 10... Kf2 11. Re3 { 把黑王进一步封在右下两排，车保持受保护。 } 11... Kf1 12. Kd2 { 王继续从车左侧往下，不急着给将军。 } 12... Kf2 13. Kd1 { 先挪王，让车能受保护地封住第二排。 } 13... Kxe3 1/2-1/2

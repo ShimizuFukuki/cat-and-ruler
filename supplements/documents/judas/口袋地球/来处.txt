@@ -1,0 +1,32 @@
+口袋地球仪
+
+这回读过的馆藏介绍，不是同一件东西：
+Richard Cushee，1731，GLB0044.2，78 mm：
+https://www.rmg.co.uk/collections/objects/rmgc-object-263072
+Dudley Adams，1799–1802，1928-932，球76 mm、盒80 mm：
+https://collection.sciencemuseumgroup.org.uk/objects/co57005/pocket-globe-in-case-by-dudley-adams-pocket-globe
+这两页文字读到了，但馆方照片没成功载入。
+
+本目录实际保存并看过的照片是另一件Charles Price口袋地球仪，伦敦科学博物馆藏。最初按Commons标注写成1716制作；10月3日01:24前后补查馆藏1983-791，制作年代列1710—1715，1716年1月1日是盒上赠礼题字日期。旧照片文件名保留1716，指题字年份，不再作制作年代。
+照片作者：Stefan Kühn。
+图片页面：https://commons.wikimedia.org/wiki/File:Taschenglobus.jpg
+原图：https://upload.wikimedia.org/wikipedia/commons/8/84/Taschenglobus.jpg
+使用许可：CC BY-SA 3.0（从页面列出的多重许可中选此项）。
+许可链接：https://creativecommons.org/licenses/by-sa/3.0/
+图像未修改，仅按物件改了本地文件名。不要把照片当成前两件藏品，也别称作自己的摄影。
+
+实际看到：深色两瓣盒，左边装着球，右边内侧有彩色星座人物和动物，前沿有小金属扣。未从图中量尺寸。
+2026-10-03 01:09 补记（又看了几件，别混成原先那只）：
+Whipple馆藏0076，Darton & Co，1811，球与星图盒的照片，实际保存并看过两张：
+https://collections.whipplemuseum.cam.ac.uk/objects/8805/
+https://collections.whipplemuseum.cam.ac.uk/media/library_images/web/20094_0076.jpg
+https://collections.whipplemuseum.cam.ac.uk/media/library_images/web/20099_0076b.jpg
+本地为Whipple-20094_0076.jpg和Whipple-20099_0076b.jpg。照片© Whipple Museum，私人阅读保留；对话只分享馆方原链接，没有另传副本。绿色盒内，两个半球全露，地球上下各有轴；小图字仍难辨。
+RMG Cushee 1731说明写其星图为geocentric projection、人物见背面，不能据此断言Charles Price 1716那只的绘图朝向；RMG图片仍加载失败。Whipple主题文章全文403，仅检索摘录谈凹面、从地球向外观看；不算读过全文。
+爱尔兰国家博物馆修复记录，Ellen Mc Keever：
+https://www.museum.ie/en-IE/Collections-Research/Conservation/Conservation-Projects/Conservation-of-a-C19th-Pocket-Globe
+DW:1909.1497，十九世纪（页面没有给出具体制作者，不自行补）。完整读了正文。旧补丁与馆内竖琴补法相似，修复意图在稳定结构时保留使用痕迹；球体好一些，盒子损坏较多。
+已看修复后照片，本地 爱尔兰馆藏-修复后.jpg，仅私人阅读，无另传：
+https://www.museum.ie/getmedia/d9e85fc8-d374-442a-8c00-944911e4a204/completed-object-Bryan-photography.jpg?width=1280
+另张磁铁固定修补照片未打开，没看过。不要宣称星图朝向问题全解决了。
+2026-10-03 01:25：Ambrose在聊天19提供Science Museum记录，我已打开核对。Charles Price，1983-791，1710—1715制作；外壳题字记Rev Dr Le Courayer赠Mary Russell，1716年1月1日。来源：https://collection.sciencemuseumgroup.org.uk/objects/co57117/pocket-globe-by-charles-price 。这是对之前我在聊天16说‘1716年做’的更正，已于聊天20说明。

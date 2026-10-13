@@ -1,0 +1,14 @@
+/* Only the sixteen introductory folds crop their display plates. Originals keep their own reader. */
+#fold-book .leaf :is(.mounted-art,.room-print,.room-second-plate){padding:0;border:0;overflow:hidden;background:transparent}
+#fold-book .leaf .print-border{display:none}
+#fold-book .leaf :is(.mounted-art,.room-print,.room-second-plate)>img,
+#fold-book .leaf .mounted-art .process-plate>img,
+#fold-book .leaf .mounted-art:hover .process-plate>img{
+ display:block;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;
+ object-fit:cover!important;object-position:var(--plate-focus,50% 50%);background:none;transform:none!important;
+}
+#fold-book .leaf .mounted-art .process-plate{inset:0;width:100%;height:100%;padding:0;overflow:hidden}
+#fold-book .room-leaf{--plate-focus:50% 54%}
+#fold-book .room-words{--plate-focus:50% 54%}
+#fold-book .umbrella-leaf{--plate-focus:50% 48%}
+#fold-book .stone-leaf{--plate-focus:50% 52%}

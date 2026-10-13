@@ -1,0 +1,129 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>一把会画椭圆的尺 · Ambrose</title><style>
+:root{--viz-series-1:#34776c;--viz-series-2:#b97b3c;--muted-foreground:#798980;--border:#c7d2c8;--background:#f6f3e9;--muted:#e0e7df;--foreground:#273c37;color:var(--foreground);background:#f6f3e9;font:17px/1.7 system-ui,sans-serif}body{max-width:720px;margin:5vh auto;padding:24px}h3{font:500 2.2rem/1.25 Georgia,serif;margin:1.2rem 0}.viz-controls,.viz-row{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}.viz-controls{justify-content:space-between}.btn{font:inherit;background:#fcfbf6;border:1px solid #a4b9ae;border-radius:8px;padding:.55em .85em;color:inherit;cursor:pointer}.btn:disabled{opacity:.35;cursor:default}.btn:focus-visible,input:focus-visible{outline:3px solid #34776c;outline-offset:3px}.form-check{display:flex;gap:.65em;align-items:center}input{width:20px;height:20px;accent-color:#34776c}.tabular-nums{font-variant-numeric:tabular-nums}.provenance{font-size:.8rem;color:#697871;border-top:1px solid var(--border);padding-top:1.5rem;margin-top:2.5rem}
+.form-range{width:100%;height:26px;margin:1rem 0}.viz-row{justify-content:space-between}
+.viz-controls>label{flex:1;min-width:180px}h2{font-weight:500} @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}</style><main><div id="ambrose-sliding-ruler">
+  <h2>一把会画椭圆的尺</h2>
+  <div class="viz-controls">
+    <label class="form-label" for="ruler-pen">笔尖位置 <output id="ruler-position" class="tabular-nums">30%</output>
+      <input class="form-range" id="ruler-pen" type="range" min="0" max="100" value="30" step="1">
+    </label>
+    <label class="form-label" for="ruler-angle">转到 <output id="ruler-degrees" class="tabular-nums">35°</output>
+      <input class="form-range" id="ruler-angle" type="range" min="0" max="360" value="35" step="1">
+    </label>
+  </div>
+  <div class="ruler-stage">
+    <svg class="ruler-drawing" role="img" aria-labelledby="ruler-title ruler-desc">
+      <title id="ruler-title">两个滑块带着笔尖画线</title>
+      <desc id="ruler-desc">A 沿横槽滑动，B 沿竖槽滑动，连接两点的尺保持长度不变。笔尖 P 在尺上的位置可以调整。</desc>
+      <rect class="groove" id="ruler-horizontal" rx="5"></rect>
+      <rect class="groove" id="ruler-vertical" rx="5"></rect>
+      <path id="ruler-guide" class="guide"></path>
+      <path id="ruler-trace" class="trace"></path>
+      <line id="ruler-bar" class="bar"></line>
+      <circle id="ruler-a" class="pin" r="8"></circle>
+      <circle id="ruler-b" class="pin" r="8"></circle>
+      <circle id="ruler-p" class="pencil" r="5"></circle>
+      <text id="ruler-a-label">A</text>
+      <text id="ruler-b-label">B</text>
+      <text id="ruler-p-label">P</text>
+    </svg>
+  </div>
+  <div class="viz-row">
+    <button id="ruler-play" type="button" class="btn btn-primary">画一圈</button>
+    <span id="ruler-shape" class="text-small" aria-live="polite">横向更宽的椭圆</span>
+  </div>
+</div>
+<style>
+  #ambrose-sliding-ruler .ruler-stage { width:100%; }
+  #ambrose-sliding-ruler .ruler-drawing { width:100%; display:block; overflow:visible; }
+  #ambrose-sliding-ruler .groove { fill:var(--muted); }
+  #ambrose-sliding-ruler .guide { fill:none; stroke:var(--border); stroke-width:1; stroke-dasharray:4 5; }
+  #ambrose-sliding-ruler .trace { fill:none; stroke:var(--viz-series-1); stroke-width:2.5; stroke-linecap:round; }
+  #ambrose-sliding-ruler .bar { stroke:var(--foreground); stroke-width:5; stroke-linecap:round; opacity:.65; }
+  #ambrose-sliding-ruler .pin { fill:var(--background); stroke:var(--foreground); stroke-width:1.5; }
+  #ambrose-sliding-ruler .pencil { fill:var(--viz-series-1); stroke:var(--background); stroke-width:1.5; }
+  #ambrose-sliding-ruler .ruler-drawing text { fill:var(--foreground); }
+</style>
+<script>
+(() => {
+  const root = document.getElementById('ambrose-sliding-ruler');
+  const byId = id => root.querySelector('#' + id);
+  const pen = byId('ruler-pen'), angle = byId('ruler-angle');
+  const play = byId('ruler-play'), svg = root.querySelector('.ruler-drawing');
+  let position = .3, degrees = 35, running = false, frame = 0;
+  let width = 600, height = 400, scale = 1.6;
+  const set = (id, attrs) => { const el = byId(id); for (const [k,v] of Object.entries(attrs)) el.setAttribute(k, v); };
+  const point = (t, fraction = position) => ({x:(1-fraction)*100*Math.cos(t), y:fraction*100*Math.sin(t)});
+  const screen = p => ({x:width/2 + scale*p.x, y:height/2 - scale*p.y});
+  function curve(end) {
+    const count = Math.max(1, Math.ceil(end/2));
+    return Array.from({length:count+1}, (_,i) => {
+      const p = screen(point(end*i/count*Math.PI/180));
+      return (i ? 'L' : 'M') + p.x.toFixed(2) + ',' + p.y.toFixed(2);
+    }).join(' ');
+  }
+  function shapeLabel() {
+    if(position === 0 || position === 1) return '笔尖落在滑块上，只画一条直线';
+    if(position === .5) return '笔尖在正中间，画出一个圆';
+    return position < .5 ? '横向更宽的椭圆' : '竖向更长的椭圆';
+  }
+  function draw() {
+    const theta = degrees*Math.PI/180;
+    const a = screen({x:100*Math.cos(theta),y:0});
+    const b = screen({x:0,y:100*Math.sin(theta)});
+    const p = screen(point(theta));
+    const span = scale*100+16;
+    svg.setAttribute('viewBox', '0 0 '+width+' '+height);
+    svg.style.height = height+'px';
+    set('ruler-horizontal',{x:width/2-span,y:height/2-5,width:2*span,height:10});
+    set('ruler-vertical',{x:width/2-5,y:height/2-span,width:10,height:2*span});
+    set('ruler-guide',{d:curve(360)});
+    set('ruler-trace',{d:curve(degrees)});
+    set('ruler-bar',{x1:a.x,y1:a.y,x2:b.x,y2:b.y});
+    set('ruler-a',{cx:a.x,cy:a.y}); set('ruler-b',{cx:b.x,cy:b.y}); set('ruler-p',{cx:p.x,cy:p.y});
+    set('ruler-a-label',{x:a.x+14,y:a.y+23});
+    set('ruler-b-label',{x:b.x-23,y:b.y-14});
+    set('ruler-p-label',{x:p.x+12,y:p.y-12});
+    byId('ruler-position').textContent = Math.round(position*100)+'%';
+    byId('ruler-degrees').textContent = Math.round(degrees)+'°';
+    pen.value = Math.round(position*100); angle.value = Math.round(degrees);
+    const description = shapeLabel();
+    if(byId('ruler-shape').textContent !== description) byId('ruler-shape').textContent = description;
+  }
+  function stop() { running=false; cancelAnimationFrame(frame); play.textContent='画一圈'; }
+  function save() {
+    if(window.openai?.setWidgetState) window.openai.setWidgetState({modelContent:{penPosition:position,angleDegrees:Math.round(degrees)},privateContent:null}).catch(()=>{});
+  }
+  function restore(state) {
+    const s = state?.modelContent;
+    if(!s) return;
+    stop();
+    if(Number.isFinite(s.penPosition)) position = Math.max(0,Math.min(1,s.penPosition));
+    if(Number.isFinite(s.angleDegrees)) degrees = Math.max(0,Math.min(360,s.angleDegrees));
+    draw();
+  }
+  pen.addEventListener('input',()=>{stop();position=Number(pen.value)/100;draw();});
+  angle.addEventListener('input',()=>{stop();degrees=Number(angle.value);draw();});
+  pen.addEventListener('change',save); angle.addEventListener('change',save);
+  play.addEventListener('click',()=>{
+    if(running){stop();save();return;}
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches){degrees=360;draw();save();return;}
+    running=true; play.textContent='停在这里'; degrees=0; draw();
+    const started=performance.now();
+    const advance=now=>{
+      if(!running)return;
+      degrees=Math.min(360,(now-started)/7000*360); draw();
+      if(degrees>=360){stop();save();}else frame=requestAnimationFrame(advance);
+    };
+    frame=requestAnimationFrame(advance);
+  });
+  const resize=()=>{
+    width=Math.max(280,root.querySelector('.ruler-stage').getBoundingClientRect().width);
+    height=Math.min(420,width+20); scale=Math.max(.9,(Math.min(width,height)-86)/200); draw();
+  };
+  new ResizeObserver(resize).observe(root.querySelector('.ruler-stage'));
+  window.addEventListener('openai:set_globals',event=>{if(event.detail?.globals?.widgetState)restore(event.detail.globals.widgetState);});
+  restore(window.openai?.widgetState); resize();
+})();
+</script>
+<p class="provenance">Ambrose · 2026年10月2日<br>根据原对话第36586条的完整代码恢复；原交互和绘图保留，仅补独立网页外壳与基础样式。两端沿互相垂直的槽滑动，尺长不变。系统开启“减少动态”时，画一圈会直接显示完整曲线，也可以手动拨动角度。</p></main></html>

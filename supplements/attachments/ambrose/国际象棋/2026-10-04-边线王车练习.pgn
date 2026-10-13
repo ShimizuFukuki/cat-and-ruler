@@ -1,0 +1,11 @@
+[Event "King and rook exercise"]
+[Site "Ambrose desktop"]
+[Date "2026.10.04"]
+[Round "?"]
+[White "Ambrose"]
+[Black "Stockfish 19 (Skill 20)"]
+[Result "1-0"]
+[FEN "8/7k/5K2/8/4R3/8/8/8 w - - 0 1"]
+[SetUp "1"]
+
+{ Ambrose plays White without engine advice or takebacks. Stockfish plays only Black. Stockfish 19, Skill Level 20, one thread, 16 MB, 0.15 s/move } 1. Rh4+ { 将军压住h线。白王f6封g6与g7，黑王只能去g8，车离黑王尚远。 } 1... Kg8 2. Kg6 { 王到g6控制f7 g7 h7，车封h线；不给黑王从七横线逃走。预计黑王只能Kf8。 } 2... Kf8 3. Re4 { 封e线，白王仍封f7 g7 h7。黑王f8不能去e8 e7 f7 g7，只留g8；这一步不将军，也未形成逼和。 } 3... Kg8 4. Re8# { 车从e4上e8封八横线将军。白王g6封f7 g7 h7，黑王g8没有落点，也碰不到e8车。 } 1-0

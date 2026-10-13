@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+  <title>纸鸟</title>
+  <desc>米白纸面上，一只由灰蓝、青绿和赭色多边形组成的鸟向右迈步。左侧有三粒碎屑。</desc>
+  <rect width="1000" height="700" fill="#f1ede3"/>
+  <path d="M115 535 H870" stroke="#ddd6c8" stroke-width="2"/>
+  <ellipse cx="590" cy="544" rx="143" ry="10" fill="#d9d3c7" opacity=".48"/>
+  <g stroke="#7e6a52" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M574 461 L563 524 L595 535"/>
+    <path d="M641 449 L685 487 L731 486"/>
+  </g>
+  <path d="M445 400 L330 330 L366 419 L522 471 Z" fill="#799492"/>
+  <path d="M414 382 L589 296 L695 389 L637 475 L518 471 Z" fill="#536c75"/>
+  <path d="M447 394 L584 335 L622 405 L516 457 Z" fill="#a7b4ad"/>
+  <path d="M584 335 L622 405 L516 457" fill="none" stroke="#cbd0c1" stroke-width="2"/>
+  <path d="M589 296 L654 218 L729 270 L695 389 Z" fill="#68898c"/>
+  <path d="M654 218 L729 270 L715 316 L647 292 Z" fill="#bec6b5"/>
+  <path d="M729 270 L797 301 L715 316 Z" fill="#b18a52"/>
+  <circle cx="697" cy="269" r="5" fill="#333e3c"/>
+  <g fill="#aa8b60">
+    <path d="M228 524 L239 521 L243 529 L232 531 Z"/>
+    <path d="M268 531 L279 527 L283 535 Z"/>
+    <path d="M304 523 L309 522 L310 527 L305 528 Z"/>
+  </g>
+</svg>
